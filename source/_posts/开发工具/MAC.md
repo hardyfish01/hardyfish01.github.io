@@ -1,0 +1,146 @@
+---
+title: MAC
+categories: 
+- 开发工具
+---
+
+MAC精品应用下载：
+
+* https://xclient.info/
+
+* https://www.macwk.com/
+
+活动监视器：看到后台运行程序
+
+# 快捷键
+
+ 移到废纸篓：
+
+* Command+Backspace
+
+清空废纸篓：
+
+* Command+Shift+Backspace
+
+显示隐藏文件：
+
+* Command+Shift+.
+
+前往文件目录：
+
+* Command+Shift+G
+
+新建页面：
+
+* Command+N
+
+终端操作：
+
+* Command+T：打开多个窗口
+* Command+W：关闭当前窗口
+* Command+M：当前窗口最小化
+* Command+加号键：终端放大字体
+
+打开Spotlight：
+
+* Command+空格
+
+应用程序的切换：
+
+* Command+Tab
+
+关闭应用程序：
+
+* Command+Q
+
+上/下一级文件切换：
+
+* Command+上下键
+
+# HomeBrew
+
+国内安装可用：
+
+```
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+
+# JDK安装
+
+> 1.到Oracle官网下载JDK1.8安装包：
+
+https://www.oracle.com/java/technologies/downloads/#java8
+
+> 2.配置系统的环境变量：
+
+JDK的真实主目录如下：
+
+```
+/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+```
+
+打开`.bash_profile`并编辑：
+
+在文件的末尾加入这几行语句：
+
+```
+open ~/.bash_profile
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH:.
+export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+
+source ~/.bash_profile
+```
+
+> 3.验证JDK1.8是否安装成功
+
+```
+# 确认配置生效
+java -version
+```
+
+# Maven安装
+
+> 1.下载：
+
+下载地址：http://maven.apache.org/download.cgi
+
+修改`settting.xml`文件，在mirrors标签下添加子节点。
+
+```xml
+ <mirror>
+ 	<id>nexus-aliyun</id>
+ 	<mirrorOf>central</mirrorOf>
+ 	<name>Nexus aliyun</name>
+	 <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+ </mirror>
+```
+
+> 2.配置系统的环境变量：
+
+```
+open ~/.bash_profile
+
+export MAVEN_HOME=/Users/kun/Desktop/midongtools/apache-maven-3.5.0
+export PATH=$PATH:$MAVEN_HOME/bin
+
+source ~/.bash_profile
+```
+
+> 3.验证是否安装成功
+
+```
+mvn -v
+```
+
+# Iterm2
+
+iTerm2下载地址：https://iterm2.com/downloads.html
+
+> 主题配置：
+
+iTerm2 最常用的主题是 Solarized Dark theme，下载地址：[http://ethanschoonover.com/solarized](https://links.jianshu.com/go?to=http%3A%2F%2Fethanschoonover.com%2Fsolarized)
+
+打开 Preferences 配置界面，然后`Profiles -> Colors -> Color Presets`，在下拉列表中选择 Import，选择刚才解压的`solarized->iterm2-colors-solarized->Solarized Dark.itermcolors`文件，导入成功后，在 Color Presets下选择 Solarized Dark 主题。
+
