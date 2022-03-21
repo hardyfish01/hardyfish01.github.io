@@ -1815,6 +1815,15 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Hexo/">
+										Hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/MAC/">
 										MAC
 									</a>
@@ -2108,6 +2117,44 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										MySQL数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E8%AF%AD%E5%8F%A5/">
+										SQL语句
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/19/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%BB%BA%E8%A1%A8%E8%A7%84%E7%BA%A6/">
+										建表规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%B4%A2%E5%BC%95%E8%A7%84%E7%BA%A6/">
+										索引规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										异常日志
 									</a>
 									
@@ -2346,6 +2393,159 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2022/03/09/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E9%9B%86%E7%BE%A4/">
+				<h2 class="index-title">
+					集群
+				</h2>
+				<div class="index-brief">
+					集群是Redis提供的分布式数据库方案，通过分片来进行数据共享并提供复制和故障转移的功能。
+节点
+集群由多个节点组成，通过CLUSTER MEET &lt;ip&gt; &lt;port&gt;可以将节点连接起来。
+这个命令主要是将目标节点加入到当前Redis所在的集群中。
+启动节点
+Redis服务
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-09</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/03/08/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/Sentinel%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					Sentinel机制
+				</h2>
+				<div class="index-brief">
+					Sentinel（哨兵）是Redis的高可用性的解决方案，由一个或多个Sentinel实例组成的Sentinel系统可以监视任意多个主服务器以及属下的所有从服务器。
+
+当主服务器下线时，自动将下线的某个主服务器属下的某个从服务器升级为新的主服务器。
+
+从而实现故障转移，当原来的主服务器重新上线时，会
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-08</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/03/07/MySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/">
+				<h2 class="index-title">
+					字段类型
+				</h2>
+				<div class="index-brief">
+					整数类型
+整数类型一共有5种，包括TINYINT、SMALLINT、MEDIUMINT、INT（INTEGER）和BIGINT，它们的区别如下表所示：
+
+
+浮点数类型和定点数类型
+MySQL支持的浮点数类型，分别是FLOAT、DOUBLE、REAL。
+
+FLOAT表示单精度浮点数；
+DOUBLE表示
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-07</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL必知必会/">MySQL必知必会</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/03/07/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%A4%8D%E5%88%B6/">
+				<h2 class="index-title">
+					复制
+				</h2>
+				<div class="index-brief">
+					在Redis中，可通过SLAVEOF命令或配置文件中设置slaveof选项，让一个服务器去复制另一个服务器，被复制的为主服务器，对其复制的称为从服务器。
+旧版本复制功能的实现
+Redis在2.8以前使用旧版本复制，在短线重连后的从服务器会遇上低效的情况。
+Redis的复制功能分为同步和命令传播俩操作
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-07</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/03/06/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E4%BB%B6/">
+				<h2 class="index-title">
+					事件
+				</h2>
+				<div class="index-brief">
+					Redis服务器是一个事件驱动程序，主要有两种：
+
+文件事件：Redis服务器通过套接字与客户端连接，文件事件就是服务器对套接字操作的抽象。服务器与客户端通信会产生相应文件事件，服务器通过监听这些事件来完成一系列网络通信操作。
+时间事件：Redis服务器有一些需要在给定时间内执行的操作，而时间事件就
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-06</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/03/06/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Disruptor%E6%A1%86%E6%9E%B6/">
@@ -2824,167 +3024,10 @@ struct sdshdr&#123;
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/02/19/Shell%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B%E5%A4%A7%E5%85%A8/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					Shell是一个命令行解释器，为用户提供了一个向Linux内核发送请求，以便程序运行的界面系统级程序，用户可以用Shell来启动，挂起，停止程序，甚至编写一些程序。
-Shell还是一个功能相当强大的编程语言，易编写，易调试，灵活性较强。
-
-Shell是解释执行的脚本语言，在Shell中可以直接调用L
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Shell脚本编程大全/">Shell脚本编程大全</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/19/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					Spring设计模式
-				</h2>
-				<div class="index-brief">
-					前言前几天，一位读者面阿里被问到一个问题：Spring框架用到了哪些设计模式？，答的不是很好，于是打算写篇文章讲讲这个！
-
-文章首发在公众号（月伴飞鱼），之后同步到个人网站：https://xiaoflyfish.cn/
-面经：社招一年半面经分享(含阿里美团头条京东滴滴)
-
-
-微信搜索：月伴飞鱼，交
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/公众号文章/">公众号文章</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/14/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E6%85%A2%E6%9F%A5%E8%AF%A2/">
-				<h2 class="index-title">
-					慢查询
-				</h2>
-				<div class="index-brief">
-					文章首发在公众号（月伴飞鱼），之后同步到个人网站：https://xiaoflyfish.cn/
-
-喜欢的话，之后会分享更多系列文章！
-觉得有收获，希望帮忙点赞，转发下哈，谢谢，谢谢
-
-微信搜索：月伴飞鱼，交个朋友，进面试交流群
-
-公众号后台回复666，可以获得免费电子书籍
-
-
-前言前几天帮公司解决
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-14</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/公众号文章/">公众号文章</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/02/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					Nginx是一个高性能的HTTP和反向代理Web服务器，同时也提供了 IMAP/POP3/SMTP服务，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用。
-高性能原因
-Nginx采用了Linux的Epoll模型，Epoll模型基于事件驱动机制，它可以监控多个事件是否准备完毕，如果O
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/深入理解Nginx/">深入理解Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/02/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-				<h2 class="index-title">
-					反向代理
-				</h2>
-				<div class="index-brief">
-					正向代理的概念：
-正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。
-这个过程当中客户端需要知道代理服务器地址，并配置连接。
-
-
-反向代理的概念：
-反向代理是指客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/深入理解Nginx/">深入理解Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
 		
 	</div>
 </div>

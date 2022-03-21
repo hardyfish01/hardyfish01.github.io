@@ -1815,6 +1815,15 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Hexo/">
+										Hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/MAC/">
 										MAC
 									</a>
@@ -2108,6 +2117,44 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										MySQL数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E8%AF%AD%E5%8F%A5/">
+										SQL语句
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/19/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%BB%BA%E8%A1%A8%E8%A7%84%E7%BA%A6/">
+										建表规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%B4%A2%E5%BC%95%E8%A7%84%E7%BA%A6/">
+										索引规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										异常日志
 									</a>
 									
@@ -2348,6 +2395,129 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/02/05/Tomcat%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
+				<h2 class="index-title">
+					类加载器
+				</h2>
+				<div class="index-brief">
+					Tomcat作为Servlet容器，它负责加载我们的Servlet类，此外它还负责加载Servlet所依赖的JAR包。
+并且Tomcat本身也是一个Java程序，因此它需要加载自己的类和依赖的JAR包。
+Tomcat类加载器的层次结构
+
+
+假如我们使用JVM默认AppClassLoader来加载We
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-02-05</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Tomcat架构解析/">Tomcat架构解析</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/02/05/Tomcat%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					双亲委托机制
+				</h2>
+				<div class="index-brief">
+					Tomcat的自定义类加载器WebAppClassLoader打破了双亲委托机制
+它首先自己尝试去加载某个类，如果找不到再代理给父类加载器，其目的是优先加载Web应用自己定义的类。
+
+具体实现就是重写ClassLoader的两个方法：findClass和loadClass。
+
+要打破双亲委托机制，需
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-02-05</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Tomcat架构解析/">Tomcat架构解析</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/02/04/Tomcat%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
+				<h2 class="index-title">
+					热部署和热加载
+				</h2>
+				<div class="index-brief">
+					要在运行的过程中升级Web应用，如果你不想重启系统，实现的方式有两种：热加载和热部署。
+那如何实现热部署和热加载呢？它们跟类加载机制有关，具体来说就是：
+
+热加载的实现方式是Web容器启动一个后台线程，定期检测类文件的变化，如果有变化，就重新加载类，在这个过程中不会清空Session ，一般用在开发
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-02-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Tomcat架构解析/">Tomcat架构解析</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/02/04/Tomcat%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90/Executor%E7%BB%84%E4%BB%B6/">
+				<h2 class="index-title">
+					Executor组件
+				</h2>
+				<div class="index-brief">
+					为了提高处理能力和并发度，Web容器一般会把处理请求的工作放到线程池里来执行，Tomcat扩展了原生的Java线程池，来满足Web容器高并发的需求。
+通常我们可以将执行的任务分为两类：
+
+cpu 密集型任务
+io 密集型任务
+
+cpu 密集型任务，需要线程长时间进行的复杂的运算，这种类型的任务需要少
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-02-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Tomcat架构解析/">Tomcat架构解析</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/02/04/Tomcat%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
 				<h2 class="index-title">
 					核心组件
@@ -2534,134 +2704,10 @@ Host代表的是一个虚拟主机，或者
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/02/02/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-				<h2 class="index-title">
-					反向代理
-				</h2>
-				<div class="index-brief">
-					正向代理的概念：
-正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。
-这个过程当中客户端需要知道代理服务器地址，并配置连接。
-
-
-反向代理的概念：
-反向代理是指客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/深入理解Nginx/">深入理解Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/02/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					Nginx是一个高性能的HTTP和反向代理Web服务器，同时也提供了 IMAP/POP3/SMTP服务，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用。
-高性能原因
-Nginx采用了Linux的Epoll模型，Epoll模型基于事件驱动机制，它可以监控多个事件是否准备完毕，如果O
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/深入理解Nginx/">深入理解Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/02/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
-				<h2 class="index-title">
-					负载均衡
-				</h2>
-				<div class="index-brief">
-					负载均衡是指如何将网络请求派发到集群中的一个或多个节点上处理，一般来说，传统的负载均衡可以分为硬件负载均衡和软件负载均衡
-
-硬件负载均衡，就是通过专门的硬件来实现负载均衡，比如常见的 F5 设备
-
-软件负载均衡则是通过负载均衡软件实现，常见的就是 Nginx
-
-
-四层/七层负载均衡
-四层/七层负载均
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/深入理解Nginx/">深入理解Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/02/02/%E5%9B%BE%E8%A7%A3TCP%20IP/TCP%E5%92%8CUDP/">
-				<h2 class="index-title">
-					TCP和UDP
-				</h2>
-				<div class="index-brief">
-					TCPTCP是一个传输层协议，提供可靠传输，支持全双工，是一个连接导向的协议。
-双工/单工
-在任何一个时刻，如果数据只能单向发送，就是单工。
-如果在某个时刻数据可以向一个方向传输，也可以向另一个方向反方向传输，而且交替进行，叫作半双工；半双工需要至少 1 条线路。
-如果任何时刻数据都可以双向收发，这
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-02-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/图解TCP-IP/">图解TCP IP</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2022/page/7/">&lt;</a><a class="page-number" href="/archives/2022/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/6/">6</a><a class="page-number" href="/archives/2022/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2022/page/9/">9</a><a class="extend next" rel="next" href="/archives/2022/page/9/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2022/page/7/">&lt;</a><a class="page-number" href="/archives/2022/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/6/">6</a><a class="page-number" href="/archives/2022/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2022/page/9/">9</a><a class="page-number" href="/archives/2022/page/10/">10</a><a class="extend next" rel="next" href="/archives/2022/page/9/">&gt;</a>
 		
 	</div>
 </div>

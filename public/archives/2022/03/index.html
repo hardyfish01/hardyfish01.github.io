@@ -1815,6 +1815,15 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Hexo/">
+										Hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/MAC/">
 										MAC
 									</a>
@@ -2108,6 +2117,44 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										MySQL数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E8%AF%AD%E5%8F%A5/">
+										SQL语句
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/19/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%BB%BA%E8%A1%A8%E8%A7%84%E7%BA%A6/">
+										建表规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%B4%A2%E5%BC%95%E8%A7%84%E7%BA%A6/">
+										索引规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										异常日志
 									</a>
 									
@@ -2348,6 +2395,121 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/03/21/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E8%AF%AD%E5%8F%A5/">
+				<h2 class="index-title">
+					SQL语句
+				</h2>
+				<div class="index-brief">
+					1.不要使用count(列名)或count(常量)来替代count(*)，count(*)是SQL92定义的标准统计行数的语法，跟数据库无关，跟NULL和非NULL无关。
+
+说明：count(*)会统计值为NULL的行，而count(列名)不会统计此列为NULL值的行。
+
+2.count(disti
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/阿里Java开发手册/">阿里Java开发手册</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/阿里Java开发手册/MySQL数据库/">MySQL数据库</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/03/20/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%B4%A2%E5%BC%95%E8%A7%84%E7%BA%A6/">
+				<h2 class="index-title">
+					索引规约
+				</h2>
+				<div class="index-brief">
+					1.业务上具有唯一特性的字段，即使是多个字段的组合，也必须建成唯一索引。
+
+说明：不要以为唯一索引影响了insert速度，这个速度损耗可以忽略，但提高查找速度是明显的；
+
+2.超过三个表禁止join。需要join的字段，数据类型必须绝对一致；多表关联查询时，保证被关联的字段需要有索引。
+
+说明：即使
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-20</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/阿里Java开发手册/">阿里Java开发手册</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/阿里Java开发手册/MySQL数据库/">MySQL数据库</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Hexo/">
+				<h2 class="index-title">
+					Hexo
+				</h2>
+				<div class="index-brief">
+					安装npm install -g hexo-cli
+
+hexo init blog
+
+输入hexo g生成静态网页，然后输入hexo s打开本地服务器
+连接GitHub与本地
+首先右键打开Git Bash，然后输入下面命令：
+git config --global user.name &quot;g
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-20</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/MAC/">
 				<h2 class="index-title">
 					MAC
@@ -2510,6 +2672,49 @@ Isolation.REA
 		</div>	
 	
 		<div class="index-li">
+			<a href="/2022/03/19/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%BB%BA%E8%A1%A8%E8%A7%84%E7%BA%A6/">
+				<h2 class="index-title">
+					建表规约
+				</h2>
+				<div class="index-brief">
+					1.表达是与否概念的字段，必须使用is_xxx的方式命名，数据类型是unsigned tinyint（ 1表示是，0表示否）。
+
+说明：任何字段如果为非负数，必须是unsigned。
+
+
+正例： 表达逻辑删除的字段名 is_deleted，1表示删除， 0表示未删除。
+
+2.表名、字段名必须使用小写
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-03-19</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/阿里Java开发手册/">阿里Java开发手册</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/阿里Java开发手册/MySQL数据库/">MySQL数据库</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/03/19/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E9%9D%A2%E8%AF%95%E9%A2%98/">
 				<h2 class="index-title">
 					并发编程面试题
@@ -2552,127 +2757,6 @@ Isolation.REA
 流量削锋 - 可以通过消息队列长度控制请求量；可以缓解短时间内的高并发请求。
 日志处理 - 解决大量日志传输。
 消息通讯 - 消息队列一般都内
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-03-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试题/">面试题</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/03/19/%E9%9D%A2%E8%AF%95%E9%A2%98/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">
-				<h2 class="index-title">
-					MySQL面试题
-				</h2>
-				<div class="index-brief">
-					基础知识为什么要使用数据库
-数据保存在内存
-优点： 存取速度快
-缺点： 数据不能永久保存
-数据保存在文件
-优点： 数据永久保存
-缺点：1）速度比内存操作慢，频繁的IO操作。2）查询数据不方便
-数据保存在数据库
-1）数据永久保存
-2）使用SQL语句，查询方便效率高。
-3）管理数据方便
-什么是SQL？
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-03-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试题/">面试题</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/03/19/%E9%9D%A2%E8%AF%95%E9%A2%98/Java%E5%BC%82%E5%B8%B8%E9%9D%A2%E8%AF%95%E9%A2%98/">
-				<h2 class="index-title">
-					Java异常面试题
-				</h2>
-				<div class="index-brief">
-					简介Java异常是Java提供的一种识别及响应错误的一致性机制。
-Java异常机制可以使程序中异常处理代码和正常业务代码分离，保证程序代码更加优雅，并提高程序健壮性。在有效使用异常的情况下，异常能清晰的回答what, where, why这3个问题：异常类型回答了“什么”被抛出，异常堆栈跟踪回答了“
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-03-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试题/">面试题</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/03/19/%E9%9D%A2%E8%AF%95%E9%A2%98/%E9%9B%86%E5%90%88%E5%AE%B9%E5%99%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">
-				<h2 class="index-title">
-					集合容器面试题
-				</h2>
-				<div class="index-brief">
-					概述集合框架：用于存储数据的容器。
-集合框架是为表示和操作集合而规定的一种统一的标准的体系结构。任何集合框架都包含三大块内容：对外的接口、接口的实现和对集合运算的算法。
-接口：表示集合的抽象数据类型。接口允许我们操作集合时不必关注具体实现，从而达到“多态”。在面向对象编程语言中，接口通常用来形成规范
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-03-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试题/">面试题</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/03/19/%E9%9D%A2%E8%AF%95%E9%A2%98/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">
-				<h2 class="index-title">
-					Java基础面试题
-				</h2>
-				<div class="index-brief">
-					jdk1.5之后的三大版本
-
-Java SE（J2SE，Java 2 Platform Standard Edition，标准版）Java SE 以前称为 J2SE。它允许开发和部署在桌面、服务器、嵌入式环境和实时环境中使用的 Java 应用程序。Java SE 包含了支持 Java Web 服务开
 					...
 				</div>
 			</a>
