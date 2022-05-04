@@ -4,6 +4,9 @@ categories:
 - 公众号文章
 ---
 
+原文：https://mp.weixin.qq.com/s/AuDUJs35dBVLenSuT4RCWQ
+
+
 # 前言
 
 面试题来自：[社招一年半面经分享(含阿里美团头条京东滴滴)](https://mp.weixin.qq.com/s?__biz=MzUyOTg1OTkyMA==&mid=2247484910&idx=1&sn=c686a382915e18bfc7bca152aa8590de&scene=21#wechat_redirect)

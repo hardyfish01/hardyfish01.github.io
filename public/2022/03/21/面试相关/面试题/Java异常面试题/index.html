@@ -1,0 +1,4875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java异常面试题 | 
+	 
+	月伴飞鱼
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/%E5%A4%B4%E5%83%8F.jpg">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="/css/clipboard-use.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://readmore.openwrite.cn/js/readmore.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/jquery.fancybox.min.js"></script>
+
+	
+		
+<script src="/lib/valine/av-3.0.4-min.js"></script>
+
+		
+<script src="/lib/valine/Valine-1.3.10-min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+<script src="/js/clipboard.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">公众号月伴飞鱼</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于我</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="/movie" class="menu-item-link">电影推荐</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="/个人公众号.jpg" class="menu-item-link" target="_blank">我的公众号</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="/neitui" class="menu-item-link">大厂内推</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://tech.meituan.com/" class="menu-item-link" target="_blank">
+				美团技术团队
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://tech.youzan.com/" class="menu-item-link" target="_blank">
+				有赞技术团队
+			</a>
+		</li>
+		<!--<li class="menu-item">
+			<select class="menu-item-link menu-item-select">
+				<option class="menu-item-link"  value="volvo">Volvo</option>
+				<option class="menu-item-link"  value="saab">Saab</option>
+				<option class="menu-item-link"  value="fiat">Fiat</option>
+				<option class="menu-item-link"  value="audi">Audi</option>
+			</select>
+		</li>-->
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="按目录搜索一下">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JVM相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/04/07/JVM%E7%9B%B8%E5%85%B3/GC%E6%97%A5%E5%BF%97/">
+										GC日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Java基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/Java%E5%9F%BA%E7%A1%80/Long%E7%B1%BB/">
+										Long类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/10/Java%E5%9F%BA%E7%A1%80/SPI%E6%9C%BA%E5%88%B6/">
+										SPI机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/Java%E5%9F%BA%E7%A1%80/String%E7%B1%BB/">
+										String类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/05/Java%E5%9F%BA%E7%A1%80/Timer/">
+										Timer
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/16/Java%E5%9F%BA%E7%A1%80/%E4%BC%AA%E5%85%B1%E4%BA%AB/">
+										伪共享
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/Java%E5%9F%BA%E7%A1%80/%E5%85%B3%E9%94%AE%E8%AF%8D/">
+										关键词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/Java%E5%9F%BA%E7%A1%80/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/02/Java%E5%9F%BA%E7%A1%80/%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6/">
+										日志框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/23/Java%E5%9F%BA%E7%A1%80/%E6%B3%9B%E5%9E%8B/">
+										泛型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/Java%E5%9F%BA%E7%A1%80/%E7%BC%96%E8%AF%91%E5%92%8C%E5%8F%8D%E7%BC%96%E8%AF%91/">
+										编译和反编译
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										中间件
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ElasticSearch
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/04/05/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/ELK/">
+										ELK
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">
+										倒排索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%88%86%E8%AF%8D/">
+										分词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/24/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%88%86%E9%A1%B5/">
+										分页
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/27/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+										基本介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/28/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2/">
+										常用查询
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+										数据处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/27/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E7%B4%A2%E5%BC%95/">
+										索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E9%9B%86%E7%BE%A4/">
+										集群
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Netty
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/ByteBuf/">
+										ByteBuf
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/FastThreadLocal/">
+										FastThreadLocal
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Future%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6/">
+										Future回调机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Reactor%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
+										Reactor线程模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Recycler%E5%AF%B9%E8%B1%A1%E6%B1%A0/">
+										Recycler对象池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/">
+										入门案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+										基本架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B/">
+										核心流程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E7%A9%BA%E9%97%B2%E6%A3%80%E6%B5%8B/">
+										空闲检测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81/">
+										编解码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+										零拷贝
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ZooKeeper
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/ACL%E6%9D%83%E9%99%90/">
+										ACL权限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/Leader%E9%80%89%E4%B8%BE/">
+										Leader选举
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/Watch%E6%9C%BA%E5%88%B6/">
+										Watch机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E4%BC%9A%E8%AF%9D%E6%9C%BA%E5%88%B6/">
+										会话机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8FID/">
+										分布式ID
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%BA%8F%E5%88%97%E5%8C%96/">
+										序列化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/">
+										数据同步
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6/">
+										数据文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">
+										数据模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E6%97%A5%E5%BF%97%E6%B8%85%E7%90%86/">
+										日志清理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+										负载均衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E9%9B%86%E7%BE%A4/">
+										集群
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										公众号文章
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/10/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/ArrayList%E5%92%8CLinkedList/">
+										ArrayList和LinkedList
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/09/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/CompletableFuture/">
+										CompletableFuture
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/06/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Disruptor%E6%A1%86%E6%9E%B6/">
+										Disruptor框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/12/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Explain/">
+										Explain
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/06/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/IDEA%E6%8F%92%E4%BB%B6/">
+										IDEA插件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Lambda/">
+										Lambda
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/MySQL%E4%BC%98%E5%8C%96/">
+										MySQL优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/26/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/MySQL%E8%BF%9E%E6%8E%A5/">
+										MySQL连接
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/21/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Pipeline/">
+										Pipeline
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/19/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Spring%E6%89%A9%E5%B1%95%E7%82%B9/">
+										Spring扩展点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/19/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+										Spring设计模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Switch/">
+										Switch
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/06/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/ZooKeeper/">
+										ZooKeeper
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/28/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">
+										二分搜索算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/09/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/">
+										代码优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
+										动态代理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/26/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF/">
+										嵌套循环
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/14/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E6%85%A2%E6%9F%A5%E8%AF%A2/">
+										慢查询
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/13/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E6%95%A3%E5%88%97%E8%A1%A8/">
+										散列表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+										正则表达式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/28/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E6%B7%B1%E5%BA%A6%E5%88%86%E9%A1%B5/">
+										深度分页
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/">
+										线程安全
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/01/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/">
+										缓存一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/20/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E7%BD%91%E7%BB%9CIO%E6%A8%A1%E5%9E%8B/">
+										网络IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/30/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
+										网络基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/02/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9B%86%E5%90%88%E5%8E%BB%E9%87%8D/">
+										集合去重
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分布式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
+										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/17/%E5%88%86%E5%B8%83%E5%BC%8F/ServerLess/">
+										ServerLess
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/25/%E5%88%86%E5%B8%83%E5%BC%8F/ServiceMesh/">
+										ServiceMesh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E5%88%86%E5%B8%83%E5%BC%8F/%E4%B8%80%E8%87%B4%E6%80%A7Hash/">
+										一致性Hash
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
+										服务架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/04/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%AB%98%E5%B9%B6%E5%8F%91%E5%90%8D%E8%AF%8D/">
+										高并发名词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										常用框架
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MyBatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/05/02/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+										基本架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/03/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%8B%A6%E6%88%AA%E5%99%A8/">
+										拦截器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/13/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/">
+										核心原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+										缓存机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spring
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/04/09/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/AOP/">
+										AOP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/26/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/Bean%E6%B3%A8%E5%86%8C/">
+										Bean注册
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										SpringBoot
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/18/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringBoot/SpringBootStarter/">
+										SpringBootStarter
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringBoot/%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/">
+										事务管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringBoot/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
+										跨域问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/03/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringBoot/%E9%87%8D%E8%AF%95%E5%8A%9F%E8%83%BD/">
+										重试功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										SpringCloudAlibaba
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/18/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringCloudAlibaba/Nacos/">
+										Nacos
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/18/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringCloudAlibaba/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+										基本介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/%E6%89%A9%E5%B1%95%E7%82%B9/">
+										扩展点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/%E6%BA%90%E7%A0%81%E7%8E%AF%E5%A2%83/">
+										源码环境
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+										设计模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										并发编程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/05/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
+										CAS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/27/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E5%AF%B9%E8%B1%A1/">
+										共享对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/28/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
+										四大线程池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
+										多线程打印
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/26/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/">
+										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/01/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/">
+										阻塞队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Hexo/">
+										Hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/MAC/">
+										MAC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/10/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/MAT/">
+										MAT
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
+										仓库管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/">
+										依赖管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										正则表达式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/22/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%85%83%E5%AD%97%E7%AC%A6/">
+										元字符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/23/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%88%86%E7%BB%84/">
+										分组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/24/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F/">
+										匹配模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/24/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E6%96%AD%E8%A8%80/">
+										断言
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/23/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%B4%AA%E5%A9%AA%E6%A8%A1%E5%BC%8F%E5%92%8C%E9%9D%9E%E8%B4%AA%E5%A9%AA%E6%A8%A1%E5%BC%8F/">
+										贪婪模式和非贪婪模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/25/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%BD%AC%E4%B9%89/">
+										转义
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										HBase
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/29/%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+										基本介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MySQL
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/14/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/ER%E6%A8%A1%E5%9E%8B/">
+										ER模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/13/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/MySQL%E6%9E%B6%E6%9E%84/">
+										MySQL架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/16/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/SQL%E6%9B%B4%E6%96%B0/">
+										SQL更新
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2/">
+										关联查询
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%88%86%E5%8C%BA%E8%A1%A8/">
+										分区表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/07/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/">
+										字段类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/13/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">
+										存储引擎
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/">
+										数据备份
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E6%97%A5%E5%BF%97%E6%9F%A5%E7%9C%8B/">
+										日志查看
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/13/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E8%8C%83%E5%BC%8F/">
+										范式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/12/17/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/Pipeline/">
+										Pipeline
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/17/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E4%BA%8B%E5%8A%A1/">
+										事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/20/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%86%85%E5%AD%98%E6%9C%BA%E5%88%B6/">
+										内存机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/12/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%88%9D%E8%AF%86Redis/">
+										初识Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/20/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6/">
+										哨兵机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/20/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+										常见问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97/">
+										延时队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/17/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E6%85%A2%E6%9F%A5%E8%AF%A2/">
+										慢查询
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/19/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E6%8C%81%E4%B9%85%E5%8C%96/">
+										持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/12/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/">
+										缓存一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E9%9B%AA%E5%B4%A9%E5%87%BB%E7%A9%BF/">
+										缓存穿透雪崩击穿
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/19/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
+										通信协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/19/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E9%9B%86%E7%BE%A4/">
+										集群
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/01/29/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%8F%B0/">
+										云计算平台
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/28/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+										基本架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/28/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+										基本概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/28/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E9%95%9C%E5%83%8F%E5%92%8C%E5%AE%B9%E5%99%A8/">
+										镜像和容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+										反向代理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+										负载均衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Tomcat
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/Executor%E7%BB%84%E4%BB%B6/">
+										Executor组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/Servlet/">
+										Servlet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/05/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%9C%BA%E5%88%B6/">
+										双亲委托机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/03/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E5%A4%9A%E5%B1%82%E5%AE%B9%E5%99%A8/">
+										多层容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
+										核心组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
+										热部署和热加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/03/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/">
+										生命周期管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/05/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
+										类加载器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/03/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E8%BF%9E%E6%8E%A5%E5%99%A8/">
+										连接器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										消息队列
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										KAFKA
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E4%BD%8D%E7%A7%BB%E4%B8%BB%E9%A2%98/">
+										位移主题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E4%BD%8D%E7%A7%BB%E6%8F%90%E4%BA%A4/">
+										位移提交
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%89%AF%E6%9C%AC%E6%9C%BA%E5%88%B6/">
+										副本机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/07/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+										基本概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E9%AB%98%E5%8F%AF%E7%94%A8/">
+										如何保证高可用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%B9%82%E7%AD%89%E6%80%A7%E5%92%8C%E4%BA%8B%E5%8A%A1/">
+										幂等性和事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%8B%A6%E6%88%AA%E5%99%A8/">
+										拦截器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%8E%A7%E5%88%B6%E5%99%A8/">
+										控制器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%97%A5%E5%BF%97%E5%AD%98%E5%82%A8/">
+										日志存储
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1/">
+										消息丢失
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/07/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E8%B4%B9%E8%80%85%E7%BB%84/">
+										消费者组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/07/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E7%94%9F%E4%BA%A7%E8%80%85%E5%88%86%E5%8C%BA/">
+										生产者分区
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E7%94%9F%E4%BA%A7%E8%80%85%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/">
+										生产者压缩算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/07/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E8%AE%A4%E8%AF%86KAFKA/">
+										认识KAFKA
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/08/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%87%8D%E5%A4%8D%E6%B6%88%E8%B4%B9/">
+										重复消费
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/07/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%87%8D%E5%B9%B3%E8%A1%A1/">
+										重平衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										RabbitMQ
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/04/06/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RabbitMQ/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										RocketMQ
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/04/21/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ/%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+										核心概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/21/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
+										核心组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/23/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ/%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B/">
+										消息类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/23/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ/%E6%B6%88%E8%B4%B9%E6%A8%A1%E5%BC%8F/">
+										消费模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										计算机基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Linux相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+										IO多路复用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Shell
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/Shell/%E5%8F%98%E9%87%8F/">
+										变量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/Shell/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/VIM%E7%BC%96%E8%BE%91%E5%99%A8/">
+										VIM编辑器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+										常见问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/">
+										服务管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">
+										权限管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">
+										用户管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										操作系统相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+										内存管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										常见面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E7%BA%BF%E7%A8%8B/">
+										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84/">
+										计算机结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86/">
+										设备管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E8%BF%9B%E7%A8%8B/">
+										进程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据结构和算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/B%E6%A0%91%E5%92%8CB+%E6%A0%91/">
+										B树和B+树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/LRU%E7%AE%97%E6%B3%95/">
+										LRU算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/">
+										布隆过滤器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+										排序算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E8%B7%B3%E8%B7%83%E8%A1%A8/">
+										跳跃表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/">
+										限流算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										网络相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/02/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/HTTP/">
+										HTTP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/TCP%20IP%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										TCP IP基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/TCP%E5%92%8CUDP/">
+										TCP和UDP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">
+										加密算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										网络基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+										网络安全
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML/">
+										UML
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+										六大设计原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+										工厂方法模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										建造者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										抽象工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+										桥接模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+										模板方法模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+										策略模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										简单工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+										组合模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										装饰者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/">
+										责任链模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										读书笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Effective Java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/12/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E5%AF%B9%E8%B1%A1/">
+										创建和销毁对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+										类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/06/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/">
+										通用方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis设计与实现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/AOF%E6%8C%81%E4%B9%85%E5%8C%96/">
+										AOF持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/09/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/Codis/">
+										Codis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/03/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/RDB%E6%8C%81%E4%B9%85%E5%8C%96/">
+										RDB持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/Sentinel%E6%9C%BA%E5%88%B6/">
+										Sentinel机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/06/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E4%BB%B6/">
+										事件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/10/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E5%8A%A1/">
+										事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/28/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/">
+										压缩列表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%A4%8D%E5%88%B6/">
+										复制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/24/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AD%97%E5%85%B8/">
+										字典
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AF%B9%E8%B1%A1/">
+										对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/27/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/">
+										整数集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E7%AE%80%E5%8D%95%E5%8A%A8%E6%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+										简单动态字符串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E8%B7%B3%E8%B7%83%E8%A1%A8/">
+										跳跃表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E9%93%BE%E8%A1%A8/">
+										链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/09/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E9%9B%86%E7%BE%A4/">
+										集群
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										深入理解JVM虚拟机
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/12/20/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/">
+										内存区域
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/21/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
+										内存回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/21/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
+										内存溢出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/25/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
+										即时编译器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/20/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/">
+										垃圾收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/25/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95/">
+										垃圾收集算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/06/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/21/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
+										类加载机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+										类文件结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/25/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AF%B9%E8%B1%A1/">
+										虚拟机对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										金字塔原理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/12/29/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E9%87%91%E5%AD%97%E5%A1%94%E7%BB%93%E6%9E%84/">
+										为什么要用金字塔结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/01/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E9%87%91%E5%AD%97%E5%A1%94/">
+										如何构建金字塔
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/%E9%87%91%E5%AD%97%E5%A1%94%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/">
+										金字塔内部结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										阿里Java开发手册
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MySQL数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E8%AF%AD%E5%8F%A5/">
+										SQL语句
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/19/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%BB%BA%E8%A1%A8%E8%A7%84%E7%BA%A6/">
+										建表规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/20/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%B4%A2%E5%BC%95%E8%A7%84%E7%BA%A6/">
+										索引规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工程结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84/%E5%BA%94%E7%94%A8%E5%88%86%E5%B1%82/">
+										应用分层
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										异常日志
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E5%BC%82%E5%B8%B8%E6%97%A5%E5%BF%97/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+										异常处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编程规约
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/OOP%E8%A7%84%E7%BA%A6/">
+										OOP规约
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/%E5%91%BD%E5%90%8D%E9%A3%8E%E6%A0%BC/">
+										命名风格
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89/">
+										常量定义
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/16/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/%E5%B9%B6%E5%8F%91%E5%A4%84%E7%90%86/">
+										并发处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/17/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
+										控制语句
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%98%BF%E9%87%8CJava%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/%E9%9B%86%E5%90%88%E5%A4%84%E7%90%86/">
+										集合处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										面试相关
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										资料分享
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/04/10/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/MySQL/">
+										MySQL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/30/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/Spring%20Cloud%20Alibaba/">
+										Spring Cloud Alibaba
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/30/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/SpringBoot/">
+										SpringBoot
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/10/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">
+										并发编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/04/16/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/">
+										面试资料
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										面试题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/JVM%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										JVM面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										Java基础面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/Java%E5%BC%82%E5%B8%B8%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										Java异常面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										MyBatis面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/MySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										MySQL面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/Netty%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										Netty面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/Redis%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										Redis面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/SpringBoot%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										SpringBoot面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/SpringCloud%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										SpringCloud面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										SpringMVC面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										Spring面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/ZooKeeper%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										ZooKeeper面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										并发编程面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										消息队列面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/%E9%9B%86%E5%90%88%E5%AE%B9%E5%99%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										集合容器面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										面试算法
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										LeetCode
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/">
+										100相同的树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/27/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/1014%E6%9C%80%E4%BD%B3%E8%A7%82%E5%85%89%E7%BB%84%E5%90%88/">
+										1014最佳观光组合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										101对称二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/102%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										102二叉树的层序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/104%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/">
+										104二叉树的最大深度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/110%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										110平衡二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/">
+										112路径总和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/21/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/1137%E7%AC%ACN%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
+										1137第N个泰波那契数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8CII/">
+										113路径总和II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/1143%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/">
+										1143最长公共子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/11%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
+										11盛最多水的容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/">
+										121买卖股票的最佳时机
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/122%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII/">
+										122买卖股票的最佳时机II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/125%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/">
+										125验证回文串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/129%E6%B1%82%E6%A0%B9%E8%8A%82%E7%82%B9%E5%88%B0%E5%8F%B6%E8%8A%82%E7%82%B9%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/">
+										129求根节点到叶节点数字之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/136%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
+										136只出现一次的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/13%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/">
+										13罗马数字转整数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/">
+										141环形链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/">
+										142环形链表II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/143%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/">
+										143重排链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/144%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										144二叉树的前序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										145二叉树的后序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/146LRU%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+										146LRU缓存机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/148%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/">
+										148排序链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/14%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/">
+										14最长公共前缀
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/26/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/152%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84/">
+										152乘积最大子数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/155%E6%9C%80%E5%B0%8F%E6%A0%88/">
+										155最小栈
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/15%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										15三数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/16.06%E6%9C%80%E5%B0%8F%E5%B7%AE/">
+										16.06最小差
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8/">
+										160相交链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/09/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/162%E5%AF%BB%E6%89%BE%E5%B3%B0%E5%80%BC/">
+										162寻找峰值
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/">
+										169多数元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/30/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										16最接近的三数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/17.14%E6%9C%80%E5%B0%8FK%E4%B8%AA%E6%95%B0/">
+										17.14最小K个数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/18%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										18四数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/">
+										198打家劫舍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/">
+										199二叉树的右视图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/19%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9/">
+										19删除链表的倒数第N个节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										1两数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
+										206反转链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
+										20有效的括号
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/23/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/213%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8DII/">
+										213打家劫舍II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/215%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0/">
+										215数组中的第K个最大元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/05/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/217%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/">
+										217存在重复元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/">
+										21合并两个有序链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										226翻转二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/229%E6%B1%82%E4%BC%97%E6%95%B0II/">
+										229求众数II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/06/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/">
+										230二叉搜索树中第K小的元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/234%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/">
+										234回文链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/07/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/237%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/">
+										237删除链表中的节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5II/">
+										240搜索二维矩阵II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/24%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/">
+										24两两交换链表中的节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/257%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84/">
+										257二叉树的所有路径
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/26%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/">
+										26删除排序数组中的重复项
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/27%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">
+										27移除元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
+										2两数相加
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/300%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/">
+										300最长上升子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/31%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/">
+										31下一个排列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/322%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/">
+										322零钱兑换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/328%E5%A5%87%E5%81%B6%E9%93%BE%E8%A1%A8/">
+										328奇偶链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/">
+										33搜索旋转排序数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/344%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+										344反转字符串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/25/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/371%E4%B8%A4%E6%95%B4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										371两整数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/3%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/">
+										3无重复字符的最长子串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/415%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/">
+										415字符串相加
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/25/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/45%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8FII/">
+										45跳跃游戏II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/46%E5%85%A8%E6%8E%92%E5%88%97/">
+										46全排列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/470%E7%94%A8Rand7()%E5%AE%9E%E7%8E%B0Rand10()/">
+										470用Rand7()实现Rand10()
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/509%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
+										509斐波那契数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/50%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/">
+										50第一个只出现一次的字符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/53%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/">
+										53最大子序和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/543%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">
+										543二叉树的直径
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/">
+										54螺旋矩阵
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/24/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/">
+										55跳跃游戏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/22/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/572%E5%8F%A6%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E5%AD%90%E6%A0%91/">
+										572另一棵树的子树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/5%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">
+										5最长回文子串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/637%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%B9%B3%E5%9D%87%E5%80%BC/">
+										637二叉树的层平均值
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/64%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C/">
+										64最小路径和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/03/26/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/66%E5%8A%A0%E4%B8%80/">
+										66加一
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/">
+										674最长连续递增序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/69X%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/">
+										69X的平方根
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/704%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+										704二分查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/22/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/70%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+										70爬楼梯
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/22/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/746%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+										746使用最小花费爬楼梯
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/75%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/">
+										75颜色分类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/78%E5%AD%90%E9%9B%86/">
+										78子集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/7%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/">
+										7整数反转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/83%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/">
+										83删除排序链表中的重复元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/88%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/">
+										88合并两个有序数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/90%E5%AD%90%E9%9B%86II/">
+										90子集II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/92%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/">
+										92反转链表II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/94%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										94二叉树的中序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+										98验证二叉搜索树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/28/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/9%E5%9B%9E%E6%96%87%E6%95%B0/">
+										9回文数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										剑指OFFER
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/10II%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/">
+										10II青蛙跳台阶问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/15%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">
+										15二进制中1的个数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/">
+										18删除链表的节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/21%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/">
+										21调整数组顺序使奇数位于偶数前面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E8%8A%82%E7%82%B9/">
+										22链表中倒数第K个节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
+										24反转链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/25%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/">
+										25合并两个排序的链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/26%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/">
+										26树的子结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/27%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/">
+										27二叉树的镜像
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/31%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/">
+										31栈的压入、弹出序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/32III%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91III/">
+										32III从上到下打印二叉树III
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/32II%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91II/">
+										32II从上到下打印二叉树II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/33%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/">
+										33二叉搜索树的后序遍历序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/39%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/">
+										39数组中出现次数超过一半的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/3%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/">
+										3数组中重复的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/41%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">
+										41数据流中的中位数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/42%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/">
+										42连续子数组的最大和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/4%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">
+										4二维数组中的查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/52%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/">
+										52两个链表的第一个公共节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/54%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84K%E5%A4%A7%E8%8A%82%E7%82%B9/">
+										54二叉搜索树的K大节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/55I%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6/">
+										55I二叉树的深度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/63%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6/">
+										63股票的最大利润
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/65%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/">
+										65不用加减乘除做加法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/68II%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">
+										68II二叉树的最近公共祖先
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/68I%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">
+										68I二叉搜索树的最近公共祖先
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/6%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/">
+										6从尾到头打印链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/01/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/9%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
+										9用两个栈实现队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Java异常面试题
+</h1>
+<div class="article-meta">
+	<span>月伴飞鱼</span>
+	<span>2022-03-21 09:17:45</span>
+    
+		<div id="article-categories">
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/面试相关/">面试相关</a>
+						
+							>
+						
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/面试相关/面试题/">面试题</a>
+						
+                    </span>
+                
+            
+		</div>
+    
+</div>
+
+<div id="container" class = "content999">
+	<div id="article-content">
+		<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Java异常是Java提供的一种识别及响应错误的一致性机制。</p>
+<p>Java异常机制可以使程序中异常处理代码和正常业务代码分离，保证程序代码更加优雅，并提高程序健壮性。在有效使用异常的情况下，异常能清晰的回答what, where, why这3个问题：异常类型回答了“什么”被抛出，异常堆栈跟踪回答了“在哪”抛出，异常信息回答了“为什么”会抛出。</p>
+<p><strong>Java异常架构</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/f446c760230f460ba1ab388085b96d7c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5pyI5Ly06aOe6bG8,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><strong>Throwable</strong></p>
+<p>Throwable 是 Java 语言中所有错误与异常的超类。</p>
+<p>Throwable 包含两个子类：Error（错误）和 Exception（异常），它们通常用于指示发生了异常情况。</p>
+<p>Throwable 包含了其线程创建时线程执行堆栈的快照，它提供了 printStackTrace() 等接口用于获取堆栈跟踪数据等信息。</p>
+<p><strong>Error（错误）</strong></p>
+<p><strong>定义</strong>：Error 类及其子类。程序中无法处理的错误，表示运行应用程序中出现了严重的错误。</p>
+<p><strong>特点</strong>：此类错误一般表示代码运行时 JVM 出现问题。通常有 Virtual MachineError（虚拟机运行错误）、NoClassDefFoundError（类定义错误）等。比如 OutOfMemoryError：内存不足错误；StackOverflowError：栈溢出错误。此类错误发生时，JVM 将终止线程。</p>
+<p>这些错误是不受检异常，非代码性错误。因此，当此类错误发生时，应用程序不应该去处理此类错误。按照Java惯例，我们是不应该实现任何新的Error子类的！</p>
+<p><strong>Exception（异常）</strong></p>
+<p>程序本身可以捕获并且可以处理的异常。Exception 这种异常又分为两类：运行时异常和编译时异常。</p>
+<p><strong>运行时异常</strong></p>
+<p><strong>定义</strong>：RuntimeException 类及其子类，表示 JVM 在运行期间可能出现的异常。</p>
+<p><strong>特点</strong>：Java 编译器不会检查它。也就是说，当程序中可能出现这类异常时，倘若既”没有通过throws声明抛出它”，也”没有用try-catch语句捕获它”，还是会编译通过。比如NullPointerException空指针异常、ArrayIndexOutBoundException数组下标越界异常、ClassCastException类型转换异常、ArithmeticExecption算术异常。此类异常属于不受检异常，一般是由程序逻辑错误引起的，在程序中可以选择捕获处理，也可以不处理。虽然 Java 编译器不会检查运行时异常，但是我们也可以通过 throws 进行声明抛出，也可以通过 try-catch 对它进行捕获处理。如果产生运行时异常，则需要通过修改代码来进行避免。例如，若会发生除数为零的情况，则需要通过代码避免该情况的发生！</p>
+<p>RuntimeException 异常会由 Java 虚拟机自动抛出并自动捕获（<strong>就算我们没写异常捕获语句运行时也会抛出错误</strong>！！），此类异常的出现绝大数情况是代码本身有问题应该从逻辑上去解决并改进代码。</p>
+<p><strong>编译时异常</strong></p>
+<p><strong>定义</strong>: Exception 中除 RuntimeException 及其子类之外的异常。</p>
+<p><strong>特点</strong>: Java 编译器会检查它。如果程序中出现此类异常，比如 ClassNotFoundException（没有找到指定的类异常），IOException（IO流异常），要么通过throws进行声明抛出，要么通过try-catch进行捕获处理，否则不能通过编译。在程序中，通常不会自定义该类异常，而是直接使用系统提供的异常类。<strong>该异常我们必须手动在代码里添加捕获语句来处理该异常</strong>。</p>
+<p><strong>受检异常与非受检异常</strong></p>
+<p>Java 的所有异常可以分为受检异常（checked exception）和非受检异常（unchecked exception）。</p>
+<p><strong>受检异常</strong></p>
+<p>编译器要求必须处理的异常。正确的程序在运行过程中，经常容易出现的、符合预期的异常情况。一旦发生此类异常，就必须采用某种方式进行处理。<strong>除 RuntimeException 及其子类外，其他的 Exception 异常都属于受检异常</strong>。编译器会检查此类异常，也就是说当编译器检查到应用中的某处可能会此类异常时，将会提示你处理本异常——要么使用try-catch捕获，要么使用方法签名中用 throws 关键字抛出，否则编译不通过。</p>
+<p><strong>非受检异常</strong></p>
+<p>编译器不会进行检查并且不要求必须处理的异常，也就说当程序中出现此类异常时，即使我们没有try-catch捕获它，也没有使用throws抛出该异常，编译也会正常通过。<strong>该类异常包括运行时异常（RuntimeException极其子类）和错误（Error）。</strong></p>
+<p><strong>Java异常关键字</strong></p>
+<p>• <strong>try</strong> – 用于监听。将要被监听的代码(可能抛出异常的代码)放在try语句块之内，当try语句块内发生异常时，异常就被抛出。<br>• <strong>catch</strong> – 用于捕获异常。catch用来捕获try语句块中发生的异常。<br>• <strong>finally</strong> – finally语句块总是会被执行。它主要用于回收在try块里打开的物力资源(如数据库连接、网络连接和磁盘文件)。只有finally块，执行完成之后，才会回来执行try或者catch块中的return或者throw语句，如果finally中使用了return或者throw等终止方法的语句，则就不会跳回执行，直接停止。<br>• <strong>throw</strong> – 用于抛出异常。<br>• <strong>throws</strong> – 用在方法签名中，用于声明该方法可能抛出的异常。</p>
+<p><strong>Java异常处理</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/92399448d7a14885b384305279a56f64.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5pyI5Ly06aOe6bG8,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>Java 通过面向对象的方法进行异常处理，一旦方法抛出异常，系统自动根据该异常对象寻找合适异常处理器（Exception Handler）来处理该异常，把各种不同的异常进行分类，并提供了良好的接口。在 Java 中，每个异常都是一个对象，它是 Throwable 类或其子类的实例。当一个方法出现异常后便抛出一个异常对象，该对象中包含有异常信息，调用这个对象的方法可以捕获到这个异常并可以对其进行处理。Java 的异常处理是通过 5 个关键词来实现的：try、catch、throw、throws 和 finally。</p>
+<p>在Java应用中，异常的处理机制分为声明异常，抛出异常和捕获异常。</p>
+<p><strong>声明异常</strong></p>
+<p>通常，应该捕获那些知道如何处理的异常，将不知道如何处理的异常继续传递下去。传递异常可以在方法签名处使用 <strong>throws</strong> 关键字声明可能会抛出的异常。</p>
+<p>注意</p>
+<ul>
+<li>非检查异常（Error、RuntimeException 或它们的子类）不可使用 throws 关键字来声明要抛出的异常。</li>
+<li>一个方法出现编译时异常，就需要 try-catch/ throws 处理，否则会导致编译错误。</li>
+</ul>
+<p><strong>抛出异常</strong></p>
+<p>如果你觉得解决不了某些异常问题，且不需要调用者处理，那么你可以抛出异常。</p>
+<p>throw关键字作用是在方法内部抛出一个Throwable类型的异常。任何Java代码都可以通过throw语句抛出异常。</p>
+<p><strong>捕获异常</strong></p>
+<p>程序通常在运行之前不报错，但是运行后可能会出现某些未知的错误，但是还不想直接抛出到上一级，那么就需要通过try…catch…的形式进行异常捕获，之后根据不同的异常情况来进行相应的处理。</p>
+<p><strong>如何选择异常类型</strong></p>
+<p>可以根据下图来选择是捕获异常，声明异常还是抛出异常</p>
+<p><img src="https://img-blog.csdnimg.cn/151dd2aa50524af9a55aba0177e91891.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5pyI5Ly06aOe6bG8,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h1 id="处理方式"><a href="#处理方式" class="headerlink" title="处理方式"></a>处理方式</h1><p><strong>直接抛出异常</strong></p>
+<p>通常，应该捕获那些知道如何处理的异常，将不知道如何处理的异常继续传递下去。传递异常可以在方法签名处使用 <strong>throws</strong> 关键字声明可能会抛出的异常。</p>
+<pre><code class="java">private static void readFile(String filePath) throws IOException &#123; 
+  File file = new File(filePath); 
+  String result; 
+  BufferedReader reader = new BufferedReader(new FileReader(file)); 
+  while((result = reader.readLine())!=null) &#123; 
+    System.out.println(result); 
+  &#125; 
+  reader.close(); 
+&#125;
+</code></pre>
+<p><strong>封装异常再抛出</strong></p>
+<p>有时我们会从 catch 中抛出一个异常，目的是为了改变异常的类型。多用于在多系统集成时，当某个子系统故障，异常类型可能有多种，可以用统一的异常类型向外暴露，不需暴露太多内部异常细节。</p>
+<pre><code class="java">private static void readFile(String filePath) throws MyException &#123; 
+  try &#123; 
+    // code 
+  &#125; catch (IOException e) &#123; 
+    MyException ex = new MyException(&quot;read file failed.&quot;); 
+    ex.initCause(e); 
+    throw ex; 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>捕获异常</strong></p>
+<p>在一个 try-catch 语句块中可以捕获多个异常类型，并对不同类型的异常做出不同的处理</p>
+<pre><code class="java">private static void readFile(String filePath) &#123; 
+  try &#123; 
+    // code 
+  &#125; catch (FileNotFoundException e) &#123; 
+    // handle FileNotFoundException 
+  &#125; catch (IOException e)&#123; 
+    // handle IOException 
+  &#125; 
+&#125;
+</code></pre>
+<p>同一个 catch 也可以捕获多种类型异常，用 | 隔开</p>
+<pre><code class="java">private static void readFile(String filePath) &#123; 
+  try &#123; 
+    // code 
+  &#125; catch (FileNotFoundException | UnknownHostException e) &#123; 
+    // handle FileNotFoundException or UnknownHostException 
+  &#125; catch (IOException e)&#123; 
+    // handle IOException 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>自定义异常</strong></p>
+<p>习惯上，定义一个异常类应包含两个构造函数，一个无参构造函数和一个带有详细描述信息的构造函数（Throwable 的 toString 方法会打印这些详细信息，调试时很有用）</p>
+<pre><code class="java">public class MyException extends Exception &#123; 
+  public MyException()&#123; 
+  &#125; 
+  
+  public MyException(String msg)&#123; 
+    super(msg); 
+  &#125; 
+  // ... 
+&#125;
+</code></pre>
+<p><strong>try-catch-finally</strong></p>
+<p>当方法中发生异常，异常处之后的代码不会再执行，如果之前获取了一些本地资源需要释放，则需要在方法正常结束时和 catch 语句中都调用释放本地资源的代码，显得代码比较繁琐，finally 语句可以解决这个问题。</p>
+<pre><code class="java">private static void readFile(String filePath) throws MyException &#123; 
+  File file = new File(filePath); 
+  String result; BufferedReader reader = null; 
+  try &#123; 
+    reader = new BufferedReader(new FileReader(file)); 
+    while((result = reader.readLine())!=null) &#123; 
+      System.out.println(result); 
+    &#125; 
+  &#125; catch (IOException e) &#123; 
+    System.out.println(&quot;readFile method catch block.&quot;); 
+    MyException ex = new MyException(&quot;read file failed.&quot;); 
+    ex.initCause(e); 
+    throw ex; 
+  &#125; finally &#123; 
+    System.out.println(&quot;readFile method finally block.&quot;); 
+    if (null != reader) &#123; 
+      try &#123; 
+        reader.close(); 
+      &#125; catch (IOException e) &#123; 
+        e.printStackTrace(); 
+      &#125; 
+    &#125; 
+  &#125; 
+&#125;
+</code></pre>
+<p>调用该方法时，读取文件时若发生异常，代码会进入 catch 代码块，之后进入 finally 代码块；若读取文件时未发生异常，则会跳过 catch 代码块直接进入 finally 代码块。所以无论代码中是否发生异常，fianlly 中的代码都会执行。</p>
+<p>若 catch 代码块中包含 return 语句，finally 中的代码还会执行吗？将以上代码中的 catch 子句修改如下：</p>
+<pre><code class="java">catch (IOException e) &#123; 
+  System.out.println(&quot;readFile method catch block.&quot;); 
+  return; 
+&#125;
+</code></pre>
+<p>调用 readFile 方法，观察当 catch 子句中调用 return 语句时，finally 子句是否执行</p>
+<pre><code>readFile method catch block. 
+readFile method finally block.
+</code></pre>
+<p>可见，即使 catch 中包含了 return 语句，finally 子句依然会执行。若 finally 中也包含 return 语句，finally 中的 return 会覆盖前面的 return.</p>
+<p><strong>try-with-resource</strong></p>
+<p>上面例子中，finally 中的 close 方法也可能抛出 IOException, 从而覆盖了原始异常。JAVA 7 提供了更优雅的方式来实现资源的自动释放，自动释放的资源需要是实现了 AutoCloseable 接口的类。</p>
+<pre><code class="java">private static void tryWithResourceTest()&#123; 
+  try (Scanner scanner = new Scanner(new FileInputStream(&quot;c:/abc&quot;),&quot;UTF-8&quot;))&#123; 
+    // code 
+  &#125; catch (IOException e)&#123; 
+    // handle exception 
+  &#125; 
+&#125;
+</code></pre>
+<p>try 代码块退出时，会自动调用 scanner.close 方法，和把 scanner.close 方法放在 finally 代码块中不同的是，若 scanner.close 抛出异常，则会被抑制，抛出的仍然为原始异常。被抑制的异常会由 addSusppressed 方法添加到原来的异常，如果想要获取被抑制的异常列表，可以调用 getSuppressed 方法来获取。</p>
+<h1 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h1><p><strong>Error 和 Exception 区别是什么？</strong></p>
+<p>Error 类型的错误通常为虚拟机相关错误，如系统崩溃，内存不足，堆栈溢出等，编译器不会对这类错误进行检测，JAVA 应用程序也不应对这类错误进行捕获，一旦这类错误发生，通常应用程序会被终止，仅靠应用程序本身无法恢复；</p>
+<p>Exception 类的错误是可以在应用程序中进行捕获并处理的，通常遇到这种错误，应对其进行处理，使应用程序可以继续正常运行。</p>
+<p><strong>运行时异常和一般异常(受检异常)区别是什么？</strong></p>
+<p>运行时异常包括 RuntimeException 类及其子类，表示 JVM 在运行期间可能出现的异常。 Java 编译器不会检查运行时异常。</p>
+<p>受检异常是Exception 中除 RuntimeException 及其子类之外的异常。 Java 编译器会检查受检异常。</p>
+<p><strong>RuntimeException异常和受检异常之间的区别</strong>：是否强制要求调用者必须处理此异常，如果强制要求调用者必须进行处理，那么就使用受检异常，否则就选择非受检异常(RuntimeException)。一般来讲，如果没有特殊的要求，我们建议使用RuntimeException异常。</p>
+<p><strong>JVM 是如何处理异常的？</strong></p>
+<p>在一个方法中如果发生异常，这个方法会创建一个异常对象，并转交给 JVM，该异常对象包含异常名称，异常描述以及异常发生时应用程序的状态。创建异常对象并转交给 JVM 的过程称为抛出异常。可能有一系列的方法调用，最终才进入抛出异常的方法，这一系列方法调用的有序列表叫做调用栈。</p>
+<p>JVM 会顺着调用栈去查找看是否有可以处理异常的代码，如果有，则调用异常处理代码。当 JVM 发现可以处理异常的代码时，会把发生的异常传递给它。如果 JVM 没有找到可以处理该异常的代码块，JVM 就会将该异常转交给默认的异常处理器（默认处理器为 JVM 的一部分），默认异常处理器打印出异常信息并终止应用程序。</p>
+<p><strong>throw 和 throws 的区别是什么？</strong></p>
+<p>Java 中的异常处理除了包括捕获异常和处理异常之外，还包括声明异常和拋出异常，可以通过 throws 关键字在方法上声明该方法要拋出的异常，或者在方法内部通过 throw 拋出异常对象。</p>
+<p><strong>throws 关键字和 throw 关键字在使用上的几点区别如下</strong>：</p>
+<ul>
+<li>throw 关键字用在方法内部，只能用于抛出一种异常，用来抛出方法或代码块中的异常，受查异常和非受查异常都可以被抛出。</li>
+<li>throws 关键字用在方法声明上，可以抛出多个异常，用来标识该方法可能抛出的异常列表。一个方法用 throws 标识了可能抛出的异常列表，调用该方法的方法中必须包含可处理异常的代码，否则也要在方法签名中用 throws 关键字声明相应的异常。</li>
+</ul>
+<p><strong>final、finally、finalize 有什么区别？</strong></p>
+<ul>
+<li>final可以修饰类、变量、方法，修饰类表示该类不能被继承、修饰方法表示该方法不能被重写、修饰变量表示该变量是一个常量不能被重新赋值。</li>
+<li>finally一般作用在try-catch代码块中，在处理异常的时候，通常我们将一定要执行的代码方法finally代码块中，表示不管是否出现异常，该代码块都会执行，一般用来存放一些关闭资源的代码。</li>
+<li>finalize是一个方法，属于Object类的一个方法，而Object类是所有类的父类，Java 中允许使用 finalize()方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。</li>
+</ul>
+<p><strong>NoClassDefFoundError 和 ClassNotFoundException 区别？</strong></p>
+<p>NoClassDefFoundError 是一个 Error 类型的异常，是由 JVM 引起的，不应该尝试捕获这个异常。</p>
+<p>引起该异常的原因是 JVM 或 ClassLoader 尝试加载某类时在内存中找不到该类的定义，该动作发生在运行期间，即编译时该类存在，但是在运行时却找不到了，可能是变异后被删除了等原因导致；</p>
+<p>ClassNotFoundException 是一个受查异常，需要显式地使用 try-catch 对其进行捕获和处理，或在方法签名中用 throws 关键字进行声明。当使用 Class.forName, ClassLoader.loadClass 或 ClassLoader.findSystemClass 动态加载类到内存的时候，通过传入的类路径参数没有找到该类，就会抛出该异常；另一种抛出该异常的可能原因是某个类已经由一个类加载器加载至内存中，另一个加载器又尝试去加载它。</p>
+<p><strong>try-catch-finally 中哪个部分可以省略？</strong></p>
+<p>答：catch 可以省略</p>
+<p><strong>原因</strong></p>
+<p>更为严格的说法其实是：try只适合处理运行时异常，try+catch适合处理运行时异常+普通异常。也就是说，如果你只用try去处理普通异常却不加以catch处理，编译是通不过的，因为编译器硬性规定，普通异常如果选择捕获，则必须用catch显示声明以便进一步处理。而运行时异常在编译时没有如此规定，所以catch可以省略，你加上catch编译器也觉得无可厚非。</p>
+<p>理论上，编译器看任何代码都不顺眼，都觉得可能有潜在的问题，所以你即使对所有代码加上try，代码在运行期时也只不过是在正常运行的基础上加一层皮。但是你一旦对一段代码加上try，就等于显示地承诺编译器，对这段代码可能抛出的异常进行捕获而非向上抛出处理。如果是普通异常，编译器要求必须用catch捕获以便进一步处理；如果运行时异常，捕获然后丢弃并且+finally扫尾处理，或者加上catch捕获以便进一步处理。</p>
+<p>至于加上finally，则是在不管有没捕获异常，都要进行的“扫尾”处理。</p>
+<p><strong>try-catch-finally 中，如果 catch 中 return 了，finally 还会执行吗？</strong></p>
+<p>答：会执行，在 return 前执行。</p>
+<p><strong>注意</strong>：在 finally 中改变返回值的做法是不好的，因为如果存在 finally 代码块，try中的 return 语句不会立马返回调用者，而是记录下返回值待 finally 代码块执行完毕之后再向调用者返回其值，然后如果在 finally 中修改了返回值，就会返回修改后的值。显然，在 finally 中返回或者修改返回值会对程序造成很大的困扰，C#中直接用编译错误的方式来阻止程序员干这种龌龊的事情，Java 中也可以通过提升编译器的语法检查级别来产生警告或错误。</p>
+<p><strong>代码示例1：</strong></p>
+<pre><code class="java">public static int getInt() &#123; 
+  int a = 10; 
+  try &#123; 
+    System.out.println(a / 0); a = 20; 
+  &#125; catch (ArithmeticException e) &#123; 
+    a = 30; 
+    return a; 
+    /* 
+    * return a 在程序执行到这一步的时候，这里不是return a 而是 return 30；这个返回路径就形成了 
+    * 但是呢，它发现后面还有finally，所以继续执行finally的内容，a=40 
+    * 再次回到以前的路径,继续走return 30，形成返回路径之后，这里的a就不是a变量了，而是常量30 
+    */ 
+  &#125; finally &#123; 
+    a = 40; 
+  &#125; return a; 
+&#125;
+</code></pre>
+<p>执行结果：30</p>
+<p><strong>代码示例2：</strong></p>
+<pre><code class="java">public static int getInt() &#123; 
+  int a = 10; 
+  try &#123; 
+    System.out.println(a / 0); a = 20; 
+  &#125; catch (ArithmeticException e) &#123; 
+    a = 30; return a; 
+  &#125; finally &#123; 
+    a = 40; 
+    //如果这样，就又重新形成了一条返回路径，由于只能通过1个return返回，所以这里直接返回40 
+    return a; 
+  &#125; 
+&#125;
+</code></pre>
+<p>执行结果：40</p>
+<p><strong>类 ExampleA 继承 Exception，类 ExampleB 继承ExampleA。</strong></p>
+<p>有如下代码片断：</p>
+<pre><code class="java">try &#123; 
+  throw new ExampleB(&quot;b&quot;) 
+  &#125; catch（ExampleA e）&#123; 
+  System.out.println(&quot;ExampleA&quot;); 
+&#125; catch（Exception e）&#123; 
+  System.out.println(&quot;Exception&quot;); 
+&#125;
+</code></pre>
+<p>请问执行此段代码的输出是什么？</p>
+<p><strong>答</strong>：</p>
+<p>输出：ExampleA。（根据里氏代换原则[能使用父类型的地方一定能使用子类型]，抓取 ExampleA 类型异常的 catch 块能够抓住 try 块中抛出的 ExampleB 类型的异常）</p>
+<p>面试题 - 说出下面代码的运行结果。（此题的出处是《Java 编程思想》一书）</p>
+<pre><code class="java">class Annoyance extends Exception &#123; 
+&#125; 
+
+class Sneeze extends Annoyance &#123; 
+&#125; 
+
+class Human &#123; 
+  public static void main(String[] args) throws Exception &#123; 
+    try &#123; 
+      try &#123; 
+        throw new Sneeze(); 
+      &#125; catch ( Annoyance a ) &#123; 
+        System.out.println(&quot;Caught Annoyance&quot;); 
+        throw a; 
+      &#125; 
+    &#125; catch ( Sneeze s ) &#123; 
+      System.out.println(&quot;Caught Sneeze&quot;); 
+      return ; 
+    &#125; finally &#123; 
+      System.out.println(&quot;Hello World!&quot;); 
+    &#125; 
+  &#125; 
+&#125;
+</code></pre>
+<p>结果</p>
+<pre><code>Caught Annoyance 
+Caught Sneeze 
+Hello World!
+</code></pre>
+<p><strong>常见的 RuntimeException 有哪些？</strong></p>
+<ul>
+<li>ClassCastException(类转换异常)</li>
+<li>IndexOutOfBoundsException(数组越界)</li>
+<li>NullPointerException(空指针)</li>
+<li>ArrayStoreException(数据存储异常，操作数组时类型不一致)</li>
+<li>还有IO操作的BufferOverflowException异常</li>
+</ul>
+<p><strong>Java常见异常有哪些</strong></p>
+<p>java.lang.IllegalAccessError：违法访问错误。当一个应用试图访问、修改某个类的域（Field）或者调用其方法，但是又违反域或方法的可见性声明，则抛出该异常。</p>
+<p>java.lang.InstantiationError：实例化错误。当一个应用试图通过Java的new操作符构造一个抽象类或者接口时抛出该异常.</p>
+<p>java.lang.OutOfMemoryError：内存不足错误。当可用内存不足以让Java虚拟机分配给一个对象时抛出该错误。</p>
+<p>java.lang.StackOverflowError：堆栈溢出错误。当一个应用递归调用的层次太深而导致堆栈溢出或者陷入死循环时抛出该错误。</p>
+<p>java.lang.ClassCastException：类造型异常。假设有类A和B（A不是B的父类或子类），O是A的实例，那么当强制将O构造为类B的实例时抛出该异常。该异常经常被称为强制类型转换异常。</p>
+<p>java.lang.ClassNotFoundException：找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。</p>
+<p>java.lang.ArithmeticException：算术条件异常。譬如：整数除零等。</p>
+<p>java.lang.ArrayIndexOutOfBoundsException：数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出。</p>
+<p>java.lang.IndexOutOfBoundsException：索引越界异常。当访问某个序列的索引值小于0或大于等于序列大小时，抛出该异常。</p>
+<p>java.lang.InstantiationException：实例化异常。当试图通过newInstance()方法创建某个类的实例，而该类是一个抽象类或接口时，抛出该异常。</p>
+<p>java.lang.NoSuchFieldException：属性不存在异常。当访问某个类的不存在的属性时抛出该异常。</p>
+<p>java.lang.NoSuchMethodException：方法不存在异常。当访问某个类的不存在的方法时抛出该异常。</p>
+<p>java.lang.NullPointerException：空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等。</p>
+<p>java.lang.NumberFormatException：数字格式异常。当试图将一个String转换为指定的数字类型，而该字符串确不满足数字类型要求的格式时，抛出该异常。</p>
+<p>java.lang.StringIndexOutOfBoundsException：字符串索引越界异常。当使用索引值访问某个字符串中的字符，而该索引值小于0或大于等于序列大小时，抛出该异常。</p>
+<h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><p><strong>在 finally 块中清理资源或者使用 try-with-resource 语句</strong></p>
+<p>当使用类似InputStream这种需要使用后关闭的资源时，一个常见的错误就是在try块的最后关闭资源。</p>
+<pre><code class="java">public void doNotCloseResourceInTry() &#123; 
+  FileInputStream inputStream = null; 
+  try &#123; 
+    File file = new File(&quot;./tmp.txt&quot;); 
+    inputStream = new FileInputStream(file); 
+    // use the inputStream to read a file 
+    // do NOT do this 
+    inputStream.close(); 
+  &#125; catch (FileNotFoundException e) &#123; 
+    log.error(e); 
+  &#125; catch (IOException e) &#123; 
+    log.error(e); 
+  &#125; 
+&#125;
+</code></pre>
+<p>问题就是，只有没有异常抛出的时候，这段代码才可以正常工作。try 代码块内代码会正常执行，并且资源可以正常关闭。但是，使用 try 代码块是有原因的，一般调用一个或多个可能抛出异常的方法，而且，你自己也可能会抛出一个异常，这意味着代码可能不会执行到 try 代码块的最后部分。结果就是，你并没有关闭资源。</p>
+<p>所以，你应该把清理工作的代码放到 finally 里去，或者使用 try-with-resource 特性。</p>
+<p><strong>使用 finally 代码块</strong></p>
+<p>与前面几行 try 代码块不同，finally 代码块总是会被执行。不管 try 代码块成功执行之后还是你在 catch 代码块中处理完异常后都会执行。因此，你可以确保你清理了所有打开的资源。</p>
+<pre><code class="java">public void closeResourceInFinally() &#123; 
+  FileInputStream inputStream = null; 
+  try &#123; 
+    File file = new File(&quot;./tmp.txt&quot;); 
+    inputStream = new FileInputStream(file); 
+    // use the inputStream to read a file 
+  &#125; catch (FileNotFoundException e) &#123; 
+    log.error(e); 
+  &#125; finally &#123; 
+    if (inputStream != null) &#123; 
+      try &#123; 
+        inputStream.close(); 
+          &#125; catch (IOException e) &#123; 
+        log.error(e); 
+      &#125; 
+    &#125; 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>Java 7 的 try-with-resource 语法</strong></p>
+<p>如果你的资源实现了 AutoCloseable 接口，你可以使用这个语法。大多数的 Java 标准资源都继承了这个接口。当你在 try 子句中打开资源，资源会在 try 代码块执行后或异常处理后自动关闭。</p>
+<pre><code class="java">public void automaticallyCloseResource() &#123; 
+  File file = new File(&quot;./tmp.txt&quot;); 
+  try (FileInputStream inputStream = new FileInputStream(file);) &#123; 
+    // use the inputStream to read a file 
+  &#125; catch (FileNotFoundException e) &#123; 
+    log.error(e); 
+  &#125; catch (IOException e) &#123; 
+    log.error(e); 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>优先明确的异常</strong></p>
+<p>你抛出的异常越明确越好，永远记住，你的同事或者几个月之后的你，将会调用你的方法并且处理异常。</p>
+<p>因此需要保证提供给他们尽可能多的信息。这样你的 API 更容易被理解。你的方法的调用者能够更好的处理异常并且避免额外的检查。</p>
+<p>因此，总是尝试寻找最适合你的异常事件的类，例如，抛出一个 NumberFormatException 来替换一个 IllegalArgumentException 。避免抛出一个不明确的异常。</p>
+<pre><code class="java">public void doNotDoThis() throws Exception &#123; 
+  ... 
+  &#125; 
+
+public void doThis() throws NumberFormatException &#123; 
+  ... 
+  &#125;
+</code></pre>
+<p><strong>对异常进行文档说明</strong></p>
+<p>当在方法上声明抛出异常时，也需要进行文档说明。目的是为了给调用者提供尽可能多的信息，从而可以更好地避免或处理异常。<br>在 Javadoc 添加 @throws 声明，并且描述抛出异常的场景。</p>
+<pre><code class="java">public void doSomething(String input) throws MyBusinessException &#123; 
+  ... 
+  &#125;
+</code></pre>
+<p><strong>使用描述性消息抛出异常</strong></p>
+<p>在抛出异常时，需要尽可能精确地描述问题和相关信息，这样无论是打印到日志中还是在监控工具中，都能够更容易被人阅读，从而可以更好地定位具体错误信息、错误的严重程度等。</p>
+<p>但这里并不是说要对错误信息长篇大论，因为本来 Exception 的类名就能够反映错误的原因，因此只需要用一到两句话描述即可。</p>
+<p>如果抛出一个特定的异常，它的类名很可能已经描述了这种错误。所以，你不需要提供很多额外的信息。一个很好的例子是 NumberFormatException 。当你以错误的格式提供 String 时，它将被 java.lang.Long 类的构造函数抛出。</p>
+<pre><code class="java">try &#123; 
+  new Long(&quot;xyz&quot;); 
+&#125; catch (NumberFormatException e) &#123; 
+  log.error(e); 
+&#125;
+</code></pre>
+<p><strong>优先捕获最具体的异常</strong></p>
+<p>大多数 IDE 都可以帮助你实现这个最佳实践。当你尝试首先捕获较不具体的异常时，它们会报告无法访问的代码块。</p>
+<p>但问题在于，只有匹配异常的第一个 catch 块会被执行。 因此，如果首先捕获 IllegalArgumentException ，则永远不会到达应该处理更具体的 NumberFormatException 的 catch 块，因为它是 IllegalArgumentException 的子类。</p>
+<p>总是优先捕获最具体的异常类，并将不太具体的 catch 块添加到列表的末尾。</p>
+<p>你可以在下面的代码片断中看到这样一个 try-catch 语句的例子。 第一个 catch 块处理所有 NumberFormatException 异常，第二个处理所有非 NumberFormatException 异常的IllegalArgumentException 异常。</p>
+<pre><code class="java">public void catchMostSpecificExceptionFirst() &#123; 
+  try &#123; 
+    doSomething(&quot;A message&quot;); 
+  &#125; catch (NumberFormatException e) &#123; 
+    log.error(e); 
+  &#125; catch (IllegalArgumentException e) &#123; 
+    log.error(e) 
+    &#125; 
+&#125;
+</code></pre>
+<p><strong>不要捕获 Throwable 类</strong></p>
+<p>Throwable 是所有异常和错误的超类。你可以在 catch 子句中使用它，但是你永远不应该这样做！</p>
+<p>如果在 catch 子句中使用 Throwable ，它不仅会捕获所有异常，也将捕获所有的错误。JVM 抛出错误，指出不应该由应用程序处理的严重问题。 典型的例子是 OutOfMemoryError 或者 StackOverflowError 。两者都是由应用程序控制之外的情况引起的，无法处理。</p>
+<p>所以，最好不要捕获 Throwable ，除非你确定自己处于一种特殊的情况下能够处理错误。</p>
+<pre><code class="java">public void doNotCatchThrowable() &#123; 
+  try &#123; 
+    // do something 
+  &#125; catch (Throwable t) &#123; 
+    // don&#39;t do this! 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>不要忽略异常</strong></p>
+<p>很多时候，开发者很有自信不会抛出异常，因此写了一个catch块，但是没有做任何处理或者记录日志。</p>
+<pre><code class="java">public void doNotIgnoreExceptions() &#123; 
+  try &#123; 
+    // do something 
+  &#125; catch (NumberFormatException e) &#123; 
+    // this will never happen 
+  &#125; 
+&#125;
+</code></pre>
+<p>但现实是经常会出现无法预料的异常，或者无法确定这里的代码未来是不是会改动(删除了阻止异常抛出的代码)，而此时由于异常被捕获，使得无法拿到足够的错误信息来定位问题。</p>
+<p>合理的做法是至少要记录异常的信息。</p>
+<pre><code class="java">public void logAnException() &#123; 
+  try &#123; 
+    // do something 
+  &#125; catch (NumberFormatException e) &#123; 
+    log.error(&quot;This should never happen: &quot; + e); 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>包装异常时不要抛弃原始的异常</strong></p>
+<p>捕获标准异常并包装为自定义异常是一个很常见的做法。这样可以添加更为具体的异常信息并能够做针对的异常处理。</p>
+<p>在你这样做时，请确保将原始异常设置为原因（注：参考下方代码 NumberFormatException e 中的原始异常 e ）。Exception 类提供了特殊的构造函数方法，它接受一个 Throwable 作为参数。否则，你将会丢失堆栈跟踪和原始异常的消息，这将会使分析导致异常的异常事件变得困难。</p>
+<pre><code class="java">public void wrapException(String input) throws MyBusinessException &#123; 
+  try &#123; 
+    // do something 
+  &#125; catch (NumberFormatException e) &#123; 
+    throw new MyBusinessException(&quot;A message that describes the error.&quot;, e); 
+  &#125; 
+&#125;
+</code></pre>
+<p><strong>不要使用异常控制程序的流程</strong></p>
+<p>不应该使用异常控制应用的执行流程，例如，本应该使用if语句进行条件判断的情况下，你却使用异常处理，这是非常不好的习惯，会严重影响应用的性能。</p>
+<p><strong>使用标准异常</strong></p>
+<p>如果使用内建的异常可以解决问题，就不要定义自己的异常。Java API 提供了上百种针对不同情况的异常类型，在开发中首先尽可能使用 Java API 提供的异常，如果标准的异常不能满足你的要求，这时候创建自己的定制异常。尽可能得使用标准异常有利于新加入的开发者看懂项目代码。</p>
+<p><strong>异常会影响性能</strong></p>
+<p>异常处理的性能成本非常高，每个 Java 程序员在开发时都应牢记这句话。创建一个异常非常慢，抛出一个异常又会消耗1~5ms，当一个异常在应用的多个层级之间传递时，会拖累整个应用的性能。</p>
+<ul>
+<li>仅在异常情况下使用异常；</li>
+<li>在可恢复的异常情况下使用异常；</li>
+</ul>
+<p>尽管使用异常有利于 Java 开发，但是在应用中最好不要捕获太多的调用栈，因为在很多情况下都不需要打印调用栈就知道哪里出错了。因此，异常消息应该提供恰到好处的信息。</p>
+
+	</div>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Java基础面试题
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2022/03/21/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                MyBatis面试题
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+ 
+	    const btw = new BTWPlugin();
+	    btw.init({
+	        id: 'container',
+	        blogId: '22377-1651587209685-819',
+	        name: '月伴飞鱼',
+	        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
+	        keyword: '验证码',
+	    });
+	
+</script>
+
+<script>
+
+    document.oncontextmenu=new Function("event.returnValue=false");
+	document.onselectstart=new Function("event.returnValue=false");
+
+	
+	
+</script>
+
+<script>
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'container',
+        blogId: '22377-1651587209685-819',
+        name: '月伴飞鱼',
+        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
+        keyword: '验证码',
+    });
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">月伴飞鱼</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			PV 180986
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			UV 10079
+		</span>
+	
+	<br>
+	微信搜索 <a href="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/个人公众号.jpg" target="_blank">月伴飞鱼</a> 关注我
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

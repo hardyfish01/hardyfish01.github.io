@@ -15,11 +15,11 @@ valine:
     # 评论
     enableComment: false 
     # 阅读量
-    enableCounter: true
+    enableCounter: false
     # valine appID
-    appID: 5d5IGicy3WQ8uqBfGvRuypK2-gzGzoHsz
+    appID: QLuwMMF7dvcWXkpd6Udvhb9h-gzGzoHsz
     # valine appKey
-    appKey: EiJ6YAPw8XDP9qDC2vqelquy
+    appKey: n6nrOOuITdpIOEIRBK3QQ33O
     placeholder: 请输入评论
     avatar: retro
 

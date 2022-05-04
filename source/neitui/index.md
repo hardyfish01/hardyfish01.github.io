@@ -13,13 +13,7 @@ date: 2020-12-03 11:29:32
 
 **手机端**
 
-方式一：用手机扫下面的二维码，进入内推系统；
-
-<img src="https://img-blog.csdnimg.cn/f5eba0407a7e459fb8195999c9dfd0b4.png" style="zoom:25%;" />
-
-<img src="https://img-blog.csdnimg.cn/d2f7745d86b64c1aacab6d89dc93d755.png" style="zoom:32%;" />
-
-方式二：用手机点击此处链接，用手机浏览器进入内推系统：
+用手机点击此处链接，用手机浏览器进入内推系统：
 
 https://campus.meituan.com/bole/wechat?staffSsoId=5236707&appKey=hiring-campus-portal；
 

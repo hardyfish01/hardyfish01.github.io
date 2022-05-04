@@ -100,6 +100,59 @@ source ~/.bash_profile
 java -version
 ```
 
+**多JDK版本切换**
+
+Oracle JDK12： https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html
+
+系统中默认安装位置：`/Library/Java/JavaVirtualMachines/`
+
+```
+sudo tar -zxf  openjdk-12_osx-x64_bin.tar.gz -C /Library/Java/JavaVirtualMachines/
+```
+
+验证是否安装成功：
+
+```
+ java -version
+```
+
+查看所有JDK的在系统中默认的安装位置：
+
+```
+/usr/libexec/java_home  -V
+```
+
+查看指定版本JDK在系统中默认安装位置：
+
+```
+/usr/libexec/java_home -v 9
+```
+
+手动切换JDK版本
+
+通过修改` ~/.bash_profile`文件修改JAVA_HOME
+
+```
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+export JAVA_10_HOME=$(/usr/libexec/java_home -v10)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java9='export JAVA_HOME=$JAVA_9_HOME'
+alias java10='export JAVA_HOME=$JAVA_10_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+#默认是Java 11
+```
+
+执行下面命令，让文件生效
+
+```
+source ~/.bash_profile
+```
+
+切换JDK版本就执行对应命令别名，比如，我要切换成JDK9，就执行一下java9就可以了。
+
 # Maven安装
 
 > 1.下载：
@@ -143,4 +196,3 @@ iTerm2下载地址：https://iterm2.com/downloads.html
 iTerm2 最常用的主题是 Solarized Dark theme，下载地址：[http://ethanschoonover.com/solarized](https://links.jianshu.com/go?to=http%3A%2F%2Fethanschoonover.com%2Fsolarized)
 
 打开 Preferences 配置界面，然后`Profiles -> Colors -> Color Presets`，在下拉列表中选择 Import，选择刚才解压的`solarized->iterm2-colors-solarized->Solarized Dark.itermcolors`文件，导入成功后，在 Color Presets下选择 Solarized Dark 主题。
-
