@@ -134,8 +134,35 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/CMS%E6%94%B6%E9%9B%86%E5%99%A8/">
+										CMS收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/JVM%E7%9B%B8%E5%85%B3/G1%E6%94%B6%E9%9B%86%E5%99%A8/">
+										G1收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/GC%E6%97%A5%E5%BF%97/">
 										GC日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
+										元空间
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2562,6 +2589,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%85%B3%E9%94%AE%E8%AF%8D/">
 										关键词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
+										反射
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5401,6 +5437,166 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+				<h2 class="index-title">
+					基本概念
+				</h2>
+				<div class="index-brief">
+					Docker 要做的就是把各种软件打包成一个集装箱（镜像），然后分发，且在运行的时候可以相互隔离。
+Docker 是利用 Linux 的 Namespace 、Cgroups 和联合文件系统三大机制来保证实现的
+
+使用 Namespace 做主机名、网络、PID 等资源的隔离
+
+使用 Cgroups
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E9%95%9C%E5%83%8F%E5%92%8C%E5%AE%B9%E5%99%A8/">
+				<h2 class="index-title">
+					镜像和容器
+				</h2>
+				<div class="index-brief">
+					镜像Docker 镜像是由一系列镜像层（layer）组成的，每一层代表了镜像构建过程中的一次提交。
+分层的结构使得 Docker 镜像非常轻量，每一层根据镜像的内容都有一个唯一的 ID 值，当不同的镜像之间有相同的镜像层时，便可以实现不同的镜像之间共享镜像层的效果。
+
+Docker 镜像是静态的分层
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+				<h2 class="index-title">
+					反向代理
+				</h2>
+				<div class="index-brief">
+					正向代理的概念：
+正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。
+这个过程当中客户端需要知道代理服务器地址，并配置连接。
+
+
+反向代理的概念：
+反向代理是指客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Nginx/">Nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+				<h2 class="index-title">
+					基础知识
+				</h2>
+				<div class="index-brief">
+					Nginx是一个高性能的HTTP和反向代理Web服务器，同时也提供了 IMAP&#x2F;POP3&#x2F;SMTP服务，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用。
+高性能原因
+Nginx采用了Linux的Epoll模型，Epoll模型基于事件驱动机制，它可以监控多个事件
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Nginx/">Nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
 				<h2 class="index-title">
 					负载均衡
@@ -6022,172 +6218,6 @@ Server层包括连接器、查询缓存、分析器、优化器、执行器等�
 
 
 在 MySQL 中，如果存储引擎是 MyISAM，那么在 data 目录下会看到 3 类文件：.frm、.myi、.myd，作用如下：
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/">
-				<h2 class="index-title">
-					字段类型
-				</h2>
-				<div class="index-brief">
-					整数类型
-整数类型一共有5种，包括TINYINT、SMALLINT、MEDIUMINT、INT（INTEGER）和BIGINT，它们的区别如下表所示：
-
-
-浮点数类型和定点数类型
-MySQL支持的浮点数类型，分别是FLOAT、DOUBLE、REAL。
-
-FLOAT表示单精度浮点数；
-DOUBLE表示
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">
-				<h2 class="index-title">
-					存储引擎
-				</h2>
-				<div class="index-brief">
-					InnoDB体系架构
-InnoDB主要包括了内存池、后台线程以及存储文件。
-
-内存池又是由多个内存块组成的，主要包括缓存磁盘数据、redo log缓冲等；
-
-后台线程则包括了Master Thread、IO Thread以及Purge Thread等；
-
-存储文件一般包括表结构文件（.frm）、共享
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/">
-				<h2 class="index-title">
-					数据备份
-				</h2>
-				<div class="index-brief">
-					MySQL的数据备份有2种，一种是物理备份，通过把数据文件复制出来，达到备份的目的；另外一种是逻辑备份，通过把描述数据库结构和内容的信息保存起来，达到备份的目的。
-逻辑备份这种方式是免费的，广泛得到使用；而物理备份的方式需要收费，用得比较少。
-如何备份数据库中的表？
-使用mysqldump备份数据库
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E6%97%A5%E5%BF%97%E6%9F%A5%E7%9C%8B/">
-				<h2 class="index-title">
-					日志查看
-				</h2>
-				<div class="index-brief">
-					通用查询日志
-通用查询日志记录了所有用户的连接开始时间和截止时间，以及发给MySQL数据库服务器的所有SQL指令。
-查询一下通用查询日志的状态：
-mysql&gt; SHOW VARIABLES LIKE &#39;%general%&#39;;
-+------------------+------
 					...
 				</div>
 			</a>

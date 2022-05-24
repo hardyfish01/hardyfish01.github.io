@@ -134,8 +134,35 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/CMS%E6%94%B6%E9%9B%86%E5%99%A8/">
+										CMS收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/JVM%E7%9B%B8%E5%85%B3/G1%E6%94%B6%E9%9B%86%E5%99%A8/">
+										G1收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/GC%E6%97%A5%E5%BF%97/">
 										GC日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
+										元空间
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2562,6 +2589,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%85%B3%E9%94%AE%E8%AF%8D/">
 										关键词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
+										反射
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5401,6 +5437,166 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+				<h2 class="index-title">
+					基本概念
+				</h2>
+				<div class="index-brief">
+					Docker 要做的就是把各种软件打包成一个集装箱（镜像），然后分发，且在运行的时候可以相互隔离。
+Docker 是利用 Linux 的 Namespace 、Cgroups 和联合文件系统三大机制来保证实现的
+
+使用 Namespace 做主机名、网络、PID 等资源的隔离
+
+使用 Cgroups
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E9%95%9C%E5%83%8F%E5%92%8C%E5%AE%B9%E5%99%A8/">
+				<h2 class="index-title">
+					镜像和容器
+				</h2>
+				<div class="index-brief">
+					镜像Docker 镜像是由一系列镜像层（layer）组成的，每一层代表了镜像构建过程中的一次提交。
+分层的结构使得 Docker 镜像非常轻量，每一层根据镜像的内容都有一个唯一的 ID 值，当不同的镜像之间有相同的镜像层时，便可以实现不同的镜像之间共享镜像层的效果。
+
+Docker 镜像是静态的分层
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+				<h2 class="index-title">
+					反向代理
+				</h2>
+				<div class="index-brief">
+					正向代理的概念：
+正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。
+这个过程当中客户端需要知道代理服务器地址，并配置连接。
+
+
+反向代理的概念：
+反向代理是指客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Nginx/">Nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+				<h2 class="index-title">
+					基础知识
+				</h2>
+				<div class="index-brief">
+					Nginx是一个高性能的HTTP和反向代理Web服务器，同时也提供了 IMAP&#x2F;POP3&#x2F;SMTP服务，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用。
+高性能原因
+Nginx采用了Linux的Epoll模型，Epoll模型基于事件驱动机制，它可以监控多个事件
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Nginx/">Nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
 				<h2 class="index-title">
 					负载均衡
@@ -5648,177 +5844,10 @@ Catalina的主要任务就是创建Server，它不是直接new一个Server实例
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
-				<h2 class="index-title">
-					热部署和热加载
-				</h2>
-				<div class="index-brief">
-					要在运行的过程中升级Web应用，如果你不想重启系统，实现的方式有两种：热加载和热部署。
-那如何实现热部署和热加载呢？它们跟类加载机制有关，具体来说就是：
-
-热加载的实现方式是Web容器启动一个后台线程，定期检测类文件的变化，如果有变化，就重新加载类，在这个过程中不会清空Session ，一般用在开发
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/">
-				<h2 class="index-title">
-					生命周期管理
-				</h2>
-				<div class="index-brief">
-					
-
-上面这张图描述了组件之间的静态关系，如果想让一个系统能够对外提供服务，我们需要创建、组装并启动这些组件；
-在服务停止的时候，我们还需要释放资源，销毁这些组件，因此这是一个动态的过程。
-
-也就是说，Tomcat需要动态地管理这些组件的生命周期。
-
-Lifecycle接口
-
-这个接口跟生命周期有关。
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
-				<h2 class="index-title">
-					类加载器
-				</h2>
-				<div class="index-brief">
-					Tomcat作为Servlet容器，它负责加载我们的Servlet类，此外它还负责加载Servlet所依赖的JAR包。
-并且Tomcat本身也是一个Java程序，因此它需要加载自己的类和依赖的JAR包。
-Tomcat类加载器的层次结构
-
-
-假如我们使用JVM默认AppClassLoader来加载We
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E8%BF%9E%E6%8E%A5%E5%99%A8/">
-				<h2 class="index-title">
-					连接器
-				</h2>
-				<div class="index-brief">
-					Tomcat要实现2个核心功能：
-
-处理Socket连接，负责网络字节流与Request和Response对象的转化。
-加载和管理Servlet，以及具体处理Request请求。
-
-因此Tomcat设计了两个核心组件连接器（Connector）和容器（Container）来分别做这两件事情。
-连接器
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/22/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/21/">21</a><a class="page-number" href="/archives/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/archives/page/24/">24</a><a class="page-number" href="/archives/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/51/">51</a><a class="extend next" rel="next" href="/archives/page/24/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/22/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/21/">21</a><a class="page-number" href="/archives/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/archives/page/24/">24</a><a class="page-number" href="/archives/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/52/">52</a><a class="extend next" rel="next" href="/archives/page/24/">&gt;</a>
 		
 	</div>
 </div>

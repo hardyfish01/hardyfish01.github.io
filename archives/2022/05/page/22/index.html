@@ -134,8 +134,35 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/CMS%E6%94%B6%E9%9B%86%E5%99%A8/">
+										CMS收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/JVM%E7%9B%B8%E5%85%B3/G1%E6%94%B6%E9%9B%86%E5%99%A8/">
+										G1收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/GC%E6%97%A5%E5%BF%97/">
 										GC日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
+										元空间
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2562,6 +2589,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%85%B3%E9%94%AE%E8%AF%8D/">
 										关键词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
+										反射
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5401,6 +5437,179 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					仓库管理
+				</h2>
+				<div class="index-brief">
+					Maven的依赖是存放在仓库中进行统一管理，使用某依赖时先从本地仓库检索是否有该依赖，如果没有再从远程仓库下载至本地仓库。
+仓库的分类
+本地仓库：从远程仓库下载下来的构件都是存放在本地仓库的，我们在构建项目的时候都是依赖本地仓库构建的。
+&lt;settings&gt;
+    &lt;localR
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/Maven/">Maven</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					依赖管理
+				</h2>
+				<div class="index-brief">
+					依赖范围管理
+依赖范围即引入jar包的作用域，引入时使用&lt;scope&gt;指定
+
+
+依赖的作用域分为以上五种，作用范围如下：
+
+
+例如junit就是test范围：
+&lt;dependency&gt;
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+  &lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/Maven/">Maven</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%88%86%E7%BB%84/">
+				<h2 class="index-title">
+					分组
+				</h2>
+				<div class="index-brief">
+					分组与编号
+括号在正则中可以用于分组，被括号括起来的部分子表达式会被保存成一个子组。
+这里有个时间格式 2020-05-10 20:23:05。假设我们想要使用正则提取出里面的日期和时间。
+
+
+不保存子组
+括号只用于归组，把某个部分当成单个元素，不分配编号，后面不会再进行这部分的引用。
+
+
+
+
+括号
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/正则表达式/">正则表达式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%85%83%E5%AD%97%E7%AC%A6/">
+				<h2 class="index-title">
+					元字符
+				</h2>
+				<div class="index-brief">
+					所谓元字符就是指那些在正则表达式中具有特殊意义的专用字符，元字符是构成正则表达式的基本元件。
+测试工具：https://regex101.com/r/PnzZ4k/1
+特殊单字符
+英文的点表示换行以外的任意单个字符，d 表示任意单个数字，w 表示任意单个数字或字母或下划线，s 表示任意单个空白符。
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/正则表达式/">正则表达式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F/">
 				<h2 class="index-title">
 					匹配模式
@@ -5666,170 +5875,10 @@ Docker 客
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-				<h2 class="index-title">
-					基本概念
-				</h2>
-				<div class="index-brief">
-					Docker 要做的就是把各种软件打包成一个集装箱（镜像），然后分发，且在运行的时候可以相互隔离。
-Docker 是利用 Linux 的 Namespace 、Cgroups 和联合文件系统三大机制来保证实现的
-
-使用 Namespace 做主机名、网络、PID 等资源的隔离
-
-使用 Cgroups
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E9%95%9C%E5%83%8F%E5%92%8C%E5%AE%B9%E5%99%A8/">
-				<h2 class="index-title">
-					镜像和容器
-				</h2>
-				<div class="index-brief">
-					镜像Docker 镜像是由一系列镜像层（layer）组成的，每一层代表了镜像构建过程中的一次提交。
-分层的结构使得 Docker 镜像非常轻量，每一层根据镜像的内容都有一个唯一的 ID 值，当不同的镜像之间有相同的镜像层时，便可以实现不同的镜像之间共享镜像层的效果。
-
-Docker 镜像是静态的分层
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-				<h2 class="index-title">
-					反向代理
-				</h2>
-				<div class="index-brief">
-					正向代理的概念：
-正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。
-这个过程当中客户端需要知道代理服务器地址，并配置连接。
-
-
-反向代理的概念：
-反向代理是指客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Nginx/">Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					Nginx是一个高性能的HTTP和反向代理Web服务器，同时也提供了 IMAP&#x2F;POP3&#x2F;SMTP服务，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用。
-高性能原因
-Nginx采用了Linux的Epoll模型，Epoll模型基于事件驱动机制，它可以监控多个事件
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Nginx/">Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2022/05/page/21/">&lt;</a><a class="page-number" href="/archives/2022/05/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/05/page/20/">20</a><a class="page-number" href="/archives/2022/05/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/archives/2022/05/page/23/">23</a><a class="page-number" href="/archives/2022/05/page/24/">24</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/05/page/51/">51</a><a class="extend next" rel="next" href="/archives/2022/05/page/23/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2022/05/page/21/">&lt;</a><a class="page-number" href="/archives/2022/05/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/05/page/20/">20</a><a class="page-number" href="/archives/2022/05/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/archives/2022/05/page/23/">23</a><a class="page-number" href="/archives/2022/05/page/24/">24</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/05/page/52/">52</a><a class="extend next" rel="next" href="/archives/2022/05/page/23/">&gt;</a>
 		
 	</div>
 </div>

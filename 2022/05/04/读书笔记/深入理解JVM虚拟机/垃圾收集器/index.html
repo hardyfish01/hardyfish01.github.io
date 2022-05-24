@@ -136,8 +136,35 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/CMS%E6%94%B6%E9%9B%86%E5%99%A8/">
+										CMS收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/JVM%E7%9B%B8%E5%85%B3/G1%E6%94%B6%E9%9B%86%E5%99%A8/">
+										G1收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/GC%E6%97%A5%E5%BF%97/">
 										GC日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
+										元空间
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2564,6 +2591,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%85%B3%E9%94%AE%E8%AF%8D/">
 										关键词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
+										反射
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5483,23 +5519,23 @@
 <p>在注重 吞吐量或者处理器资源较为稀缺的场合，都可以优先考虑Parallel Scavenge加Parallel Old收集器这个组合。</p>
 <img src="https://img-blog.csdnimg.cn/81f40d50d7ce4f28a88333ec61dde988.png" style="zoom:50%;" />
 
-<h1 id="CMS"><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h1><p>CMS(Concurrent Mark Sweep)收集器是一种以获取最短回收停顿时间为目标的收集器。</p>
-<p>从名字(包含Mark Sweep)上就可以看出CMS收集器是基于标记-清除算法实现的：</p>
+<h1 id="CMS"><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h1><p>CMS收集器是一种以获取最短回收停顿时间为目标的收集器。</p>
+<p>CMS收集器是基于标记-清除算法实现的：</p>
 <ul>
-<li><p>初始标记(CMS initial mark) </p>
+<li><p>初始标记</p>
 </li>
-<li><p>并发标记(CMS concurrent mark) </p>
+<li><p>并发标记</p>
 </li>
-<li><p>重新标记(CMS remark) </p>
+<li><p>重新标记</p>
 </li>
-<li><p>并发清除(CMS concurrent sweep)</p>
+<li><p>并发清除</p>
 </li>
 </ul>
 <p>其中初始标记、重新标记这两个步骤仍然需要Stop The World。</p>
 <ul>
-<li><p>初始标记仅仅只是标记一下GC Roots能直接关联到的对象，速度很快</p>
+<li><p>初始标记仅仅只是标记一下GC Roots能直接关联到的对象，速度很快。</p>
 </li>
-<li><p>并发标记阶段就是从GC Roots的直接关联对象开始遍历整个对象图的过程，这个过程耗时较长但是不需要停顿用户线程，可以与垃圾收集线程一起并发运行</p>
+<li><p>并发标记阶段就是从GC Roots的直接关联对象开始遍历整个对象图的过程，这个过程耗时较长但是不需要停顿用户线程，可以与垃圾收集线程一起并发运行。</p>
 <p>在这个阶段的执行过程中，可能会产生很多变化：</p>
 <ul>
 <li><p>有些对象，从新生代晋升到了老年代； </p>
@@ -5511,23 +5547,23 @@
 </ul>
 <p>在这个阶段受到影响的老年代对象所对应的卡页，会被标记为 dirty，用于后续重新标记阶段的扫描。</p>
 </li>
-<li><p>重新标记阶段则是为了修正并发标记期间，因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录，这个阶段的停顿时间通常会比初始标记阶段稍长一 些，但也远比并发标记阶段的时间短</p>
+<li><p>重新标记阶段则是为了修正并发标记期间，因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录，这个阶段的停顿时间通常会比初始标记阶段稍长一 些，但也远比并发标记阶段的时间短。</p>
 </li>
-<li><p>并发清除阶段，清理删除掉标记阶段判断的已经死亡的对象，由于不需要移动存活对象，所以这个阶段也是可以与用户线程同时并发的</p>
+<li><p>并发清除阶段，清理删除掉标记阶段判断的已经死亡的对象，由于不需要移动存活对象，所以这个阶段也是可以与用户线程同时并发的。</p>
 </li>
 </ul>
 <p>由于在整个过程中耗时最长的并发标记和并发清除阶段中，垃圾收集器线程都可以与用户线程一 起工作，所以从总体上来说，CMS收集器的<strong>内存回收过程是与用户线程</strong>一起并发执行的。</p>
 <img src="https://img-blog.csdnimg.cn/69374386f15146ddb402650de4f0b71f.png" style="zoom:50%;" />
 
+<blockquote>
 <p>CMS最主要的优点:并发收集、低停顿。</p>
-<p><strong>CMS收集器至少有以下三个明显的 缺点:</strong></p>
+</blockquote>
+<p><strong>三个明显的缺点:</strong></p>
 <ul>
-<li>对处理器资源非常敏感，因为占用了一部分线程(或者说处理器的计算能力)而导致应用程序变慢，降低总吞吐量</li>
+<li>对处理器资源非常敏感，因为占用了一部分线程(或者说处理器的计算能力)而导致应用程序变慢，降低总吞吐量。</li>
 </ul>
 <p><strong>CMS收集器无法处理浮动垃圾</strong></p>
-<p>有可能出现Concurrent Mode Failure失败进而导致另一次完全Stop The World的Full GC的产生，在CMS的并发标记和并发清理阶段，用户线程是还在继续运行的，程序在运行自然就还会伴随有新的垃圾对象不断产生，但这一部分垃圾对象是出现在标记过程结束以后，CM S无法在当次收集中处理掉它们，只好留待下一次垃圾收集时再清理掉。</p>
-<p><strong>这一部分垃圾就称为浮动垃圾</strong></p>
-<p>同样也是由于在垃圾收集阶段用户线程还需要持续运行，那就还需要预留足够内存空间提供给用户线程使用，因此CMS收集器不能像其他收集器那样等待 到老年代几乎完全被填满了再进行收集，必须预留一部分空间供并发收集时的程序运作使用。</p>
+<p>有可能出现Concurrent Mode Failure失败进而导致另一次完全Stop The World的Full GC的产生，在CMS的并发标记和并发清理阶段，用户线程是还在继续运行的，程序在运行自然就还会伴随有新的垃圾对象不断产生，但这一部分垃圾对象是出现在标记过程结束以后，CMS无法在当次收集中处理掉它们，只好留待下一次垃圾收集时再清理掉。</p>
 <p>在JDK 5的默认设置下，CMS收集器当老年代使用了68%的空间后就会被激活，如果 在实际应用中老年代增长并不是太快，可以适当调高参数<code>-XX:CMSInitiatingOccupancyFraction</code>的值 来提高CMS的触发百分比，降低内存回收频率，获取更好的性能。</p>
 <blockquote>
 <p>到了JDK 6时，CMS收集器的启动阈值就已经默认提升至92%。</p>
@@ -5540,13 +5576,16 @@
 <blockquote>
 <p>CMS是一款基于标记-清除算法实现的收集器，会有大量空间碎片产生。</p>
 </blockquote>
-<p>空间碎片过多时，将会给大对象分配带来很大麻烦，往往会出现老年代还有很多剩余空间，但就是无法找 到足够大的连续空间来分配当前对象，而不得不提前触发一次Full GC的情况。</p>
-<p>为了解决这个问题， CMS收集器提供了一个<code>-XX:+UseCMSCompactAtFullCollection</code>开关参数(默认是开启的，此参数从 JDK 9开始废弃)，用于在CMS收集器不得不进行Full GC时开启内存碎片的合并整理过程</p>
-<p><strong>由于这个内存整理必须移动存活对象的。</strong> </p>
-<p>这样停顿时间又会变长，另外一个参数<code>-XX:CM SFullGCsBeforeCompaction</code>(此参数从JDK 9开始废弃)，这个参数的作用是要求CMS收集器在执行过若干次(数量由参数值决定)不整理空间的Full GC之后，下一次进入Full GC前会先进行碎片整理(默认值为0，表示每次进入Full GC时都进行碎片整理)。</p>
+<p>空间碎片过多时，将会给大对象分配带来很大麻烦，往往会出现老年代还有很多剩余空间，但就是无法找到足够大的连续空间来分配当前对象，而不得不提前触发一次Full GC的情况。</p>
+<p>为了解决这个问题， CMS收集器提供了一个<code>-XX:+UseCMSCompactAtFullCollection</code>开关参数(默认是开启的，此参数从 JDK 9开始废弃)，用于在CMS收集器不得不进行Full GC时开启内存碎片的合并整理过程。</p>
+<p><strong>这个内存整理必须移动存活对象的。</strong> </p>
+<p>参数<code>-XX:CM SFullGCsBeforeCompaction</code>(此参数从JDK 9开始废弃)：</p>
+<ul>
+<li>这个参数的作用是要求CMS收集器在执行过若干次不整理空间的Full GC之后，下一次进入Full GC前会先进行碎片整理(默认值为0，表示每次进入Full GC时都进行碎片整理)。</li>
+</ul>
 <h1 id="Garbage-First"><a href="#Garbage-First" class="headerlink" title="Garbage First"></a>Garbage First</h1><p>G1是一款主要面向服务端应用的垃圾收集器。</p>
 <blockquote>
-<p>JDK 9发布之日，G1宣告取代Parallel Scavenge加Parallel Old组合，成为服务端模式下的默认垃圾收集器</p>
+<p>JDK 9发布之日，G1宣告取代Parallel Scavenge加Parallel Old组合，成为服务端模式下的默认垃圾收集器。</p>
 </blockquote>
 <p>G1把连续的Java堆划分为多个大小相等的独立区域(Region)，每一个Region都可以根据需要，扮演新生代的Eden空间、Survivor空间，或者老年代空间：</p>
 <ul>
@@ -5554,7 +5593,7 @@
 </li>
 <li><p>G1认为只要大小超过了一个 Region容量一半的对象即可判定为大对象。</p>
 </li>
-<li><p>每个Region的大小可以通过参数<code>-XX:G1Heap RegionSize</code>设 定，取值范围为1M B~32M B，且应为2的N次幂。</p>
+<li><p>每个Region的大小可以通过参数<code>-XX:G1Heap RegionSize</code>设定，取值范围为1MB~32MB，且应为2的N次幂。</p>
 </li>
 </ul>
 <p>而对于那些超过了整个Region容量的超级大对象， 将会被存放在N个连续的Humongous Region之中，G1的大多数行为都把Humongous Region作为老年代 的一部分来进行看待。</p>
@@ -5563,7 +5602,7 @@
 <p>G1收集器之所以能建立可预测的停顿时间模型，是因为它将Region作为单次回收的最小单元，即每次收集到的内存空间都是Region大小的整数倍，这样可以有计划地避免在整个Java堆中进行全区域的垃圾收集。</p>
 <p>在垃圾收集过程中，G1收集器会记录每个Region的回收耗时。</p>
 </blockquote>
-<p>G1在后台维护一 个优先级列表，每次根据用户设定允许的收集停顿时间(使用参数<code>-XX:MaxGCPauseMillis</code>指定，默认值是200毫秒)，优先处理回收价值收益最大的那些Region。 </p>
+<p>G1在后台维护一个优先级列表，每次根据用户设定允许的收集停顿时间(使用参数<code>-XX:MaxGCPauseMillis</code>指定，默认值是200毫秒)，优先处理回收价值收益最大的那些Region。 </p>
 <p><strong>将Java堆分成多个独立Region后，Region里面存在的跨Region引用对象如何解决?</strong></p>
 <p>使用记忆集避免全堆作为GC Roots扫描，但在G1收集器上记忆集的应用其实要复杂很多，它的每个Region都维护有自己的记忆集，这些记忆集会记录下别的Region 指向自己的指针，并标记这些指针分别在哪些卡页的范围之内。</p>
 <p>G1的记忆集在存储结构的本质上是一种哈希表 ，Key是别的Region的起始地址 ，Value是一个集合 ，里面存储的元素是卡表的索引号 。 </p>
@@ -5573,13 +5612,13 @@
 </blockquote>
 <p><strong>G1收集器的运作过程大致可划分为以下四个步骤:</strong></p>
 <ul>
-<li><p>初始标记:仅仅只是标记一下GC Roots能直接关联到的对象。</p>
+<li><p>初始标记：仅仅只是标记一下GC Roots能直接关联到的对象。</p>
 </li>
-<li><p>并发标记:从GC Root开始对堆中对象进行可达性分析，递归扫描整个堆里的对象图，找出要回收的对象，这阶段耗时较长，但可与用户程序并发执行，当对象图扫描完成以后，还要重新处理SATB记录下的在并发时有引用变动的对象。</p>
+<li><p>并发标记：从GC Root开始对堆中对象进行可达性分析，递归扫描整个堆里的对象图，找出要回收的对象，这阶段耗时较长，但可与用户程序并发执行，当对象图扫描完成以后，还要重新处理SATB记录下的在并发时有引用变动的对象。</p>
 </li>
-<li><p>最终标记:对用户线程做另一个短暂的暂停，用于处理并发阶段结束后仍遗留下来的最后那少量的SATB记录。</p>
+<li><p>最终标记：对用户线程做另一个短暂的暂停，用于处理并发阶段结束后仍遗留下来的最后那少量的SATB记录。</p>
 </li>
-<li><p>筛选回收:负责更新Region的统计数据，对各个<code>Region</code>的回收价值和成本进行排序，根据用户所期望的停顿时间来制定回收计划，可以自由选择任意多个Region 构成回收集，然后把决定回收的那一部分<code>Region</code>的存活对象复制到空的Region中，再清理掉整个旧 Region的全部空间，这里的操作涉及存活对象的移动，是必须<strong>暂停用户线程</strong>，由多条收集器线程并行完成的。</p>
+<li><p>筛选回收：对各个<code>Region</code>的回收价值和成本进行排序，根据用户所期望的停顿时间来制定回收计划，可以自由选择任意多个Region 构成回收集，然后把决定回收的那一部分<code>Region</code>的存活对象复制到空的Region中，再清理掉整个旧 Region的全部空间，这里的操作涉及存活对象的移动，是必须<strong>暂停用户线程</strong>，由多条收集器线程并行完成的。</p>
 </li>
 </ul>
 <img src="https://img-blog.csdnimg.cn/84db616d120a43c0890d320154aca3c4.png" style="zoom:50%;" />
@@ -5588,7 +5627,7 @@
 <p>这种特性有利于程序长时间运行，在程序为大 对象分配内存时不容易因无法找到连续内存空间而提前触发下一次收集。</p>
 <p>目前在小内存应用上CM S的表现大概率仍然要会优于G1，而在大内存应用上G1则大多能发挥其优势，这个优劣势的Java堆容量平衡点通常在6GB至8GB之间。</p>
 <p><strong>在并发标记阶段如何保证收集线程与用户线程互不干扰地运行?</strong></p>
-<p>CM S收集器采用增量更新算法实现，而G1 收集器则是通过原始快照(SATB)算法来实现的。</p>
+<p>CMS收集器采用增量更新算法实现，而G1 收集器则是通过原始快照(SATB)算法来实现的。</p>
 <p><strong>GC模式</strong></p>
 <p>G1中提供了三种模式垃圾回收模式，young gc、mixed gc 和 full gc，在不同的条件下被触发。</p>
 <blockquote>
@@ -5619,13 +5658,13 @@
 <p>mixed gc</p>
 </blockquote>
 <p>当越来越多的对象晋升到老年代old region时，为了避免堆内存被耗尽，虚拟机会触发一个混合的垃圾收集器，即mixed gc，该算法并不是一个old gc，除了回收整个young region，还会回收一部分的old region，可以选择哪些old region进行收集，从而可以对垃圾回收的耗时时间进行控制。</p>
-<p>mixed gc中有一个阈值参数 <code>-XX:InitiatingHeapOccupancyPercent</code>，当老年代使用大小占整个堆大小百分比达到该阈值时，会触发一次mixed gc</p>
+<p>mixed gc中有一个阈值参数 <code>-XX:InitiatingHeapOccupancyPercent</code>，当老年代使用大小占整个堆大小百分比达到该阈值时，会触发一次mixed gc。</p>
 <blockquote>
 <p>full gc</p>
 </blockquote>
 <p>如果对象内存分配速度过快，mixed gc来不及回收，导致老年代被填满，就会触发一次full gc，G1的full gc算法就是单线程执行的serial old gc，会导致异常长时间的暂停时间，需要进行不断的调优，尽可能的避免full gc。</p>
 <p><strong>参数：</strong></p>
-<p>-XX:InitiatingHeapOccupancyPercent，默认值是45%：</p>
+<p>-XX:InitiatingHeapOccupancyPercent，默认值是45%</p>
 <ul>
 <li>老年代占据了堆内存的45%的Region的时候，此时就会尝试触发一个新生代+老年代一起回收的混合回收阶段。</li>
 </ul>
@@ -5637,8 +5676,14 @@
 <ul>
 <li>在混合回收的时候，对Region回收都是基于复制算法进行的，都是把要回收的Region里的存活对象放入其他 Region，然后这个Region中的垃圾对象全部清理掉，这样的话在回收过程就会不断空出来新的Region，一旦空闲出来的Region数量达到了堆内存的5%，此时就会立即停止混合回收，意味着本次混合回收就结束了。</li>
 </ul>
-<h1 id="ZGC"><a href="#ZGC" class="headerlink" title="ZGC"></a>ZGC</h1><p>ZGC是一款在JDK 11中新加入的具有实验性质的低延迟垃圾收集器</p>
-<p>ZGC和Shenandoah的目标是高度相似的，都希望在尽可能对吞吐量影响不太大的前提下，实现在任意堆内存大小下都可以把垃圾收集的停顿时间限制在十毫秒以内的低延迟。</p>
+<h1 id="ZGC"><a href="#ZGC" class="headerlink" title="ZGC"></a>ZGC</h1><p>ZGC是一款在JDK 11中新加入的具有实验性质的低延迟垃圾收集器。</p>
+<p><strong>ZGC 最主要的特点包括：</strong></p>
+<ul>
+<li>GC 最大停顿时间不超过 10ms</li>
+<li>堆内存支持范围广，小至几百 MB 的堆空间，大至 4TB 的超大堆内存（JDK 13 升至 16TB）</li>
+<li>与 G1 相比，应用吞吐量下降不超过 15%</li>
+</ul>
+<p>根据基准测试，在 128G 的大堆下，最大停顿时间只有 1.68ms，远远低于 10ms；和 G1 算法比起来相比，改进非常明显。</p>
 
 	</div>
 </div>
