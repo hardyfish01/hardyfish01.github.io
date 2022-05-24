@@ -61,22 +61,9 @@
 <% } %>
 
 <script>
- <% if (theme.password){ %>
-	    const btw = new BTWPlugin();
-	    btw.init({
-	        id: 'container',
-	        blogId: '22377-1651587209685-819',
-	        name: '月伴飞鱼',
-	        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
-	        keyword: '验证码',
-	    });
-	<% } %>
-</script>
 
-<script>
-
-    document.oncontextmenu=new Function("event.returnValue=false");
-	document.onselectstart=new Function("event.returnValue=false");
+    //document.oncontextmenu=new Function("event.returnValue=false");
+	//document.onselectstart=new Function("event.returnValue=false");
 
 	<% if (theme.valine.enableComment){ %>
 		// 评论
@@ -93,33 +80,22 @@
 			recordIP: false
 		})
 	<% } %>
-	<% if (theme.valine.enableCounter){ %>
-    // 显示次数
-		function showTime(Counter) {
-			var query = new AV.Query("Counter");
-			if($(".leancloud_visitors").length > 0){
-				var url = $(".leancloud_visitors").attr('id').trim();
-				// where field
-				query.equalTo("words", url);
-				// count
-				query.count().then(function (number) {
-					// There are number instances of MyClass where words equals url.
-					$(document.getElementById(url)).text(number?  number : '--');
-				}, function (error) {
-					// error is an instance of AVError.
-				});
-			}
-		}
-		// 追加pv
-		function addCount(Counter) {
-			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
-			var Counter = AV.Object.extend("Counter");
-			var query = new Counter;
-			query.save({
-				words: url
-			}).then(function (object) {
-			})
-		}
+
+	$(function () {
+		const btw = new BTWPlugin();
+	    btw.init({
+	        id: 'container',
+	        blogId: '22377-1653144231800-229',
+	        name: '月伴飞鱼',
+	        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
+	        keyword: '验证码',
+	    });
+
+	    var contents = document.getElementsByClassName("content999");
+	    //监听文章内容的copy事件
+	    contents[0].addEventListener('copy',function(e){
+	        setClipboardText(e);
+	    });
 
 	    function setClipboardText(event){
 	        // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
@@ -150,28 +126,39 @@
 	    
 	        }
 	    };
+	});
 
-		$(function () {
+	<% if (theme.valine.enableCounter){ %>
+		var Counter = AV.Object.extend("Counter");
+		addCount(Counter);
+		showTime(Counter);
+
+    	// 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
 			var Counter = AV.Object.extend("Counter");
-			addCount(Counter);
-			showTime(Counter);
-
-			const btw = new BTWPlugin();
-		    btw.init({
-		        id: 'container',
-		        blogId: '22377-1651587209685-819',
-		        name: '月伴飞鱼',
-		        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
-		        keyword: '验证码',
-		    });
-
-		    var contents = document.getElementsByClassName("content999");
-		    //监听文章内容的copy事件
-		    contents[0].addEventListener('copy',function(e){
-		        setClipboardText(e);
-		    });
-		});
-
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
 	<% } %>
 </script>
 
@@ -179,7 +166,7 @@
     const btw = new BTWPlugin();
     btw.init({
         id: 'container',
-        blogId: '22377-1651587209685-819',
+        blogId: '22377-1653144231800-229',
         name: '月伴飞鱼',
         qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
         keyword: '验证码',

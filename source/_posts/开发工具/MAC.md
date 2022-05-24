@@ -196,3 +196,36 @@ iTerm2下载地址：https://iterm2.com/downloads.html
 iTerm2 最常用的主题是 Solarized Dark theme，下载地址：[http://ethanschoonover.com/solarized](https://links.jianshu.com/go?to=http%3A%2F%2Fethanschoonover.com%2Fsolarized)
 
 打开 Preferences 配置界面，然后`Profiles -> Colors -> Color Presets`，在下拉列表中选择 Import，选择刚才解压的`solarized->iterm2-colors-solarized->Solarized Dark.itermcolors`文件，导入成功后，在 Color Presets下选择 Solarized Dark 主题。
+
+# 安装Zsh
+
+```
+# 使用brew安装zsh
+brew install zsh 
+# 将zsh加入shells备选列表
+echo /usr/local/bin/bash | sudo tee -a /etc/shells
+# 切换到zsh（之后需要重新打开命令窗口）
+chsh -s /usr/local/bin/zsh
+```
+
+**安装ohmyzsh**
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+配置zsh
+
+```
+vi ~/.zshrc
+```
+
+根据主题列表 https://github.com/ohmyzsh/ohmyzsh/wiki/themes ，选择你想要的主题
+
+```
+ZSH_THEME="af-magic
+
+#改为
+ZSH_THEME="ys"
+```
+
