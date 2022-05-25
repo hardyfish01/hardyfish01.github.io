@@ -168,6 +168,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
+										即时编译器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -305,6 +314,15 @@
 										大厂晋升指南
 									</a>
 									
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/3C%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%B3%95/">
+										3C方案设计法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 							<ul>
 								<li class="file">
 									<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/4D%E6%80%BB%E7%BB%93%E6%B3%95/">
@@ -1043,6 +1061,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/05/26/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/">
+										性能指标
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
 										服务架构
 									</a>
@@ -1619,6 +1646,15 @@
 			
 								</li>
 								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/25/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99/">
+										实用网站
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
 							<ul>
@@ -3459,15 +3495,6 @@
 								<li class="file">
 									<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
 										内存溢出
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
-										即时编译器
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5437,6 +5464,92 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
+				<h2 class="index-title">
+					CAS
+				</h2>
+				<div class="index-brief">
+					Synchronized的方式加锁，会让线程在 BLOCKED 状态和 RUNNABLE 状态之间切换，在操作系统上，就会造成用户态和内核态的频繁切换，效率就比较低，所以产生一种CAS方式。
+CAS 是什么
+它的英文全称是 Compare-And-Swap，中文叫做比较并交换
+
+有三个操作数：内存值
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E5%AF%B9%E8%B1%A1/">
+				<h2 class="index-title">
+					共享对象
+				</h2>
+				<div class="index-brief">
+					可见性、原子性与有序性可见性
+可见性指的是当一个线程修改了某个共享变量的值，其他线程是否能够马上得知这个修改的值
+多线程环境下由于线程对共享变量的操作都是线程拷贝到各自的工作内存进行操作后才写回到主内存中的，这就可能存在一个线程A修改了共享变量的值，还未写回主内存时，另外一个线程B又对主内存中同一个
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+				<h2 class="index-title">
+					内存模型
+				</h2>
+				<div class="index-brief">
+					Java内存模型(Java Memory Model简称JMM)是一种抽象的概念，并不真实存在，它描述的是一组规则或规范，通过这组规范定义了程序中各个变量（包括实例字段，静态字段和构成数组对象的元素）的访问方式
+为什么需要 JMM（Java Memory Model，Java 内存模型）
+同样的一段
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
 				<h2 class="index-title">
 					四大线程池
@@ -5641,100 +5754,6 @@ A类向B类发送消息，从而影响B类发生变化；
 对扩展开放， 意味着有新的需求或变化时， 可以对现有代码进行扩展， 以适应新的情况。 
 
 对修改封闭， 意
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					单例模式
-				</h2>
-				<div class="index-brief">
-					一个类只允许创建一个对象（或者实例），那这个类就是一个单例类，这种设计模式就叫作单例设计模式
-懒汉模式双重检查
-public class LazyDoubleCheckSingleton &#123;
-    private volatile static LazyDoubleCheckSingle
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					工厂方法模式
-				</h2>
-				<div class="index-brief">
-					定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类，工厂方法让类的实例化推迟到子类中进行。
-工厂创建对象用的 ，方法通过子类实现方法来创建对象。
-适用场景
-创建对象需要大量重复的代码
-客户端（应用层）不依赖于产品类实例如何被创建、实现等细节
-一个类通过其子类来指定创建哪个对象
-
-抽象工厂
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					建造者模式
-				</h2>
-				<div class="index-brief">
-					定义：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示
-用户只需指定需要建造的类型就可以得到它们，建造过程及细节不需要知道
-适用场景
-如果一个对象有非常复杂的内部结构（很多属性），想把复杂对象的创建和使用分离
-建造者模式和工厂模式的区别
-
-建造者模式更注重方法的调用顺序，工厂
 					...
 				</div>
 			</a>
