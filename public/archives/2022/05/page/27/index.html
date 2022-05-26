@@ -334,6 +334,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/05/26/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/5S%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B3%95/">
+										5S问题处理法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/%E5%9B%9B%E7%BA%BF%E5%A4%8D%E7%9B%98%E6%B3%95/">
 										四线复盘法
 									</a>
@@ -2634,6 +2643,24 @@
 								<li class="file">
 									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
 										反射
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/27/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/26/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%BC%95%E7%94%A8%E5%92%8C%E5%80%BC%E4%BC%A0%E9%80%92/">
+										引用和值传递
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5464,6 +5491,128 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1/">
+				<h2 class="index-title">
+					消息丢失
+				</h2>
+				<div class="index-brief">
+					生产者程序丢失数据
+目前Kafka Producer是异步发送消息的，也就是说如果你调用的是producer.send(msg)这个API，那么它通常会立即返回，但此时你不能认为消息发送已成功完成。
+如果用这个方式，可能会有哪些因素导致消息没有发送成功呢？
+原因有很多，例如网络抖动，导致消息压根就没
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E8%B4%B9%E8%80%85%E7%BB%84/">
+				<h2 class="index-title">
+					消费者组
+				</h2>
+				<div class="index-brief">
+					Consumer Group是Kafka提供的可扩展且具有容错性的消费者机制。
+既然是一个组，那么组内必然可以有多个消费者或消费者实例，它们共享一个公共的ID，这个ID被称为Group ID。
+组内的所有消费者协调在一起来消费订阅主题的所有分区。
+
+每个分区只能由同一个消费者组内的一个Consume
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E7%94%9F%E4%BA%A7%E8%80%85%E5%88%86%E5%8C%BA/">
+				<h2 class="index-title">
+					生产者分区
+				</h2>
+				<div class="index-brief">
+					为什么分区？
+Kafka的消息组织方式实际上是三级结构：主题-分区-消息。
+主题下的每条消息只会保存在某一个分区中，而不会在多个分区中被保存多份。
+分区的作用：
+
+就是提供负载均衡的能力，或者说对数据进行分区的主要原因，就是为了实现系统的高伸缩性（Scalability）。
+
+不同的分区能够被放置到
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E7%94%9F%E4%BA%A7%E8%80%85%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/">
 				<h2 class="index-title">
 					生产者压缩算法
@@ -5711,126 +5860,6 @@ OK
 					内存消耗可通过执行info memory 命令获取内存相关指标。
 当mem_fragmentation_ratio&gt;1时，说明used_memory_rss-used_memory多出的部分内存并没有用于数据存储，而是被内存碎片所消耗，如果两者相差很大，说明碎片率严重。
 当mem_fragme
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
-				<h2 class="index-title">
-					分布式锁
-				</h2>
-				<div class="index-brief">
-					面试题：Redis如何实现分布式锁！
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%88%9D%E8%AF%86Redis/">
-				<h2 class="index-title">
-					初识Redis
-				</h2>
-				<div class="index-brief">
-					Redis官网：
-
-http://www.redis.cn/
-https://redis.io/
-
-本书相关网站：https://cachecloud.github.io/，该网站持续更新Redis开发运维的相关知识和经验。
-Redis使用场景
-1.缓存
-2.排行榜系统
-3.计数器应用
-4.社交网络
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					哨兵机制
-				</h2>
-				<div class="index-brief">
-					当主节点出现故障时，Redis Sentinel能自动完成故障发现和故障转移并通知应用方，从而实现真正的高可用。
-Redis2.6版本提供Redis Sentinel v1版本，但是功能性和健壮性都有一些 问题，如果想使用Redis Sentinel的话，建议使用2.8以上版本，也就是v2版本 的R
 					...
 				</div>
 			</a>
