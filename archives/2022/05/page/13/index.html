@@ -334,6 +334,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/05/26/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/5S%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B3%95/">
+										5S问题处理法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/%E5%9B%9B%E7%BA%BF%E5%A4%8D%E7%9B%98%E6%B3%95/">
 										四线复盘法
 									</a>
@@ -2634,6 +2643,24 @@
 								<li class="file">
 									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
 										反射
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/27/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/26/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%BC%95%E7%94%A8%E5%92%8C%E5%80%BC%E4%BC%A0%E9%80%92/">
+										引用和值传递
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5464,6 +5491,101 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/ServiceMesh/">
+				<h2 class="index-title">
+					ServiceMesh
+				</h2>
+				<div class="index-brief">
+					微服务架构尽管它解决了单体服务的很多问题，却也带来了负载均衡、服务治理、服务注册发现、如何拆分服务等问题。
+Service Mesh （服务网格）是一个用于处理服务和服务之间通信的基础设施层。
+
+通过 sidecar 模式将原本在 SDK 中的代码独立出来，用控制面代替配置中心的部分功能，以透明代理
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/分布式/">分布式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/%E4%B8%80%E8%87%B4%E6%80%A7Hash/">
+				<h2 class="index-title">
+					一致性Hash
+				</h2>
+				<div class="index-brief">
+					我们 经常会用 Redis 做缓存，把一些数据放在上面，以减少数据的压力。
+当数据量变大，并发量也增加的时候，通常我们会搭建集群环境，让数据尽量平均的放到每一台 Redis 中，比如集群中有 4 台Redis。
+
+那么如何把数据尽量平均地放到这 4 台Redis中呢？最简单的就是取模算法：
+
+has
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/分布式/">分布式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
+				<h2 class="index-title">
+					服务架构
+				</h2>
+				<div class="index-brief">
+					单体架构
+1、所有的功能集成在一个项目工程中
+2、所有的功能打一个war包部署到服务器
+3、应用与数据库分开部署
+4、通过部署应用集群和数据库集群来提高系统的性能
+分布式
+将系统的功能拆分到不同的节点，使用的时候再将这些系统组合起来，不同的机器运行不一样的代码
+分布式系统的好处：
+
+部分的节点出现了
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/分布式/">分布式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%AB%98%E5%B9%B6%E5%8F%91%E5%90%8D%E8%AF%8D/">
 				<h2 class="index-title">
 					高并发名词
@@ -5661,98 +5783,6 @@ Disruptor是一个开源框架，研发的初衷是为了解决高并
 觉得有收获，希望帮忙点赞，转发下哈，谢谢，谢谢
 我们日常工作中，Lambda 使用比较多的场景，就是集合类下的 Lambda 流操作，往往几行代码可以帮助我们实现复杂代码
 接下来我们把 Lambda 流的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/公众号文章/">公众号文章</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/MySQL%E4%BC%98%E5%8C%96/">
-				<h2 class="index-title">
-					MySQL优化
-				</h2>
-				<div class="index-brief">
-					原文：https://mp.weixin.qq.com/s/AuDUJs35dBVLenSuT4RCWQ
-前言面试题来自：社招一年半面经分享(含阿里美团头条京东滴滴)
-MySQL常见的优化手段分为下面几个方面：
-SQL优化、设计优化，硬件优化等，其中每个大的方向中又包含多个小的优化点
-
-下面我们具体
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/公众号文章/">公众号文章</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/MySQL%E8%BF%9E%E6%8E%A5/">
-				<h2 class="index-title">
-					MySQL连接
-				</h2>
-				<div class="index-brief">
-					文章首发在公众号（月伴飞鱼），之后同步到个人网站：xiaoflyfish.cn&#x2F;
-觉得有收获，希望帮忙点赞，转发下哈，谢谢，谢谢
-前言最近遇到在将本地的项目部署到服务器上之后遇到的一个奇怪问题
-在部署完成后，网站当时可以正常工作，但是第二天访问网站的时候却会遇到一个500 Server E
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/公众号文章/">公众号文章</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Pipeline/">
-				<h2 class="index-title">
-					Pipeline
-				</h2>
-				<div class="index-brief">
-					文章首发在公众号（月伴飞鱼），之后同步到个人网站：xiaoflyfish.cn&#x2F;
-觉得有收获，希望帮忙点赞，转发下哈，谢谢，谢谢
-前言先来看看Redis客户端和服务端的交互模型
-
-可以得出：
-1.Redis是基于一个Request，一个Response的同步请求服务
-2.客户端将数据包发送
 					...
 				</div>
 			</a>

@@ -334,6 +334,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/05/26/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/5S%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86%E6%B3%95/">
+										5S问题处理法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/%E5%9B%9B%E7%BA%BF%E5%A4%8D%E7%9B%98%E6%B3%95/">
 										四线复盘法
 									</a>
@@ -2634,6 +2643,24 @@
 								<li class="file">
 									<a href="/2022/05/25/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/">
 										反射
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/27/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8/">
+										异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/26/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E5%BC%95%E7%94%A8%E5%92%8C%E5%80%BC%E4%BC%A0%E9%80%92/">
+										引用和值传递
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5464,6 +5491,135 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+				<h2 class="index-title">
+					数据处理
+				</h2>
+				<div class="index-brief">
+					Document最终存储到分片上，那么文档的数据是如何选择要存储的分片的呢？
+
+此时，就需要「文档到分片的映射算法」。
+
+目的：是文档均匀分布到所有分片上，以充分利用资源。之所以不用随机和轮询round-robin算法的原因是：
+
+需要维护文档到分片的映射关系，那么在PB级别的数据量的时候，这是一个
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E7%B4%A2%E5%BC%95/">
+				<h2 class="index-title">
+					索引
+				</h2>
+				<div class="index-brief">
+					索引一个文档就是存储一个文档到一个 索引 （名词）中以便被检索和查询。
+倒排索引：
+关系型数据库通过增加一个 索引，比如一个 B树（B-tree）索引 到指定的列上，以便提升数据检索速度。
+Elasticsearch 和 Lucene 使用了一个叫做 倒排索引 的结构来达到相同的目的。
+
+默认的，一
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Elasticsearch/">Elasticsearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E9%9B%86%E7%BE%A4/">
+				<h2 class="index-title">
+					集群
+				</h2>
+				<div class="index-brief">
+					ES支持集群模式，即一个分布式系统。
+其好处主要有以下2个：
+
+可增大系统容量。比如：内存、磁盘的增加使得ES能够支持PB级别的数据；
+
+提高了系统可用性。即使一部分节点停止服务，集群依然可以正常对外服务。
+
+
+ES集群由多个ES实例构成：
+
+不同集群通过集群名字来区分，通过配置文件elastics
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/ByteBuf/">
 				<h2 class="index-title">
 					ByteBuf
@@ -6106,128 +6262,6 @@ new ZooKeeper(String connectString, in
 每个需要 ID 编码的业务服务器可以看作是 ZooKeeper 的客户端。ID 编码生成器可以作为 ZooKeeper 的服务端。
 
 客户端通过发送请求到 ZooKeeper 服务
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%BA%8F%E5%88%97%E5%8C%96/">
-				<h2 class="index-title">
-					序列化
-				</h2>
-				<div class="index-brief">
-					在 ZooKeeper 中并没有采用和 Java 一样的序列化方式，而是采用了一个 Jute 的序列解决方案作为 ZooKeeper 框架自身的序列化方式。
-
-ZooKeeper 从最开始就采用 Jute 作为其序列化解决方案，直到其最新的版本依然没有更改。
-
-虽然 ZooKeeper 一直将 Ju
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/">
-				<h2 class="index-title">
-					数据同步
-				</h2>
-				<div class="index-brief">
-					在 Leader 节点选举后，还需要把 Leader 服务器和 Follow 服务器进行数据同步。
-在保证整个 ZooKeeper 集群中服务器数据一致的前提下，ZooKeeper 集群才能对外提供服务。
-在 ZooKeeper 集群服务运行过程中，主要负责处理发送到 ZooKeeper 集群服务端
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6/">
-				<h2 class="index-title">
-					数据文件
-				</h2>
-				<div class="index-brief">
-					从存储位置上来说，事务日志和数据快照一样，都存储在本地磁盘上；而从业务角度来讲，内存数据就是我们创建数据节点、添加监控等请求时直接操作的数据。
-
-事务日志数据主要用于记录本地事务性会话操作，用于 ZooKeeper 集群服务器之间的数据同步。
-
-事务快照则是将内存数据持久化到本地磁盘。
-
-
-
-这里要
 					...
 				</div>
 			</a>
