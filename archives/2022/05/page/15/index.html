@@ -352,6 +352,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/05/28/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/OKR%E8%A7%84%E5%88%92%E6%B3%95/">
+										OKR规划法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/%E5%9B%9B%E7%BA%BF%E5%A4%8D%E7%9B%98%E6%B3%95/">
 										四线复盘法
 									</a>
@@ -5356,6 +5365,34 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E5%AF%B9%E8%B1%A1/">
+				<h2 class="index-title">
+					共享对象
+				</h2>
+				<div class="index-brief">
+					可见性、原子性与有序性可见性
+可见性指的是当一个线程修改了某个共享变量的值，其他线程是否能够马上得知这个修改的值
+多线程环境下由于线程对共享变量的操作都是线程拷贝到各自的工作内存进行操作后才写回到主内存中的，这就可能存在一个线程A修改了共享变量的值，还未写回主内存时，另外一个线程B又对主内存中同一个
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
 					内存模型
@@ -5617,39 +5654,6 @@ A类向B类发送消息，从而影响B类发生变化；
 懒汉模式双重检查
 public class LazyDoubleCheckSingleton &#123;
     private volatile static LazyDoubleCheckSingle
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					工厂方法模式
-				</h2>
-				<div class="index-brief">
-					定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类，工厂方法让类的实例化推迟到子类中进行。
-工厂创建对象用的 ，方法通过子类实现方法来创建对象。
-适用场景
-创建对象需要大量重复的代码
-客户端（应用层）不依赖于产品类实例如何被创建、实现等细节
-一个类通过其子类来指定创建哪个对象
-
-抽象工厂
 					...
 				</div>
 			</a>
