@@ -177,6 +177,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5365,6 +5374,36 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/25/JVM%E7%9B%B8%E5%85%B3/G1%E6%94%B6%E9%9B%86%E5%99%A8/">
+				<h2 class="index-title">
+					G1收集器
+				</h2>
+				<div class="index-brief">
+					G1 的全称是 Garbage-First，意为垃圾优先，哪一块的垃圾最多就优先清理它。
+
+G1 GC 最主要的设计目标是：将 STW 停顿的时间和分布，变成可预期且可配置的。
+
+G1 使用了停顿预测模型来满足用户指定的停顿时间目标，并基于目标来选择进行垃圾回收的区块数量。G1 采用增量回收的方式，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/JVM相关/">JVM相关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/CMS%E6%94%B6%E9%9B%86%E5%99%A8/">
 				<h2 class="index-title">
 					CMS收集器
@@ -5653,45 +5692,6 @@ CountDo
 					实现异步编程，这个工具类你得掌握！
 关于并发编程，你必须要知道的Future机制！
 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/">并发编程</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/并发工具类/">并发工具类</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CyclicBarrier/">
-				<h2 class="index-title">
-					CyclicBarrier
-				</h2>
-				<div class="index-brief">
-					CyclicBarrier 可以构造出一个集结点，当某一个线程执行 await() 的时候，它就会到这个集结点开始等待，等待这个栅栏被撤销。
-直到预定数量的线程都到了这个集结点之后，这个栅栏就会被撤销，之前等待的线程就在此刻统一出发，继续去执行剩下的任务。
-举一个生活中的例子
-假设我们班级春游去公园
 					...
 				</div>
 			</a>

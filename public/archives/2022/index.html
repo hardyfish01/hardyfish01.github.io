@@ -177,6 +177,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5365,6 +5374,41 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+				<h2 class="index-title">
+					垃圾回收
+				</h2>
+				<div class="index-brief">
+					引用计数法与可达性分析
+如何辨别一个对象是存是亡？
+
+引用计数法。
+
+它的做法是为每个对象添加一个引用计数器，用来统计指向该对象的引用个数。一旦某个对象的引用计数器为 0，则说明该对象已经死亡，便可以被回收了。
+
+它的具体实现是这样子的：
+
+如果有一个引用，被赋值为某一对象，那么将该对象的引用计数器
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-28</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/JVM相关/">JVM相关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/28/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/OKR%E8%A7%84%E5%88%92%E6%B3%95/">
 				<h2 class="index-title">
 					OKR规划法
@@ -5723,36 +5767,6 @@ class ReflectionDemo &#123;
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/编程语言/Java基础/">Java基础</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/25/JVM%E7%9B%B8%E5%85%B3/G1%E6%94%B6%E9%9B%86%E5%99%A8/">
-				<h2 class="index-title">
-					G1收集器
-				</h2>
-				<div class="index-brief">
-					G1 的全称是 Garbage-First，意为垃圾优先，哪一块的垃圾最多就优先清理它。
-
-G1 GC 最主要的设计目标是：将 STW 停顿的时间和分布，变成可预期且可配置的。
-
-G1 使用了停顿预测模型来满足用户指定的停顿时间目标，并基于目标来选择进行垃圾回收的区块数量。G1 采用增量回收的方式，
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM相关/">JVM相关</a>
 										
                                     </span>
                                 

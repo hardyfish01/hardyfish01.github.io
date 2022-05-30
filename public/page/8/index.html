@@ -177,6 +177,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5365,6 +5374,36 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
+				<h2 class="index-title">
+					CAS
+				</h2>
+				<div class="index-brief">
+					Synchronized的方式加锁，会让线程在 BLOCKED 状态和 RUNNABLE 状态之间切换，在操作系统上，就会造成用户态和内核态的频繁切换，效率就比较低，所以产生一种CAS方式。
+CAS 是什么
+它的英文全称是 Compare-And-Swap，中文叫做比较并交换
+
+有三个操作数：内存值
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E5%AF%B9%E8%B1%A1/">
 				<h2 class="index-title">
 					共享对象
@@ -5956,39 +5995,6 @@ public abstract class Video &#123;
 
 案例
 大妈下班
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					责任链模式
-				</h2>
-				<div class="index-brief">
-					为请求创建一个接收此次请求对象的链
-案例：
-木木网发布课程，需要审批员审批，看课程视频是否上传，课程手记是否上传，课程名字是否上传（这是我加的），请完成这个审批过程。
-审批抽象类：
-public abstract  class Approver &#123;
-
-    /**
-     * 注意：这
 					...
 				</div>
 			</a>

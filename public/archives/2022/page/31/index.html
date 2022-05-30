@@ -177,6 +177,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5365,6 +5374,45 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+				<h2 class="index-title">
+					类和接口
+				</h2>
+				<div class="index-brief">
+					使类和成员的可访问性最小化
+尽可能地使每个类或者成员不被外界访问。
+Java中可以通过包、访问修饰符（private protected public）控制类、接口和成员的可访问性（accessibility） 
+除了应该暴露的API之外，我们应该尽可能少的开放访问权。 因为一旦暴露给外界，可能会有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Effective-Java/">Effective Java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E5%AF%B9%E8%B1%A1/">
 				<h2 class="index-title">
 					创建和销毁对象
@@ -5713,51 +5761,6 @@ jstatjstat 用来监控 JVM 内置的各种统计信息，主要是内存和 GC 
 jstat -gcutil -t 864
 
 -gcutil 选项是统计 G
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/深入理解JVM虚拟机/">深入理解JVM虚拟机</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					类加载机制
-				</h2>
-				<div class="index-brief">
-					一个类型从被加载到虚拟机内存开始，到卸载出内存为止：
-
-它的生命周期将会经历加载，验证，准备，解析，初始化，使用和卸载七个阶段。
-
-
-
-加载，验证，准备，初始化和卸载这五个阶段的开始顺序是确定的（注意确定的只有开始顺序，完成顺序不确定）。
-解析阶段则不一定：
-
-它在某些情况下可以在初始化阶段之后再开
 					...
 				</div>
 			</a>

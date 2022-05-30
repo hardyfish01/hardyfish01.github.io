@@ -177,6 +177,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5365,6 +5374,45 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E4%BB%B6/">
+				<h2 class="index-title">
+					事件
+				</h2>
+				<div class="index-brief">
+					Redis服务器是一个事件驱动程序，主要有两种：
+
+文件事件：Redis服务器通过套接字与客户端连接，文件事件就是服务器对套接字操作的抽象。服务器与客户端通信会产生相应文件事件，服务器通过监听这些事件来完成一系列网络通信操作。
+时间事件：Redis服务器有一些需要在给定时间内执行的操作，而时间事件就
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E5%8A%A1/">
 				<h2 class="index-title">
 					事务
@@ -6103,47 +6151,6 @@ public class Solution &#123;
 遍历链表，直到 head.val == val 时跳出，即可定位目标节点
 设节点 cur 的前驱节点为 pre ，后继节点为 cur.next
 则执行
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试算法/">面试算法</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试算法/剑指OFFER/">剑指OFFER</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/21%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/">
-				<h2 class="index-title">
-					21调整数组顺序使奇数位于偶数前面
-				</h2>
-				<div class="index-brief">
-					题目地址：https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/
-考虑定义双指针 i, j分列数组左右两端，循环执行：
-
-指针 i从左向右寻找偶数；
-
-指针
 					...
 				</div>
 			</a>

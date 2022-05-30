@@ -177,6 +177,15 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
+										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5365,6 +5374,39 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					责任链模式
+				</h2>
+				<div class="index-brief">
+					为请求创建一个接收此次请求对象的链
+案例：
+木木网发布课程，需要审批员审批，看课程视频是否上传，课程手记是否上传，课程名字是否上传（这是我加的），请完成这个审批过程。
+审批抽象类：
+public abstract  class Approver &#123;
+
+    /**
+     * 注意：这
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/设计模式/">设计模式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/ELK/">
 				<h2 class="index-title">
 					ELK
@@ -6100,44 +6142,6 @@ Netty扩展了Java的Future，最主要的改进就是增加了监听器Listener
 					服务端空闲检测
 对于服务端来说，客户端的连接如果出现假死，那么服务端将无法收到客户端的数据，也就是说，如果能一直收到客户端发来的数据，那么可以说明这条连接还是活的，因此，服务端对于连接假死的应对策略就是空闲检测。
 空闲检测指的是每隔一段时间，检测这段时间内是否有数据读写，我们的服务端只需要检测一段时
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81/">
-				<h2 class="index-title">
-					编解码
-				</h2>
-				<div class="index-brief">
-					每个网络应用程序都必须定义如何解析在两个节点之间来回传输的原始字节，以及如何将其和目标应用程序的数据格式做相互转换。
-这种转换逻辑由编解码器处理，编解码器由编码器和解码器组成，它们每种都可以将字节流从一种格式转换为另一种格式。
-编码器是将消息转换为适合于传输的格式（最有可能的就是字节流）；而对应的解
 					...
 				</div>
 			</a>
