@@ -379,8 +379,44 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/05/31/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/P7%E6%8F%90%E5%8D%87%E6%94%BB%E7%95%A5/">
+										P7提升攻略
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/31/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/P8%E6%8F%90%E5%8D%87%E6%94%BB%E7%95%A5/">
+										P8提升攻略
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/30/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/PDCA%E6%89%A7%E8%A1%8C%E6%B3%95/">
 										PDCA执行法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/31/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/PPT%E5%86%99%E4%BD%9C/">
+										PPT写作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/05/31/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/PPT%E6%A1%86%E6%9E%B6/">
+										PPT框架
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5419,6 +5455,166 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E5%8A%A1/">
+				<h2 class="index-title">
+					事务
+				</h2>
+				<div class="index-brief">
+					Redis通过MULTI，EXEC，WATCH等命令实现事务功能。
+
+事务是将多个命令打包，然后原子地按顺序地执行的机制，执行期间服务器不会中断事务执行其他客户端的命令请求。
+
+下面展示了一次完整事务的执行命令：
+redis&gt; MULTI
+OK
+redis&gt; SET &quot;name
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/">
+				<h2 class="index-title">
+					压缩列表
+				</h2>
+				<div class="index-brief">
+					压缩列表(ZipList) 是哈希键的底层实现之一，当一个哈希键只包含少量键值对，并且每个键值对的键和值是小整数值或者长度较短的字符串时，Redis 就会使用压缩列表来做哈希键的底层实现。
+127.0.0.1:6379&gt; HMSET hs &quot;name&quot; &quot;wifi
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%A4%8D%E5%88%B6/">
+				<h2 class="index-title">
+					复制
+				</h2>
+				<div class="index-brief">
+					在Redis中，可通过SLAVEOF命令或配置文件中设置slaveof选项，让一个服务器去复制另一个服务器，被复制的为主服务器，对其复制的称为从服务器。
+旧版本复制功能的实现
+Redis在2.8以前使用旧版本复制，在短线重连后的从服务器会遇上低效的情况。
+Redis的复制功能分为同步和命令传播俩操作
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AD%97%E5%85%B8/">
+				<h2 class="index-title">
+					字典
+				</h2>
+				<div class="index-brief">
+					字典用于保存键值对的抽象数据结构。
+当一个哈希键包含的键值对比较多时，或者键值对中的元素都是比较长的字符串时，Redis就会使用字典作为哈希键的底层实现。
+字典的实现
+Redis的字典使用哈希表作为底层实现，一个哈希表里面可以有多个哈希表节点，每个哈希表节点保存了字典中的一个键值对。
+哈希表
+使用d
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AF%B9%E8%B1%A1/">
 				<h2 class="index-title">
 					对象
@@ -5664,169 +5860,10 @@ typedef struct listNode&#123;
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E9%9B%86%E7%BE%A4/">
-				<h2 class="index-title">
-					集群
-				</h2>
-				<div class="index-brief">
-					集群是Redis提供的分布式数据库方案，通过分片来进行数据共享并提供复制和故障转移的功能。
-节点
-集群由多个节点组成，通过CLUSTER MEET &lt;ip&gt; &lt;port&gt;可以将节点连接起来。
-这个命令主要是将目标节点加入到当前Redis所在的集群中。
-启动节点
-Redis服务
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/MySQL/">
-				<h2 class="index-title">
-					MySQL
-				</h2>
-				<div class="index-brief">
-					下面是阿里工程师整理的MySQL笔记，高清PDF版，涉及到mysql的方方面面，内容质量特别高，文末有获取方式。
-
-
-获取方式，扫码发送：mysql
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/">面试相关</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/资料分享/">资料分享</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/Spring%20Cloud%20Alibaba/">
-				<h2 class="index-title">
-					Spring Cloud Alibaba
-				</h2>
-				<div class="index-brief">
-					Spring Cloud Alibaba为分布式应用开发提供了一站式解决方案。它包含开发分布式应用程序所需的所有组件，可以轻松地使用Spring Cloud开发应用程序。
-最近抽空整理了一份Spring Cloud Alibab学习笔记免费分享给大家，目录如下
-
-模块一 微服务架构设计
-本模块主要介
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/">面试相关</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/资料分享/">资料分享</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/SpringBoot/">
-				<h2 class="index-title">
-					SpringBoot
-				</h2>
-				<div class="index-brief">
-					一直建议Java程序员必须把springboot搞清楚，现在企业中Springboot太重要了，不管是大互联网公司比如阿里，还是小公司都在用springboot，现在分享一份学习资料希望能帮到大家。
-SpringBoot系列从⼊⻔到进阶手册
-因为笔记内容太多，下面只截取部分内容展示。需要获取完整笔记
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/">面试相关</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/资料分享/">资料分享</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/33/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/32/">32</a><a class="page-number" href="/archives/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/archives/page/35/">35</a><a class="page-number" href="/archives/page/36/">36</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/51/">51</a><a class="extend next" rel="next" href="/archives/page/35/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/33/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/32/">32</a><a class="page-number" href="/archives/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/archives/page/35/">35</a><a class="page-number" href="/archives/page/36/">36</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/52/">52</a><a class="extend next" rel="next" href="/archives/page/35/">&gt;</a>
 		
 	</div>
 </div>
