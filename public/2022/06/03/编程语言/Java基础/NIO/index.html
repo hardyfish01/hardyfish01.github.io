@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		四大线程池 | 
+		NIO | 
 	 
 	月伴飞鱼
 	</title>
@@ -1553,24 +1553,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-										四大线程池
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
-										多线程打印
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -2733,8 +2715,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/Long%E7%B1%BB/">
 										Long类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/NIO/">
+										NIO
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2825,6 +2825,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8E%92%E5%BA%8F%E4%BB%A3%E7%A0%81/">
+										排序代码
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5242,6 +5251,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/958%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%8C%E5%85%A8%E6%80%A7%E6%A3%80%E9%AA%8C/">
+										958二叉树的完全性检验
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 										98验证二叉搜索树
 									</a>
@@ -5528,18 +5546,28 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	四大线程池
+	NIO
 </h1>
 <div class="article-meta">
 	<span>月伴飞鱼</span>
-	<span>2022-05-04 15:23:23</span>
+	<span>2022-06-03 19:26:11</span>
     
 		<div id="article-categories">
             
                 
                     <span>
                         <i class="fa fa-folder" aria-hidden="true"></i>
-                        <a href="/categories/并发编程/">并发编程</a>
+                        <a href="/categories/编程语言/">编程语言</a>
+						
+							>
+						
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/编程语言/Java基础/">Java基础</a>
 						
                     </span>
                 
@@ -5550,81 +5578,454 @@
 
 <div id="container" class = "content999">
 	<div id="article-content">
-		<img src="https://img-blog.csdnimg.cn/91ea2309a0fb40cbbdc74beec194fd60.png" alt="img" style="zoom:25%;" />
+		<p><strong>基本概念</strong></p>
+<p>从 JDK1.4 开始，Java 提供了一系列改进的 输入&#x2F;输出 的新特性，被统称为 NIO(即 New IO)，是 同步非阻塞 的。</p>
+<p>NIO 相关类都被放在 <code>java.nio</code> 包及子包下，并且对原<code> java.io</code> 包中的很多类进行改写。</p>
+<blockquote>
+<p>NIO 有三大核心部分：Channel(通道)、Buffer(缓冲区)、Selector(选择器)</p>
+</blockquote>
+<p>NIO是 面向缓冲区 ，或者面向 块 编程的（因为有了 <code>Buffer</code>）。</p>
+<p>数据读取到一个它稍后处理的缓冲区，需要时可在缓冲区中前后移动，这就增加了处理过程中的灵活性。</p>
+<p><strong>Java NIO的非阻塞模式：</strong></p>
+<p>使一个线程从某个 通道 发送请求或者读取数据，但是它仅能得到目前可用的数据，如果目前没有数据可用时，就什么都不会获取，而不是保持线程阻塞，所以直至数据变的可以读取之前，该线程可以继续做其他的事情。 </p>
+<p>非阻塞写也是如此，一个线程请求写入一些数据到某通道，但不需要等待它完全写入，这个线程同时可以去做别的事情。</p>
+<p><strong>Selector（选择器）：</strong></p>
+<p>获取到通道的事件，就调用 thread 会去处理；如果这个通道没有事件了，thread 就去处理别的通道的事件；如果所有通道都没有事件了，thread 还可以去其它任务。反正thread没有阻塞。</p>
+<p><strong>通俗理解：</strong></p>
+<ul>
+<li>NIO是可以做到用一个线程来处理多个操作的。假设有10000个请求过来，根据实际情况，可以分配50或者100个线程来处理。不像之前的阻塞IO那样，非得分配10000个。</li>
+</ul>
+<blockquote>
+<p>HTTP2.0 使用了 多路复用 的技术，做到同一个连接并发处理多个请求，而且并发请求的数量比HTTP1.1大了好几个数量级。</p>
+</blockquote>
+<p><strong>NIO 与 BIO 比较</strong></p>
+<ul>
+<li><p>BIO 以 流 的方式处理数据，而 NIO 以 块 的方式处理数据，块 I&#x2F;O 的效率比流 I&#x2F;O 高很多；</p>
+</li>
+<li><p>BIO 是 阻塞 的，NIO 则是 非阻塞 的</p>
+</li>
+<li><p>BIO基于 字节流和字符流 进行操作，而 NIO 基于 <code>Channel</code>(通道) 和 Buffer(缓冲区) 进行操作，数据总是从通道读取到缓冲区中，或者从缓冲区写入到通道中。</p>
+</li>
+<li><p>Selector(选择器)用于监听多个通道的事件（比如：连接请求，数据到达等），因此使用单个线程就可以监听多个客户端通道。</p>
+</li>
+</ul>
+<p><strong>NIO 三大核心组件之间的关系</strong></p>
+<img src="https://img-blog.csdnimg.cn/7813c3b3a85e44c88a10a957080915fb.png" style="zoom:25%;" />
 
-<p><strong>FixedThreadPool</strong></p>
-<p>创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待</p>
-<pre><code class="java">public static ExecutorService newFixedThreadPool(int nThreads) &#123;
-    return new ThreadPoolExecutor(nThreads, nThreads,
-                                  0L, TimeUnit.MILLISECONDS,
-                                  new LinkedBlockingQueue&lt;Runnable&gt;());
+<ul>
+<li><p>每个channel 都会对应一个Buffer；</p>
+</li>
+<li><p>Selector 对应一个线程， 一个线程对应多个channel(连接)；</p>
+</li>
+<li><p>该图反应了有三个channel 注册到 Selector；</p>
+</li>
+<li><p>程序切换到哪个channel 是由 事件（Event） 决定的，Event 就是一个重要的概念；</p>
+</li>
+<li><p>Selector 会根据不同的事件，在各个通道上切换；</p>
+</li>
+<li><p>Buffer 就是一个 内存块 ， 底层是有一个数组；</p>
+</li>
+<li><p>数据的 读取&#x2F;写入 是通过 Buffer， 这个和BIO不同 , BIO 中 要么是输入流，要么是输出流，不能双向，但是NIO的Buffer 是可以读也可以写，但是需要 flip 方法 切换 读&#x2F;写 状态；</p>
+</li>
+<li><p>channel 是 双向 的，可以返回底层操作系统的情况，比如Linux 底层的操作系统通道就是双向的。</p>
+</li>
+</ul>
+<h1 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h1><p>缓冲区本质上是一个可以 读写 数据的 内存块，可以理解成是一个容器对象(含数组)，该对象提供了一组方法，可以更轻松地使用内存块，缓冲区对象内置了一些机制，能够跟踪和记录缓冲区的状态变化情况。</p>
+<p>Channel 提供从文件、网络读取数据的渠道，但是读取或写入的数据都必须经由 Buffer</p>
+<p>在 NIO 中，Buffer 是一个顶层父类，它是一个 <strong>抽象类</strong></p>
+<p><strong>Buffer类中的重要属性</strong></p>
+<pre><code class="java">private int mark = -1;
+private int position = 0;
+private int limit;
+private int capacity;
+</code></pre>
+<ul>
+<li><p>Capacity：容量，即可以容纳的最大数据量；在缓冲区创建时被设定并且不能改变</p>
+</li>
+<li><p>Limit：表示缓冲区的当前终点，不能对缓冲区超过极限的位置进行读写操作。且极限是可以修改</p>
+</li>
+<li><p>Position：位置，下一个要被读或写的元素的索引，每次读写缓冲区数据时都会改变改值，为下次读写作准备</p>
+</li>
+<li><p>Mark：标记</p>
+</li>
+</ul>
+<p><strong>Buffer的基本使用示例</strong></p>
+<pre><code class="java">public class BasicBuffer &#123;
+    public static void main(String[] args) &#123;
+        // 举例说明 Buffer 的使用
+        // 创建一个 Buffer，大小为 6，可以存放 6 个 int
+        IntBuffer intBuffer = IntBuffer.allocate(5);
+
+        // 向 Buffer 中存放数据
+        for (int i = 0; i &lt; intBuffer.capacity(); i++) &#123;
+            intBuffer.put(i * 2);
+        &#125;
+
+        // 从 Buffer 中读取数据
+        // 将 Buffer 转换，读/写 切换 !!!
+        intBuffer.flip();
+
+        while (intBuffer.hasRemaining()) &#123;
+            System.out.println(intBuffer.get());
+        &#125;
+    &#125;
 &#125;
 </code></pre>
-<p>该线程池是一个固定数量的线程池，corePoolSize核心线程数量和maximumPoolSize最大线程数量是一致的，并且keepAliveTime为0。</p>
+<h1 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h1><p>NIO 的通道类似于流，但有些区别如下：</p>
 <ul>
-<li>workQueue是LinkedBlockingQueue</li>
+<li>通道可以 <code>同时进行读写</code>，而流只能读或者只能写；</li>
+<li>通道可以实现 <code>异步读写数据</code>；</li>
+<li>通道可以 <code>从缓冲读数据</code>，也可以 <code>写数据到缓冲</code>。</li>
 </ul>
-<blockquote>
-<p>适合场景：适合少量的大任务</p>
-</blockquote>
-<p><strong>CachedThreadPool</strong></p>
-<p>newCachedThreadPool创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程</p>
-<pre><code class="java">public static ExecutorService newCachedThreadPool() &#123;
-    return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
-                                  60L, TimeUnit.SECONDS,
-                                  new SynchronousQueue&lt;Runnable&gt;());
+<p>Channel在NIO中是一个接口</p>
+<pre><code class="java">public interface Channel extends Closeable&#123;&#125;
 </code></pre>
-<p>我们可以看到corePoolSize核心线程池为0，代表该线程没有核心线程池，意味着线程都是可被回收销毁的，线程池中有时会是空的。</p>
+<p>常用的 Channel 类有：FileChannel、DatagramChannel、ServerSocketChannel 和SocketChannel。</p>
 <ul>
-<li><p>maximumPoolSize是int最大值，相当于代表该线程池可以无限创建线程。</p>
+<li><p>FileChannel 用于 文件 的数据读写</p>
 </li>
-<li><p>keepAliveTime为60，代表空闲60秒回收线程。</p>
+<li><p>DatagramChannel 用于 UDP 的数据读写</p>
 </li>
-<li><p>workQueue是SynchronousQueue，该同步队列是一个没有容量队列，即一个任务到来后，要等待线程来消费，才能再继续添加任务</p>
+<li><p>ServerSocketChannel 和 SocketChannel 用于 TCP 的数据读写。</p>
+<ul>
+<li><p>ServerSocketChannel 类似ServerSocket；</p>
+</li>
+<li><p>SocketChannel 类似 Socket。</p>
 </li>
 </ul>
-<blockquote>
-<p>适合场景：大量的小任务</p>
-</blockquote>
-<pre><code class="java">ExecutorService service = Executors.newCachedThreadPool();
-    for (int i = 0; i &lt; 1000; i++) &#123; 
-        service.execute(new Task() &#123; 
-    &#125;);
- &#125;
-</code></pre>
-<p><strong>ScheduledThreadPool</strong></p>
-<p>创建一个定长线程池，支持定时及周期性任务执行</p>
-<pre><code class="java">public ScheduledThreadPoolExecutor(int corePoolSize) &#123;
-    super(corePoolSize, Integer.MAX_VALUE, 0, NANOSECONDS,
-          new DelayedWorkQueue());
+</li>
+</ul>
+<p><strong>ServerSocketChannel 和 SocketChannel的区别</strong></p>
+<p>我们首先会在服务器端创建一个ServelSocketChannel，它真实的类型是ServelSocketChannelImpl，当有一个连接来连接Server时，由ServelSocketChannel生成一个与该客户端对应的一个通道，这个通道的类型就是SocketChannel，它的真实类型是SocketChannelImpl，客户端通过这个通道与Server进行通讯。</p>
+<p><strong>MappedByteBuffer - 直接在堆外内存中修改文件</strong></p>
+<p><code>MappedByteBuffer</code>， 可以让文件直接在内存（<code>堆外的内存</code>）中进行修改，操作系统不需要再拷贝一份，而如何同步到文件由NIO 来完成。</p>
+<pre><code class="java">public class NIOMappedByteBuffer &#123;
+    public static void main(String[] args) throws Exception &#123;
+        RandomAccessFile randomAccessFile = new RandomAccessFile(&quot;d:\\file01.txt&quot;, &quot;rw&quot;);
+        FileChannel channel = randomAccessFile.getChannel();
+        /*
+        参数1：FileChannel.MapMode.READ_WRITE，使用的是读写位置
+        参数2：0，可以直接修改的起始位置
+        参数3：5，映射到内存的大小，即将 file01.txt 的多少个字节映射到内存。
+                 可以直接修改的范围就是 0 - 5。
+         */
+        // MappedByteBuffer是一个抽象类，实际类型是 DirectByteBuffer
+        MappedByteBuffer mappedByteBuffer = channel.map(FileChannel.MapMode.READ_WRITE, 0, 5);
+
+        // 将第一个位置的值修改为 H
+        mappedByteBuffer.put(0, (byte) &#39;H&#39;);
+
+        randomAccessFile.close();
+    &#125;
+
 &#125;
 </code></pre>
-<p>workQueue是DelayedWorkQueue。</p>
+<p><strong>应用实例1 - 本地文件写数据</strong></p>
+<p>示例要求:</p>
 <ul>
-<li><p>该线程池可以指定一个时间进行定时任务。</p>
-</li>
-<li><p>也可以通过添加任务时递增延迟时间，来进行周期任务</p>
-</li>
+<li>使用前面学习后的ByteBuffer(缓冲) 和 FileChannel(通道)， 将 “hello” 写入到<code>file01.txt</code> 中。</li>
+<li>文件不存在就创建。</li>
 </ul>
-<blockquote>
-<p>适合场景：定时任务或者周期任务</p>
-</blockquote>
-<p><strong>SingleThreadExecutor</strong></p>
-<p>创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO，LIFO，优先级)执行</p>
-<pre><code class="java">public static ExecutorService newSingleThreadExecutor() &#123;
-    return new FinalizableDelegatedExecutorService
-        (new ThreadPoolExecutor(1, 1,
-                                0L, TimeUnit.MILLISECONDS,
-                                new LinkedBlockingQueue&lt;Runnable&gt;()));
+<pre><code class="java">public class NIOFileChannel &#123;
+    public static void main(String[] args) throws IOException &#123;
+        String str = &quot;hello world&quot;;
+
+        // 创建一个输出流
+        FileOutputStream fileOutputStream = new FileOutputStream(&quot;d:\\file01.txt&quot;);
+
+        // 通过fileOutputStream 获取对应的 FileChannel
+        // 注意：是 fileOutputStream 中包裹了 FileChannel
+        FileChannel channel = fileOutputStream.getChannel();
+
+        // 创建Buffer(缓冲区)
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+        // 将 str 放入 byteBuffer
+        byteBuffer.put(str.getBytes());
+
+        // 切换 byteBuffer 为 write 模式
+        byteBuffer.flip();
+
+        // 将 byteBuffer 中的数据写入到 fileChannel
+        channel.write(byteBuffer);
+
+        fileOutputStream.close();
+    &#125;
 &#125;
 </code></pre>
-<p>该线程池的corePoolSize核心线程数量和maximumPoolSize最大线程数量都是1，代表该线程有且只有一个固定的线程，既然是单线程，所以该线程池实现的是串行操作，没有并发效果。</p>
+<p><strong>应用实例2 - 本地文件读数据</strong></p>
+<p>实例要求:</p>
 <ul>
-<li>workQueue是LinkedBlockingQueue，这是一个链表阻塞队列，所以该线程池适合执行串行执行队列中的任务</li>
+<li>使用 ByteBuffer(缓冲) 和 FileChannel(通道)， 将 <code>file01.txt</code> 中的数据读入到程序，并显示在控制台屏幕；</li>
+<li>假定文件已经存在。</li>
 </ul>
-<blockquote>
-<p>适合场景：按顺序串行处理的任务</p>
-</blockquote>
+<pre><code class="java">public class NIOFileChannel02 &#123;
+    public static void main(String[] args) throws IOException &#123;
+        String str = &quot;hello world&quot;;
+
+        // 创建一个输入流
+        File file = new File(&quot;d:\\file01.txt&quot;);
+        FileInputStream fileInputStream = new FileInputStream(file);
+
+        // 通过fileOutputStream 获取对应的 FileChannel
+        FileChannel channel = fileInputStream.getChannel();
+
+        // 创建Buffer(缓冲区)
+        ByteBuffer byteBuffer = ByteBuffer.allocate((int) file.length());
+
+        // 将 fileChannel 中的数据读入到 byteBuffer
+        channel.read(byteBuffer);
+
+        // 将 byteBuffer 中的数据转成 String
+        System.out.println(new String(byteBuffer.array()));
+
+        fileInputStream.close();
+    &#125;
+&#125;
+</code></pre>
+<p><strong>应用实例3 - 本地文件的拷贝</strong></p>
+<p>实例要求:</p>
+<ul>
+<li>使用 ByteBuffer(缓冲) 和 FileChannel(通道)，完成文件的拷贝</li>
+<li>拷贝一个文本文件 <code>file01.txt</code> , 放在项目下即可</li>
+</ul>
+<pre><code class="java">public class NIOFileChannel03 &#123;
+    public static void main(String[] args) throws IOException &#123;
+        String str = &quot;hello world&quot;;
+
+        // 创建一个输入流
+        File file = new File(&quot;d:\\file01.txt&quot;);
+        FileInputStream fileInputStream = new FileInputStream(file);
+
+        // 创建一个输出流
+        FileOutputStream fileOutputStream = new FileOutputStream(&quot;d:\\file02.txt&quot;);
+
+        // 通过 fileInputStream 获取对应的 FileChannel
+        FileChannel channel01 = fileInputStream.getChannel();
+
+        // 通过 fileOutputStream 获取对应的 FileChannel
+        FileChannel channel02 = fileOutputStream.getChannel();
+
+
+        // 创建Buffer(缓冲区)
+        ByteBuffer byteBuffer = ByteBuffer.allocate(512);
+
+        while (true) &#123;
+            // 一次可能读不完，所以清空 byteBuffer
+            byteBuffer.clear();
+
+            int read = channel01.read(byteBuffer);
+            if (read == -1) &#123;
+                break;
+            &#125;
+            byteBuffer.flip();
+            channel02.write(byteBuffer);
+        &#125;
+
+        fileInputStream.close();
+        fileOutputStream.close();
+    &#125;
+&#125;
+</code></pre>
+<p><strong>应用实例4 - 拷贝文件（transferFrom 方法）</strong></p>
+<p>实例要求:</p>
+<ul>
+<li>使用 FileChannel(通道) 和 方法 transferFrom ，完成文件的拷贝；</li>
+<li>拷贝一张图片。</li>
+</ul>
+<pre><code class="java">public class NIOFileChannel04 &#123;
+    public static void main(String[] args) throws IOException &#123;
+        FileInputStream fileInputStream = new FileInputStream(&quot;d:\\a.jpg&quot;);
+        FileOutputStream fileOutputStream = new FileOutputStream(&quot;d:\\a2.jpg&quot;);
+
+        FileChannel source = fileInputStream.getChannel();
+        FileChannel target = fileOutputStream.getChannel();
+
+        // 使用 transferForm 完成拷贝
+        target.transferFrom(source,0,source.size());
+
+        source.close();
+        target.close();
+        fileInputStream.close();
+        fileOutputStream.close();
+    &#125;
+&#125;
+</code></pre>
+<h1 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h1><p><strong>基本介绍</strong></p>
+<ul>
+<li><p>Java 的 NIO，用非阻塞的 IO 方式。可以用一个线程，处理多个的客户端连接，就会使用到 <code>Selector</code>(选择器)；</p>
+</li>
+<li><p>Selector 能够检测多个注册的通道上是否有事件发生(注意:多个<code>Channel</code>以事件的方式可以注册到同一个<code>Selector</code>)，如果有事件发生，便获取事件然后针对每个事件进行相应的处理。这样就 可以只用一个单线程去管理多个通道，也就是管理多个连接和请求；</p>
+</li>
+<li><p>只有在 连接&#x2F;通道 真正有读写事件发生时，才会进行读写，就大大地减少了系统开销，并且不必为每个连接都创建一个线程，不用去维护多个线程；</p>
+</li>
+<li><p>避免了多线程之间的上下文切换导致的开销。</p>
+</li>
+</ul>
+<p><strong>Selector作用详细说明</strong></p>
+<ul>
+<li><p>Netty 的 IO 线程 NioEventLoop 聚合了 <code>Selector</code>(选择器，也叫多路复用器)，可以同时并发处理成百上千个客户端连接。</p>
+</li>
+<li><p>当线程从某客户端 Socket 通道进行读写数据时，若没有数据可用时，该线程可以进行其他任务。</p>
+</li>
+<li><p>线程通常将非阻塞 IO 的空闲时间用于在其他通道上执行 IO 操作，所以单独的线程可以管理多个输入和输出通道。</p>
+</li>
+<li><p>由于读写操作都是 非阻塞 的，这就可以充分提升 IO线程的运行效率，避免由于频繁 I&#x2F;O 阻塞导致的线程挂起。</p>
+</li>
+<li><p>一个 I&#x2F;O 线程可以并发处理 N 个客户端连接和读写操作，这从根本上解决了传统同步阻塞 I&#x2F;O 一连接一线程模型，架构的性能、弹性伸缩能力和可靠性都得到了极大的提升。</p>
+</li>
+</ul>
+<p><strong>Selector 类</strong></p>
+<pre><code class="java">public abstract class Selector implements Closeable &#123;
+    // 得到一个选择器对象
+    public static Selector open();
+    // 监控所有注册的通道，当其中有 IO 操作可以进行时，将对应的 SelectionKey 
+    // 加入到内部集合中并返回，参数用来设置超时时间
+    public int select(long timeout);
+    // 从内部集合中得到所有的 SelectionKey
+    public Set&lt;SelectionKey&gt; selectedKeys();
+    // 唤醒selector
+    selector.wakeup();
+    // 不阻塞，立马返还
+    selector.selectNow();
+&#125;
+</code></pre>
+<p><strong>SelectionKey 作用：</strong></p>
+<ul>
+<li>Selector 对象调用 select() 方法会返回一个 SelectionKey 集合，根据 SelectionKey 获取到对应的channel，然后处理channel中发生的事件。</li>
+</ul>
+<p><code>select() 或 select(long timeout)</code></p>
+<ul>
+<li><p><code>select()</code> ：调用它会一直阻塞，直到获取注册到的Selector中的channel至少有一个channel发生它所关心的事件才返回，返回的是发生事件的channel的SelectionKey。</p>
+</li>
+<li><p><code>select(long timeout)</code>：指定阻塞事件，到时见即使没有监听到任何事件也会返回。</p>
+</li>
+</ul>
+<p><strong>SelectionKey</strong></p>
+<p>SelectionKey 表示 Selector 和 网络通道 的 注册关系, 共四种:</p>
+<ul>
+<li><p>int OP_ACCEPT：有新的网络连接可以 accept，值为 16；</p>
+</li>
+<li><p>int OP_CONNECT：代表连接已经建立，值为 8；</p>
+</li>
+<li><p>int OP_READ：代表读操作，值为 1；</p>
+</li>
+<li><p>int OP_WRITE：代表写操作，值为 4。</p>
+</li>
+</ul>
+<p><strong>Selector、SelectionKey、ServerScoketChannel、SocketChannel关系梳理</strong></p>
+<img src="https://img-blog.csdnimg.cn/83adec5a59ab4e2da59cdfe919e86860.png" style="zoom:25%;" />
+
+<ul>
+<li><p>当客户端连接时，会通过 ServerSocketChannel （ServerSocketChannel也需要注册到selector上）得到 SocketChannel；</p>
+</li>
+<li><p>Selector 进行监听 ，通过 select() 方法，返回有事件发生的通道的个数；</p>
+</li>
+<li><p>socketChannel调用 <code>register(Selector sel, int ops)</code> 方法，注册到Selector上，一个selector上可以注册多个SocketChannel；</p>
+</li>
+<li><p>socketChannel注册成功后会返回一个 SelectionKey，用于和该Selector 关联，多个socketChannel注册成功后就会有一个 SelectionKey 集合；</p>
+</li>
+<li><p>Selector 通过 select() 方法，返回有事件发生的channel的个数；</p>
+</li>
+<li><p>进一步得到各个 SelectionKey (有事件发生的channel的SelectionKey )；</p>
+</li>
+<li><p>再通过 SelectionKey 反向获取 SocketChannel （通过 channel() 方法）；</p>
+</li>
+<li><p>可以通过 得到的 channel，完成业务处理。</p>
+</li>
+</ul>
+<h1 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h1><p><strong>服务器端代码</strong></p>
+<pre><code class="java">public class NIOServer &#123;
+
+    public static void main(String[] args) throws IOException &#123;
+
+        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+
+        // 获取 Selector 对象
+        Selector selector = Selector.open();
+
+        // 绑定端口 6666 在服务端监听
+        serverSocketChannel.socket().bind(new InetSocketAddress(6666));
+        // 设置为非阻塞
+        serverSocketChannel.configureBlocking(false);
+
+        // 注意：ServerSocketChannel 也需要注册到 Selector 上
+        // 因为客户端总得需要一个通道来通知Server，然后Server再分配一个和cient的单独通道
+        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+
+        // 循环等待客户端连接
+        while (true) &#123;
+            // 等待1秒，如果没有事件发生，返回
+            if (selector.select(1000) == 0) &#123;
+                System.out.println(&quot;服务器等待了1秒，客户端无连接&quot;);
+                continue;
+            &#125;
+            // 获取发生关注事件的channel的SelectionKey集合
+            Set&lt;SelectionKey&gt; selectionKeys = selector.selectedKeys();
+
+            Iterator&lt;SelectionKey&gt; keyIterator = selectionKeys.iterator();
+
+            while (keyIterator.hasNext()) &#123;
+                // 获取 SelectionKey
+                SelectionKey key = keyIterator.next();
+                // 根据 SelectionKey 对应的 channel 发生的事件做相应的处理
+                if (key.isAcceptable()) &#123; // 如果是 OP_ACCEPT，代表有新的客户端连接Server
+                    // 分配一个 SocketChannel 给客户端
+                    SocketChannel socketChannel = serverSocketChannel.accept();
+                    System.out.println(&quot;客户端连接成功，生成了一个socketChannel &quot;+socketChannel.hashCode());
+                    // 将 socketChannel 设置为 非阻塞
+                    socketChannel.configureBlocking(false);
+                    // 将这个 SocketChannel 注册到 selector，关注事件为 OP_READ，
+                    // 同时关联一个Buffer
+                    socketChannel.register(selector,SelectionKey.OP_READ, ByteBuffer.allocate(1024));
+                &#125;
+
+                if (key.isReadable()) &#123;// 发生 事件为 OP_READ
+                    // 通过 key 反向获取到 channel
+                    SocketChannel socketChannel = (SocketChannel) key.channel();
+                    // 获取到该channel关联的buffer
+                    ByteBuffer buffer = (ByteBuffer) key.attachment();
+                    // 将 channel 中的数据读入到 Buffer 中
+                    socketChannel.read(buffer);
+                    System.out.println(&quot;客户端的数据：&quot;+new String(buffer.array()));
+
+                &#125;
+                // 手动从集合中移除当前的 selectionKey，防止重复操作
+                keyIterator.remove();
+
+            &#125;
+
+        &#125;
+
+    &#125;
+&#125;
+</code></pre>
+<p><strong>客户端代码</strong></p>
+<pre><code class="java">public class NIOClient &#123;
+    public static void main(String[] args) throws IOException &#123;
+        // 得到一个网络通道
+        SocketChannel socketChannel = SocketChannel.open();
+        // 设置非阻塞模式
+        socketChannel.configureBlocking(false);
+        // 提供服务器端的 ip 和 port
+        InetSocketAddress inetSocketAddress = new InetSocketAddress(&quot;127.0.0.1&quot;, 6666);
+        // 连接服务器，非阻塞式连接
+        if (!socketChannel.connect(inetSocketAddress)) &#123;
+            while (!socketChannel.finishConnect()) &#123;
+                System.out.println(&quot;因为连接需要时间，客户端不会阻塞，可以做其它工作&quot;);
+            &#125;
+        &#125;
+        // 如果连接成功就发送数据
+        String str = &quot;hello world&quot;;
+        // 根据字节数的大小，自动设置buffer的大小
+        ByteBuffer byteBuffer = ByteBuffer.wrap(str.getBytes());
+        // 发送数据，将buffer中的数据写入到channel
+        socketChannel.write(byteBuffer);
+        System.in.read();
+
+    &#125;
+&#125;
+</code></pre>
 
 	</div>
 </div>
@@ -5633,16 +6034,11 @@
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  内存模型
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
-                多线程打印
+              <a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/IO%E6%A8%A1%E5%9E%8B/">
+                IO模型
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
@@ -5663,7 +6059,7 @@
 		const btw = new BTWPlugin();
 	    btw.init({
 	        id: 'container',
-	        blogId: '22377-1654008955981-829',
+	        blogId: '22377-1654233887776-859',
 	        name: '月伴飞鱼',
 	        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
 	        keyword: '验证码',
@@ -5698,7 +6094,7 @@
 	            + '\n著作权归作者所有。'
 	            + '\n商业转载请联系作者获得授权，非商业转载请注明出处。'
 	            + '\n作者: 月伴飞鱼'
-	            + '\n原文地址: https://xiaoflyfish.cn/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/'
+	            + '\n原文地址: https://xiaoflyfish.cn/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/NIO/'
 	    
 	            clipboardData.setData('text/plain', text + copyright);
 	    
@@ -5713,7 +6109,7 @@
     const btw = new BTWPlugin();
     btw.init({
         id: 'container',
-        blogId: '22377-1654008955981-829',
+        blogId: '22377-1654233887776-859',
         name: '月伴飞鱼',
         qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
         keyword: '验证码',
