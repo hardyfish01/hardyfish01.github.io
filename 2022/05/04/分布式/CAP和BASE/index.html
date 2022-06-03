@@ -1553,24 +1553,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-										四大线程池
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
-										多线程打印
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -2733,8 +2715,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/Long%E7%B1%BB/">
 										Long类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/NIO/">
+										NIO
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2825,6 +2825,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8E%92%E5%BA%8F%E4%BB%A3%E7%A0%81/">
+										排序代码
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5561,7 +5570,7 @@
 	<div id="article-content">
 		<p><strong>CAP</strong></p>
 <p>C (一致性)：对某个指定的客户端来说，读操作能返回最新的写操作，对于数据分布在不同节点上的数据来说，如果在某个节点更新了数据，那么在其他节点如果都能读取到这个最新的数据，那么就称为强一致，如果有某个节点没有读取到，那就是分布式不一致</p>
-<p>A (可用性)：非故障的节点在合理的时间内返回合理的响应(不是错误和超时的响应)，可用性的两个关键一个是合理的时间，一个是合理的响应。合理的时间指的是请求不能无限被阻塞，应该在合理的时间给出返回。合理的响应指的是系统应该明确返回结果并且结果是正确的，这里的正确指的是比如应该返回 50，而不是返回 40</p>
+<p>A (可用性)：非故障的节点在合理的时间内返回合理的响应(不是错误和超时的响应)，可用性的两个关键一个是合理的时间，一个是合理的响应。合理的时间指的是请求不能无限被阻塞，应该在合理的时间给出返回。合理的响应指的是系统应该明确返回结果并且结果是正确的50，而不是返回 40</p>
 <p>P (分区容错性)：当出现网络分区后，系统能够继续工作。打个比方，这里集群有多台机器，有台机器网络出现了问题，但是这个集群仍然可以正常工作</p>
 <p>CA：传统关系型数据库</p>
 <p>AP：Redis、Mongodb</p>

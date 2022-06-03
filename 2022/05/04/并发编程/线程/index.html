@@ -1553,24 +1553,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-										四大线程池
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
-										多线程打印
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -2733,8 +2715,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/Long%E7%B1%BB/">
 										Long类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/NIO/">
+										NIO
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2825,6 +2825,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8E%92%E5%BA%8F%E4%BB%A3%E7%A0%81/">
+										排序代码
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -6200,6 +6209,168 @@ synchronized (ojb) &#123;
 <p>除了刚才推荐的将异常声明到方法签名中的方式外，还可以在 catch 语句中再次中断线程。</p>
 <p>如代码所示，需要在 catch 语句块中调用<code>Thread.currentThread().interrupt()</code>函数。因为如果线程在休眠期间被中断，那么会自动清除中断信号。如果这时手动添加中断信号，中断信号依然可以被捕捉到。这样后续执行的方法依然可以检测到这里发生过中断，可以做出相应的处理，整个线程可以正常退出。</p>
 <p>需要注意，在实际开发中不能盲目吞掉中断，如果不在方法签名中声明，也不在 catch 语句块中再次恢复中断，而是在 catch 中不作处理，称这种行为是<strong>屏蔽了中断请求</strong>。如果盲目地屏蔽了中断请求，会导致中断信号被完全忽略，最终导致线程无法正确停止。</p>
+<h1 id="多线程打印"><a href="#多线程打印" class="headerlink" title="多线程打印"></a>多线程打印</h1><p>一道编程题如下：</p>
+<blockquote>
+<p>实例化三个线程，一个线程打印A，一个线程打印B，一个线程打印C，三个线程同时执行，要求打印出10个连着的ABC。</p>
+</blockquote>
+<p><strong>通过一个ReentrantLock和三个Conditon实现</strong></p>
+<pre><code class="java">import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class RcSyncPrinter implements Runnable&#123;
+
+    // 打印次数
+    private static final int PRINT_COUNT = 10;
+    // 打印锁
+    private final ReentrantLock reentrantLock;
+    // 本线程打印所需的condition
+    private final Condition thisCondtion;
+    // 下一个线程打印所需要的condition
+    private final Condition nextCondtion;
+    // 打印字符
+    private final char printChar;
+
+    public RcSyncPrinter(ReentrantLock reentrantLock, Condition thisCondtion, Condition nextCondition, 
+            char printChar) &#123;
+        this.reentrantLock = reentrantLock;
+        this.nextCondtion = nextCondition;
+        this.thisCondtion = thisCondtion;
+        this.printChar = printChar;
+    &#125;
+
+    @Override
+    public void run() &#123;
+        // 获取打印锁 进入临界区
+        reentrantLock.lock();
+        try &#123;
+            // 连续打印PRINT_COUNT次
+            for (int i = 0; i &lt; PRINT_COUNT; i++) &#123;
+                //打印字符
+                System.out.print(printChar);
+                // 使用nextCondition唤醒下一个线程
+                // 因为只有一个线程在等待，所以signal或者signalAll都可以
+                nextCondtion.signal();
+                // 不是最后一次则通过thisCondition等待被唤醒
+                // 必须要加判断，不然虽然能够打印10次，但10次后就会直接死锁
+                if (i &lt; PRINT_COUNT - 1) &#123;
+                    try &#123;
+                        // 本线程让出锁并等待唤醒
+                        thisCondtion.await();
+                    &#125; catch (InterruptedException e) &#123;
+                        e.printStackTrace();
+                    &#125;
+                &#125;
+
+            &#125;
+        &#125; finally &#123;
+            // 释放打印锁
+            reentrantLock.unlock();
+        &#125;
+    &#125;
+    
+    public static void main(String[] args) throws InterruptedException &#123;
+        // 写锁
+        ReentrantLock lock = new ReentrantLock();
+        // 打印a线程的condition
+        Condition conditionA = lock.newCondition();
+        // 打印b线程的condition
+        Condition conditionB = lock.newCondition();
+        // 打印c线程的condition
+        Condition conditionC = lock.newCondition();
+        // 实例化A线程
+        Thread printerA = new Thread(new RcSyncPrinter(lock, conditionA, conditionB, &#39;A&#39;));
+        // 实例化B线程
+        Thread printerB = new Thread(new RcSyncPrinter(lock, conditionB, conditionC, &#39;B&#39;));
+        // 实例化C线程
+        Thread printerC = new Thread(new RcSyncPrinter(lock, conditionC, conditionA, &#39;C&#39;));
+        // 依次开始A B C线程
+        printerA.start();
+        Thread.sleep(100);
+        printerB.start();
+        Thread.sleep(100);
+        printerC.start();
+    &#125;
+&#125;
+</code></pre>
+<p>打印结果：</p>
+<pre><code>ABCABCABCABCABCABCABCABCABCABC
+</code></pre>
+<p><strong>通过一个锁和一个状态变量来实现</strong></p>
+<pre><code class="java">public class StateLockPrinter &#123;
+    //状态变量
+    private volatile int state=0;
+    
+    // 打印线程
+    private class Printer implements Runnable &#123;
+        //打印次数
+        private static final int PRINT_COUNT=10;
+        //打印锁
+        private final Object printLock;
+        //打印标志位 和state变量相关
+        private final int printFlag;
+        //后继线程的线程的打印标志位，state变量相关
+        private final int nextPrintFlag;
+        //该线程的打印字符
+        private final char printChar;
+        public Printer(Object printLock, int printFlag,int nextPrintFlag, char printChar) &#123;
+            super();
+            this.printLock = printLock;
+            this.printFlag=printFlag;
+            this.nextPrintFlag=nextPrintFlag;
+            this.printChar = printChar;
+        &#125;
+
+        @Override
+        public void run() &#123;
+            //获取打印锁 进入临界区
+            synchronized (printLock) &#123;
+                //连续打印PRINT_COUNT次
+                for(int i=0;i&lt;PRINT_COUNT;i++)&#123;
+                    //循环检验标志位 每次都阻塞然后等待唤醒
+                    while (state!=printFlag) &#123;
+                        try &#123;
+                            printLock.wait();
+                        &#125; catch (InterruptedException e) &#123;
+                            return;
+                        &#125;
+                    &#125;
+                    //打印字符
+                    System.out.print(printChar);
+                    //设置状态变量为下一个线程的标志位
+                    state=nextPrintFlag;
+                    //注意要notifyall，不然会死锁，因为notify只通知一个
+                    //但是同时等待的是两个,如果唤醒的不是正确那个就会没人唤醒，死锁了
+                    printLock.notifyAll();
+                &#125;
+            &#125;
+        &#125;
+        
+    &#125;
+
+    public void test() throws InterruptedException&#123;
+        //锁
+        Object lock=new Object();
+        //打印A的线程
+        Thread threadA=new Thread(new Printer(lock, 0,1, &#39;A&#39;));
+        //打印B的线程
+        Thread threadB=new Thread(new Printer(lock, 1,2, &#39;B&#39;));
+        //打印C的线程
+        Thread threadC=new Thread(new Printer(lock, 2,0, &#39;C&#39;));
+        //一次启动A B C线程
+        threadA.start();
+        Thread.sleep(1000);
+        threadB.start();
+        Thread.sleep(1000);
+        threadC.start();
+    &#125;
+    
+    public static void main(String[] args) throws InterruptedException &#123;
+        StateLockPrinter print = new StateLockPrinter();
+        print.test();
+    &#125;
+   
+&#125;
+</code></pre>
 
 	</div>
 </div>

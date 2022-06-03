@@ -1551,24 +1551,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-										四大线程池
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
-										多线程打印
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -2731,8 +2713,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/Long%E7%B1%BB/">
 										Long类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/NIO/">
+										NIO
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2823,6 +2823,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8E%92%E5%BA%8F%E4%BB%A3%E7%A0%81/">
+										排序代码
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5536,6 +5545,45 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					内存管理
+				</h2>
+				<div class="index-brief">
+					逻辑地址和物理地址
+我们编程一般只有可能和逻辑地址打交道，比如在 C 语言中，指针里面存储的数值就可以理解成为内存里的一个地址，这个地址也就是我们说的逻辑地址，逻辑地址由操作系统决定。
+物理地址指的是真实物理内存中地址，更具体一点来说就是内存地址寄存器中的地址，物理地址是内存单元真正的地址。
+编译时
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/">计算机基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/操作系统相关/">操作系统相关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">
 				<h2 class="index-title">
 					常见面试题
@@ -6384,45 +6432,6 @@ SIGHUP
 尽可能地使每个类或者成员不被外界访问。
 Java中可以通过包、访问修饰符（private protected public）控制类、接口和成员的可访问性（accessibility） 
 除了应该暴露的API之外，我们应该尽可能少的开放访问权。 因为一旦暴露给外界，可能会有
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Effective-Java/">Effective Java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E5%AF%B9%E8%B1%A1/">
-				<h2 class="index-title">
-					创建和销毁对象
-				</h2>
-				<div class="index-brief">
-					书籍地址：https://book.douban.com/subject/30412517/
-静态工厂方法静态工厂方法，也就是提供一个静态方法，可以返回类的一个实例。
-例如，下面是一个简单的提供Boolean类实例化方法：
-public static Boolean valueOf(boolean 
 					...
 				</div>
 			</a>

@@ -1553,24 +1553,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%9B%E5%A4%A7%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-										四大线程池
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8D%B0/">
-										多线程打印
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -2733,8 +2715,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/Long%E7%B1%BB/">
 										Long类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/NIO/">
+										NIO
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -2825,6 +2825,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/03/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java%E5%9F%BA%E7%A1%80/%E6%8E%92%E5%BA%8F%E4%BB%A3%E7%A0%81/">
+										排序代码
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5576,7 +5585,7 @@
 <ul>
 <li><p>save命令：阻塞当前Redis服务器，直到RDB过程完成为止，对于内存比较大的实例会造成长时间阻塞，线上环境不建议使用。</p>
 </li>
-<li><p>bgsave命令：Redis进程执行fork操作创建子进程，RDB持久化过程由子 进程负责，完成后自动结束。阻塞只发生在fork阶段，一般时间很短。</p>
+<li><p>bgsave命令：Redis进程执行fork操作创建子进程，RDB持久化过程由子进程负责，完成后自动结束。阻塞只发生在fork阶段，一般时间很短。</p>
 </li>
 </ul>
 <p>Redis内部所有的涉及RDB的操作都采用bgsave的方式，而save命令已经废弃。</p>
@@ -5605,11 +5614,18 @@ save 60 10000
 <p>bgsave是主流的触发RDB持久化方式。</p>
 <img src="https://img-blog.csdnimg.cn/d65beca15f8745a7b14c9718d0cae388.png" style="zoom:25%;" />
 
-<p>1.执行bgsave命令，Redis父进程判断当前是否存在正在执行的子进程，如RDB&#x2F;AOF子进程，如果存在bgsave命令直接返回。</p>
-<p>2.父进程执行fork操作创建子进程，fork操作过程中父进程会阻塞，通 过<code>info stats</code>命令查看<code>latest_fork_usec</code>选项，可以获取最近一个fork操作的耗时，单位为微秒。</p>
-<p>3.父进程fork完成后，bgsave命令返回<code>Background saving started</code>信息 并不再阻塞父进程，可以继续响应其他命令。</p>
-<p>4.子进程创建RDB文件，根据父进程内存生成临时快照文件，完成后 对原有文件进行原子替换。执行lastsave命令可以获取最后一次生成RDB的时间，对应info统计的<code>rdb_last_save_time</code>选项。</p>
-<p>5.进程发送信号给父进程表示完成，父进程更新统计信息。</p>
+<ol>
+<li><p>执行bgsave命令，Redis父进程判断当前是否存在正在执行的子进程，如RDB&#x2F;AOF子进程，如果存在bgsave命令直接返回。</p>
+</li>
+<li><p>父进程执行fork操作创建子进程，fork操作过程中父进程会阻塞，通 过<code>info stats</code>命令查看<code>latest_fork_usec</code>选项，可以获取最近一个fork操作的耗时，单位为微秒。</p>
+</li>
+<li><p>父进程fork完成后，bgsave命令返回<code>Background saving started</code>信息 并不再阻塞父进程，可以继续响应其他命令。</p>
+</li>
+<li><p>子进程创建RDB文件，根据父进程内存生成临时快照文件，完成后 对原有文件进行原子替换。执行lastsave命令可以获取最后一次生成RDB的时间，对应info统计的<code>rdb_last_save_time</code>选项。</p>
+</li>
+<li><p>进程发送信号给父进程表示完成，父进程更新统计信息。</p>
+</li>
+</ol>
 <p><strong>快照时数据能修改吗?</strong></p>
 <p>Redis就会借助操作系统提供的写时复制技术（Copy-On-Write, COW），在执行快照的同时，正常处理写操作。</p>
 <p>简单来说，bgsave子进程是由主线程fork生成的，可以共享主线程的所有内存数据。</p>
@@ -5650,10 +5666,16 @@ save 60 10000
 <p>AOF的工作流程操作:命令写入 (append)、文件同步(sync)、文件重写(rewrite)、重启加载 (load)</p>
 <img src="https://img-blog.csdnimg.cn/24fa06f6f5e74dbc854de553f814e679.png" style="zoom:25%;" />
 
-<p>1.所有的写入命令会追加到<code>aof_buf(缓冲区)</code>中。</p>
-<p>2.AOF缓冲区根据对应的策略向硬盘做同步操作。</p>
-<p>3.随着AOF文件越来越大，需要定期对AOF文件进行重写，达到压缩 的目的。</p>
-<p>4.当Redis服务器重启时，可以加载AOF文件进行数据恢复。</p>
+<ol>
+<li><p>所有的写入命令会追加到<code>aof_buf(缓冲区)</code>中。</p>
+</li>
+<li><p>AOF缓冲区根据对应的策略向硬盘做同步操作。</p>
+</li>
+<li><p>随着AOF文件越来越大，需要定期对AOF文件进行重写，达到压缩 的目的。</p>
+</li>
+<li><p>当Redis服务器重启时，可以加载AOF文件进行数据恢复。</p>
+</li>
+</ol>
 <p><strong>命令写入</strong></p>
 <p>AOF命令写入的内容直接是文本协议格式。</p>
 <p>例如<code>set hello world</code>这条命令，在AOF缓冲区会追加如下文本:</p>
@@ -5717,19 +5739,30 @@ save 60 10000
 <p><strong>当触发AOF重写时，内部做了哪些事呢?</strong></p>
 <img src="https://img-blog.csdnimg.cn/4fe5edf9c7ff441ab2cf9cc8c6349073.png" style="zoom:25%;" />
 
-<p>1.执行AOF重写请求。 如果当前进程正在执行AOF重写，请求不执行并返回如下响应:</p>
+<ol>
+<li>执行AOF重写请求。 如果当前进程正在执行AOF重写，请求不执行并返回如下响应:</li>
+</ol>
 <pre><code>ERR Background append only file rewriting already in progress
 </code></pre>
 <p>如果当前进程正在执行bgsave操作，重写命令延迟到bgsave完成之后再 执行，返回如下响应:</p>
 <pre><code>Background append only file rewriting scheduled
 </code></pre>
-<p>2.父进程执行fork创建子进程，开销等同于bgsave过程。</p>
-<p>3.主进程fork操作完成后，继续响应其他命令。所有修改命令依然写 入AOF缓冲区并根据appendfsync策略同步到硬盘，保证原有AOF机制正确 性。</p>
-<p>4.由于fork操作运用写时复制技术，子进程只能共享fork操作时的内 存数据。由于父进程依然响应命令，Redis使用<strong>AOF重写缓冲区</strong>保存这部 分新数据，防止新AOF文件生成期间丢失这部分数据。</p>
-<p>5.子进程根据内存快照，按照命令合并规则写入到新的AOF文件。每 次批量写入硬盘数据量由配置aof-rewrite-incremental-fsync控制，默认为 32MB，防止单次刷盘数据过多造成硬盘阻塞。</p>
-<p>6.新AOF文件写入完成后，子进程发送信号给父进程，父进程更新统计信息，具体见info persistence下的<code>aof_*</code>相关统计。</p>
-<p>7.父进程把AOF重写缓冲区的数据写入到新的AOF文件。 </p>
-<p>8.使用新AOF文件替换老文件，完成AOF重写。</p>
+<ol start="2">
+<li><p>父进程执行fork创建子进程，开销等同于bgsave过程。</p>
+</li>
+<li><p>主进程fork操作完成后，继续响应其他命令。所有修改命令依然写入AOF缓冲区并根据appendfsync策略同步到硬盘，保证原有AOF机制正确 性。</p>
+</li>
+<li><p>由于fork操作运用写时复制技术，子进程只能共享fork操作时的内存数据。由于父进程依然响应命令，Redis使用<strong>AOF重写缓冲区</strong>保存这部分新数据，防止新AOF文件生成期间丢失这部分数据。</p>
+</li>
+<li><p>子进程根据内存快照，按照命令合并规则写入到新的AOF文件。每 次批量写入硬盘数据量由配置aof-rewrite-incremental-fsync控制，默认为 32MB，防止单次刷盘数据过多造成硬盘阻塞。</p>
+</li>
+<li><p>新AOF文件写入完成后，子进程发送信号给父进程，父进程更新统计信息，具体见info persistence下的<code>aof_*</code>相关统计。</p>
+</li>
+<li><p>父进程把AOF重写缓冲区的数据写入到新的AOF文件。 </p>
+</li>
+<li><p>使用新AOF文件替换老文件，完成AOF重写。</p>
+</li>
+</ol>
 <img src="https://img-blog.csdnimg.cn/5fd411d64adb48fb816f71230c57d01a.png" style="zoom:15%;" />
 
 <p><strong>AOF的优缺点</strong></p>
