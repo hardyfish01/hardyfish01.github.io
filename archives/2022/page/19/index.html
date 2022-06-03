@@ -5240,6 +5240,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/958%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%8C%E5%85%A8%E6%80%A7%E6%A3%80%E9%AA%8C/">
+										958二叉树的完全性检验
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 										98验证二叉搜索树
 									</a>
@@ -5525,6 +5534,57 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">
+				<h2 class="index-title">
+					倒排索引
+				</h2>
+				<div class="index-brief">
+					正排索引和倒排索引：
+
+正排索引：文档ID到文档内容、单词的关联关系
+
+倒排索引：单词到文档ID的关联关系
+
+
+倒排索引详解：
+组成：
+
+单词词典（Term Dictionary）
+倒排列表（Posting List）
+
+单词词典：
+
+记录所有文档的单词，一般都比较大，记录了单词到倒排列表的关联信息
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E5%88%86%E8%AF%8D/">
@@ -5866,44 +5926,6 @@ ByteBuf 是一个字节容器，容器里面的的数据分为三个部分，第
 					我们都有在源码中发现 FastThreadLocal 的身影。
 Netty 作为高性能的网络通信框架，FastThreadLocal 是比 JDK 自身的 ThreadLocal 性能更高的通信框架。
 FastThreadLocal 的实现与 ThreadLocal 非常类似，Netty 为 Fas
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Future%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					Future回调机制
-				</h2>
-				<div class="index-brief">
-					Java的Future大家应该比较清楚，以一种非阻塞的方式，快速返回
-但是这种方式一个比较大的缺点是用户必须通过.get()方式来获取结果，无法精确了解完成时间。
-Netty扩展了Java的Future，最主要的改进就是增加了监听器Listener接口，通过监听器可以让异步执行更加有效率，不需要通过
 					...
 				</div>
 			</a>

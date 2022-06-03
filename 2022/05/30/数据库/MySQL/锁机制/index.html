@@ -5242,6 +5242,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/03/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/958%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%8C%E5%85%A8%E6%80%A7%E6%A3%80%E9%AA%8C/">
+										958二叉树的完全性检验
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 										98验证二叉搜索树
 									</a>
@@ -5601,6 +5610,55 @@
 <pre><code class="sql">SELECT * FROM table WHERE id BETWEN 1 AND 10 FOR UPDATE;
 </code></pre>
 <p>即所有在<code>（1，10）</code>区间内的记录行都会被锁住，所有id 为 2、3、4、5、6、7、8、9 的数据行的插入会被阻塞，但是 1 和 10 两条记录行并不会被锁住。</p>
+<h1 id="排他锁"><a href="#排他锁" class="headerlink" title="排他锁"></a>排他锁</h1><p>排他锁，也叫写锁，就是我们对数据进行写操作的时候，要先获得写锁，获得写锁的事务既可以写数据也可以读数据。</p>
+<p>但是，如果数据库已经被别人增加了排他写锁，那么后面的事务是无法在获得该数据库的任何锁的。</p>
+<p>也就是说，如果事务T对数据A加上排他锁后，则其他事务不能再对A加任何类型的封锁。获准排他锁的事务既能读数据，又能修改数据。</p>
+<p><strong>用法</strong></p>
+<p>在查询语句后面增加<code>FOR UPDATE</code>，MySQL会对查询结果中的每行都加排他锁。</p>
+<pre><code class="sql">SELECT ... FOR UPDATE;
+</code></pre>
+<p>当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请排他锁，否则会被阻塞。</p>
+<h1 id="共享锁"><a href="#共享锁" class="headerlink" title="共享锁"></a>共享锁</h1><p>是共享锁，也叫读锁。就是我们对数据进行读取操作的时候，其实是不会改变数据的值的。</p>
+<p>所以我们可以给数据库增加读锁，获得读锁的事务就可以读取数据了。</p>
+<ul>
+<li><p>当数据库已经被别人增加了读锁的时候，其他新来的事务也可以读数据，但是不能写。 </p>
+</li>
+<li><p>也就是说，如果事务T对数据A加上共享锁后，则其他事务只能对A再加共享锁，不能加排他锁。 </p>
+</li>
+<li><p>获准共享锁的事务只能读数据，不能修改数据。</p>
+</li>
+</ul>
+<p><strong>用法</strong></p>
+<p>在查询语句后面增加<code>LOCK IN SHARE MODE</code>，MySQL会对<strong>查询结果中的每行</strong>都加共享锁。</p>
+<pre><code class="sql">SELECT ... LOCK IN SHARE MODE;
+</code></pre>
+<p>当没有其他线程对查询结果集中的任何一行使用排他锁时，可以成功申请共享锁，否则会被阻塞。</p>
+<p>其他线程也可以读取使用了共享锁的表，而且这些线程读取的是同一个版本的数据。</p>
+<table>
+<thead>
+<tr>
+<th>锁类型</th>
+<th>独占锁</th>
+<th>共享锁</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>独占锁</td>
+<td>互斥</td>
+<td>互斥</td>
+</tr>
+<tr>
+<td>共享锁</td>
+<td>互斥</td>
+<td>不互斥</td>
+</tr>
+</tbody></table>
+<p>一般开发业务系统的时候，其实你查询主动加共享锁，这种情况较为少见，数据库的行锁是实用功能，但是一般不会在数据库层面做复杂的手动加锁操作，反而会用基于Redis&#x2F;Zookeeper的分布式锁来控制业务系统的锁逻辑。</p>
+<p><strong>加锁原则</strong></p>
+<p>拿MySSQL的InnoDB引擎来说，对于<code>insert</code>、<code>update</code>、<code>delete</code>等操作。会自动给涉及的数据加排他锁；</p>
+<p>对于一般的<code>select</code>语句，InnoDB不会加任何锁，事务可以通过以下语句给显示加共享锁或排他锁。</p>
+<p>共享锁：<code>SELECT ... LOCK IN SHARE MODE;</code></p>
+<p>排他锁：<code>SELECT ... FOR UPDATE;</code></p>
 
 	</div>
 </div>
@@ -5639,7 +5697,7 @@
 		const btw = new BTWPlugin();
 	    btw.init({
 	        id: 'container',
-	        blogId: '22377-1654008955981-829',
+	        blogId: '22377-1654233887776-859',
 	        name: '月伴飞鱼',
 	        qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
 	        keyword: '验证码',
@@ -5689,7 +5747,7 @@
     const btw = new BTWPlugin();
     btw.init({
         id: 'container',
-        blogId: '22377-1654008955981-829',
+        blogId: '22377-1654233887776-859',
         name: '月伴飞鱼',
         qrcode: 'https://img-blog.csdnimg.cn/20210613214230408.jpeg',
         keyword: '验证码',
