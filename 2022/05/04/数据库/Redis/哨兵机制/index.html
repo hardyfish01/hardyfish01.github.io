@@ -5581,7 +5581,7 @@
 		<p>当主节点出现故障时，Redis Sentinel能自动完成故障发现和故障转移并通知应用方，从而实现真正的高可用。</p>
 <p>Redis2.6版本提供Redis Sentinel v1版本，但是功能性和健壮性都有一些 问题，如果想使用Redis Sentinel的话，建议使用2.8以上版本，也就是v2版本 的Redis Sentinel。</p>
 <p>Redis Sentinel是一个分布式架构，其中包含若干个Sentinel节点和Redis 数据节点，每个Sentinel节点会对数据节点和其余Sentinel节点进行监控，当 它发现节点不可达时，会对节点做下线标识。</p>
-<p>如果被标识的是主节点，它还 会和其他Sentinel节点进行协商，当大多数Sentinel节点都认为主节点不可 达时，它们会选举出一个Sentinel节点来完成自动故障转移的工作，同时会将这个变化实时通知给Redis应用方。</p>
+<p>如果被标识的是主节点，它还 会和其他Sentinel节点进行协商，当大多数Sentinel节点都认为主节点不可达时，它们会选举出一个Sentinel节点来完成自动故障转移的工作，同时会将这个变化实时通知给Redis应用方。</p>
 <p>整个过程完全是自动的，不需要人工来介入，所以这套方案很有效地解决了Redis的高可用问题。</p>
 <img src="https://img-blog.csdnimg.cn/93f9a63a265f4c609ac51bfd6d5ad60b.png" style="zoom:25%;" />
 
@@ -5604,7 +5604,7 @@
 <ul>
 <li><p>监控:Sentinel节点会定期检测Redis数据节点、其余Sentinel节点是否可达。</p>
 </li>
-<li><p>通知:Sentinel节点会将故障转移的结果通知给应用方。</p>
+<li><p>通知:<code>Sentine</code>l节点会将故障转移的结果通知给应用方。</p>
 </li>
 <li><p>主节点故障转移:实现从节点晋升为主节点并维护后续正确的主从关系。</p>
 </li>
@@ -5641,12 +5641,12 @@
 <blockquote>
 <p>2.客观下线</p>
 </blockquote>
-<p>当Sentinel主观下线的节点是主节点时，该Sentinel节点会通过sentinel is- master-down-by-addr命令向其他Sentinel节点询问对主节点的判断，当超过<code> &lt;quorum&gt;</code>个数，Sentinel节点认为主节点确实有问题，这时该Sentinel节点会做出客观下线的决定，也就是大部分 Sentinel节点都对主节点的下线做了同意的判定，那么这个判定就是客观的</p>
+<p>当Sentinel主观下线的节点是主节点时，该Sentinel节点会通过<code>sentinel is- master-down-by-addr</code>命令向其他Sentinel节点询问对主节点的判断，当超过<code> &lt;quorum&gt;</code>个数，Sentinel节点认为主节点确实有问题，这时该Sentinel节点会做出客观下线的决定，也就是大部分 Sentinel节点都对主节点的下线做了同意的判定，那么这个判定就是客观的</p>
 <img src="https://img-blog.csdnimg.cn/7c42c4d6f2094734b9d5fbf1be8de5de.png" style="zoom:25%;" />
 
 <p><strong>领导者Sentinel节点选举</strong></p>
 <p>故障转移的工作只需要一个Sentinel 节点来完成即可，所以Sentinel节点之间会做一个领导者选举的工作，选出 一个Sentinel节点作为领导者进行故障转移的工作。</p>
-<p>Redis使用了Raft算法实现领导者选举，这里给出一个Redis Sentinel进行领导者选举的大致思路:</p>
+<p>Redis使用了<strong>Raft算法</strong>实现领导者选举，这里给出一个Redis Sentinel进行领导者选举的大致思路:</p>
 <ol>
 <li><p>每个在线的Sentinel节点都有资格成为领导者，当它确认主节点主观下线时候，会向其他Sentinel节点发送sentinel is-master-down-by-addr命令， 要求将自己设置为领导者。</p>
 </li>
@@ -5657,13 +5657,13 @@
 <li><p>如果此过程没有选举出领导者，将进入下一次选举。</p>
 </li>
 </ol>
-<p>实际上Redis Sentinel实现会更简单一些，因为一旦有一个Sentinel节点获得了<code>max(quorum，num(sentinels)/2+1)</code>的票数，其他Sentinel节点再去确 认已经没有意义了，因为每个Sentinel节点只有一票。</p>
+<p>实际上Redis Sentinel实现会更简单一些，因为一旦有一个Sentinel节点获得了<code>max(quorum，num(sentinels)/2+1)</code>的票数，其他Sentinel节点再去确认已经没有意义了，因为每个Sentinel节点只有一票。</p>
 <p><strong>故障转移</strong></p>
 <p>领导者选举出的Sentinel节点负责故障转移，具体步骤如下:</p>
 <ol>
 <li><p>在从节点列表中选出一个节点作为新的主节点，选择方法如下:</p>
 </li>
-<li><p>过滤:不健康(主观下线、断线)、5秒内没有回复过Sentinel节 点ping响应、与主节点失联超过<code>down-after-milliseconds*10</code>秒。</p>
+<li><p>过滤:不健康(主观下线、断线)、5秒内没有回复过Sentinel节点ping响应、与主节点失联超过<code>down-after-milliseconds*10</code>秒。</p>
 </li>
 <li><p>选择slave-priority(从节点优先级)最高的从节点列表，如果存在则 返回，不存在则继续。</p>
 </li>
