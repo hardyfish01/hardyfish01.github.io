@@ -1525,6 +1525,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/07/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/InheritableThreadLocal/">
+										InheritableThreadLocal
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Synchronized/">
 										Synchronized
 									</a>
@@ -5572,6 +5581,50 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E8%8C%83%E5%BC%8F/">
+				<h2 class="index-title">
+					范式
+				</h2>
+				<div class="index-brief">
+					各种范式呈递次规范，越高的范式数据库冗余越小。
+
+通常所用到的只是前三个范式
+
+第一范式：所有属性都是不可分割的原子值
+也就是每个属性都是不可再分的
+如果在实际场景中，一个联系人有家庭电话和公司电话，那么以”姓名、性别、电话”为表头的表结构就没有达到 1NF。
+
+要符合 1NF 我们只需把电话列拆分
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/数据库/">数据库</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/数据库/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E4%BD%8D%E7%A7%BB%E4%B8%BB%E9%A2%98/">
 				<h2 class="index-title">
 					位移主题
@@ -5904,45 +5957,6 @@ Kafka控制器大量使用ZooKeeper
 每个主题又可以分为一个或多个分区，在不考虑副本的情况下，一个分区会对应一个日志。
 
 但设计者考虑到随着时间推移，日志文件会不断扩大，因此为了防止Log过大，设计者引入了日志分段（LogSegment）的概念，将Log切分为
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/消息队列/">消息队列</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1/">
-				<h2 class="index-title">
-					消息丢失
-				</h2>
-				<div class="index-brief">
-					生产者程序丢失数据
-目前Kafka Producer是异步发送消息的，也就是说如果你调用的是producer.send(msg)这个API，那么它通常会立即返回，但此时你不能认为消息发送已成功完成。
-如果用这个方式，可能会有哪些因素导致消息没有发送成功呢？
-原因有很多，例如网络抖动，导致消息压根就没
 					...
 				</div>
 			</a>

@@ -1525,6 +1525,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/07/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/InheritableThreadLocal/">
+										InheritableThreadLocal
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Synchronized/">
 										Synchronized
 									</a>
@@ -5572,6 +5581,45 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1/">
+				<h2 class="index-title">
+					消息丢失
+				</h2>
+				<div class="index-brief">
+					生产者程序丢失数据
+目前Kafka Producer是异步发送消息的，也就是说如果你调用的是producer.send(msg)这个API，那么它通常会立即返回，但此时你不能认为消息发送已成功完成。
+如果用这个方式，可能会有哪些因素导致消息没有发送成功呢？
+原因有很多，例如网络抖动，导致消息压根就没
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E8%B4%B9%E8%80%85%E7%BB%84/">
 				<h2 class="index-title">
 					消费者组
@@ -5902,43 +5950,6 @@ OK
 					内存消耗可通过执行info memory 命令获取内存相关指标。
 当mem_fragmentation_ratio&gt;1时，说明used_memory_rss-used_memory多出的部分内存并没有用于数据存储，而是被内存碎片所消耗，如果两者相差很大，说明碎片率严重。
 当mem_fragme
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
-				<h2 class="index-title">
-					分布式锁
-				</h2>
-				<div class="index-brief">
-					面试题：Redis如何实现分布式锁！
-
 					...
 				</div>
 			</a>
