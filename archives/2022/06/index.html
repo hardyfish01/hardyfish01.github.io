@@ -1023,6 +1023,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7/">
+										分布式一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
 										动态代理
 									</a>
@@ -1552,6 +1561,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90%E5%88%9D%E5%A7%8B%E5%8C%96/">
+										共享资源初始化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 										内存模型
 									</a>
@@ -1664,6 +1682,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/">
 										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E5%AE%9E%E7%8E%B0/">
+										锁实现
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5581,6 +5608,97 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E5%AE%9E%E7%8E%B0/">
+				<h2 class="index-title">
+					锁实现
+				</h2>
+				<div class="index-brief">
+					需求
+我们选择共享访问数据库链接这个场景来定义一个锁。
+详细设计
+假定我们的数据库是单机 mysql，只能承受 10 个链接，创建数据库链接时，我们是通过最原始 JDBC 的方式，我们用一个接口把用 JDBC 创建链接的过程进行了封装，这个接口我们命名为：创建链接接口。
+共享访问数据库链接的整体要求
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-08</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90%E5%88%9D%E5%A7%8B%E5%8C%96/">
+				<h2 class="index-title">
+					共享资源初始化
+				</h2>
+				<div class="index-brief">
+					在分布式的系统中，我们喜欢把一些死的配置资源在项目启动的时候加锁到 JVM 内存里面去，这样请求在拿这些共享配置资源时，就可直接从内存里面拿，不必每次都从数据库中拿，减少了时间开销。
+
+一般这样的共享资源有：死的业务流程配置 + 死的业务规则配置。
+
+共享资源初始化的步骤一般为：
+
+项目启动 -&g
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-08</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/06/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7/">
+				<h2 class="index-title">
+					分布式一致性
+				</h2>
+				<div class="index-brief">
+					文章首发在公众号（月伴飞鱼），之后同步到掘金和个人网站：xiaoflyfish.cn&#x2F;
+觉得有收获，希望帮忙点赞，转发下哈，谢谢，谢谢
+背景互联网时代和环境下，为了快速需求响应和提高系统吞吐，往往进行微服务化改造，将复杂系统和数据进行拆分；
+这时候的一致性指分布式服务化系统之间的弱一致性，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-08</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/公众号文章/">公众号文章</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/06/07/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/InheritableThreadLocal/">
 				<h2 class="index-title">
 					InheritableThreadLocal
@@ -5857,118 +5975,6 @@ list.stream().sorted(Compara
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/编程语言/Java基础/">Java基础</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/06/03/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/958%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%8C%E5%85%A8%E6%80%A7%E6%A3%80%E9%AA%8C/">
-				<h2 class="index-title">
-					958二叉树的完全性检验
-				</h2>
-				<div class="index-brief">
-					题目地址：https://leetcode.cn/problems/check-completeness-of-a-binary-tree/
-
-
-一个合法的完全二叉树在广度优先遍历的条件下，null结点是最后被访问到的。
-但我们对于遍历二叉树过程中访问到的null结点是否是这棵树的最后一个结点是未知
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试算法/">面试算法</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试算法/LeetCode/">LeetCode</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/06/02/%E8%BD%BB%E6%9D%BE%E6%97%B6%E5%88%BB/%E6%AD%A3%E7%89%88IDEA%E8%B4%A6%E5%8F%B7/">
-				<h2 class="index-title">
-					正版IDEA账号
-				</h2>
-				<div class="index-brief">
-					作为一名后端开发程序员，需要经常使用Jetbrains全家桶软件(如IntelliJ IDEA、PyCharm、Goland、PhpStorm等)。
-但是网上的这些软件的破解激活版，会有一些问题：
-
-不稳定，随时过期。
-不安全，可能代码泄漏，电脑也会变卡，这是真的，我的也经常这样。
-每次升级新的版本
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-06-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/轻松时刻/">轻松时刻</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/06/02/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/%E6%8F%90%E5%90%8D%E8%AF%8D/">
-				<h2 class="index-title">
-					提名词
-				</h2>
-				<div class="index-brief">
-					提名词的易错点
-在提名阶段，你需要提交一份提名词（也叫推荐语），通过200～300字概要地介绍自己的能力。
-这份材料对提炼和概括能力有比较高的要求，通常由主管来写，也可以由你自己写，然后给主管审核。
-很多人在写提名词的时候都会犯以下4点错误：
-
-第一，罗列事项，将自己做的项目一个一个流水账式地列出来
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-06-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/专栏学习/">专栏学习</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/专栏学习/大厂晋升指南/">大厂晋升指南</a>
 										
                                     </span>
                                 

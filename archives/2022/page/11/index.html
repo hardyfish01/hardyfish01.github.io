@@ -1023,6 +1023,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7/">
+										分布式一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
 										动态代理
 									</a>
@@ -1552,6 +1561,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90%E5%88%9D%E5%A7%8B%E5%8C%96/">
+										共享资源初始化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 										内存模型
 									</a>
@@ -1664,6 +1682,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/">
 										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E5%AE%9E%E7%8E%B0/">
+										锁实现
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5581,6 +5608,134 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%A0%81%E4%B9%8B%E4%B8%91/%E6%BB%A5%E7%94%A8%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
+				<h2 class="index-title">
+					滥用控制语句
+				</h2>
+				<div class="index-brief">
+					嵌套的代码
+public void distributeEpubs(final long bookId) &#123;
+  List&lt;Epub&gt; epubs = this.getEpubsByBookId(bookId);
+  for (Epub epub : epubs) &#123;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/专栏学习/">专栏学习</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/专栏学习/代码之丑/">代码之丑</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%A0%81%E4%B9%8B%E4%B8%91/%E5%A4%A7%E7%B1%BB/">
+				<h2 class="index-title">
+					大类
+				</h2>
+				<div class="index-brief">
+					大类的产生
+
+职责不单一
+
+最容易产生大类的原因在于职责的不单一。
+我们先来看一段代码：
+public class User &#123;
+  private long userId;
+  private String name;
+  private String nickname;
+  priva
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/专栏学习/">专栏学习</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/专栏学习/代码之丑/">代码之丑</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%A0%81%E4%B9%8B%E4%B8%91/%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE/">
+				<h2 class="index-title">
+					可变数据
+				</h2>
+				<div class="index-brief">
+					满天飞的 Setter
+public void approve(final long bookId) &#123;
+  ...
+  book.setReviewStatus(ReviewStatus.APPROVED);
+  ...
+&#125;
+
+这是一段对作品进行审核的代码，通过 bookId，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/专栏学习/">专栏学习</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/专栏学习/代码之丑/">代码之丑</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%A0%81%E4%B9%8B%E4%B8%91/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E8%B5%8B%E5%80%BC/">
 				<h2 class="index-title">
 					变量声明与赋值
@@ -5863,109 +6018,6 @@ P5&#x2F;P6 这一档相当于专业工匠，就像木匠、铁匠、粉刷匠一
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/专栏学习/大厂晋升指南/">大厂晋升指南</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/">
-				<h2 class="index-title">
-					循环依赖
-				</h2>
-				<div class="index-brief">
-					什么是循环依赖
-所谓的循环依赖是指，A 依赖 B，B 又依赖 A，它们之间形成了循环依赖。
-或者是 A 依赖 B，B 依赖 C，C 又依赖 A。它们之间的依赖关系如下：
-
-
-Spring中的循环依赖，其实就是一个死循环的过程，在初始化 A 的时候发现依赖了 B，这时就会去初始化 B，然后又发现 B 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9D%A2%E7%BB%8F%E5%88%86%E4%BA%AB/">
-				<h2 class="index-title">
-					面经分享
-				</h2>
-				<div class="index-brief">
-					最近一段时间面试了几家互联网公司，陆续通过了阿里、头条、美团，滴滴，京东的面试，基本上面试的公司都通过了，所以在这里想分享一些自己面试的经验给大家，希望能帮助大家拿到心仪的offer
-我的基本情况：19届本科，现在在一家小公司，毕业一年半，后端开发
-面试经历其实自己最开始其实并没有跳槽的打算(一直觉
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/公众号文章/">公众号文章</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E8%BD%BB%E6%9D%BE%E6%97%B6%E5%88%BB/%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90/">
-				<h2 class="index-title">
-					电影推荐
-				</h2>
-				<div class="index-brief">
-					作为一个电影迷，我本人看了很多电影，也从电影中阅尽了人生百态。
-这里推荐100部我认为的好电影，拯救你的片荒，很多我也记不清了，所以会持续更新的！
-动画电影千与千寻
-
-豆瓣地址：https://movie.douban.com/subject/1291561/
-
-我喜欢的台词：
-
-曾经发生过的事情不
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/轻松时刻/">轻松时刻</a>
 										
                                     </span>
                                 

@@ -1023,6 +1023,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7/">
+										分布式一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
 										动态代理
 									</a>
@@ -1552,6 +1561,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90%E5%88%9D%E5%A7%8B%E5%8C%96/">
+										共享资源初始化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 										内存模型
 									</a>
@@ -1664,6 +1682,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/">
 										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E5%AE%9E%E7%8E%B0/">
+										锁实现
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5581,6 +5608,105 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					桥接模式
+				</h2>
+				<div class="index-brief">
+					将抽象部分与它的具体实现部分分离，使它们都可以独立地变化
+合成复用原则中提到：
+
+优先通过组合的方式建立两个类之间联系，而不是继承，继承过多会发生类爆炸的情况
+
+案例
+业务场景：
+
+中国有很多银行，有中国农业银行和中国工商银行；
+关于我们的账号，有定期账号和活期账号，一个就是银行一个就是我们的账号；
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/设计模式/">设计模式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					模板方法模式
+				</h2>
+				<div class="index-brief">
+					模板方法模式定义了一个算法的骨架，并允许子类为一个或多个步骤提供实现
+使得子类可以在不改变算法结构的情况下，重新定义算法的某些步骤
+适用场景：
+
+各子类中公共的行为被提取出来并集中到一个公共父类中，从而避免代码重复
+
+一次性实现一个算法的不变的部分，并将可变的行为留给子类来实现
+
+
+模板方法和工厂方
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/设计模式/">设计模式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					策略模式
+				</h2>
+				<div class="index-brief">
+					定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化不会影响到使用算法的用户
+使用算法的用户就是应用层，我们把不同的算法封装到不同的类中，让她们之间可以相互替换
+案例
+木木网卖课程，为了促进销售，618实行买课程立减10元，双十一实行满50减10元，还有返现的优惠（这个活动还没有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/设计模式/">设计模式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
 				<h2 class="index-title">
 					简单工厂模式
@@ -6228,123 +6354,6 @@ Netty扩展了Java的Future，最主要的改进就是增加了监听器Listener
 				<div class="index-brief">
 					对象池与内存池的都是为了提高 Netty 的并发处理能力，我们知道 Java 中频繁地创建和销毁对象的开销是很大的，所以很多人会将一些通用对象缓存起来，当需要某个对象时，优先从对象池中获取对象实例。
 通过重用对象，不仅避免频繁地创建和销毁所带来的性能损耗，而且对 JVM GC 是友好的，这就是对象池
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Reactor%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					Reactor线程模型
-				</h2>
-				<div class="index-brief">
-					Reactor是反应堆的意思，Reactor模型，是指通过一个或多个输入同时传递给服务处理器的服务请求的事件驱动处理模式。 
-服务端程序处理传入多路请求，并将它们同步分派给请求对应的处理线程，Reactor模式也叫Dispatcher模式，即I&#x2F;O多了复用统一监听事件，收到事件后分发(Di
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
-				<h2 class="index-title">
-					基本架构
-				</h2>
-				<div class="index-brief">
-					Netty 的逻辑处理架构为典型网络分层架构设计，共分为网络通信层、事件调度层、服务编排层，每一层各司其职。
-
-
-网络通信层网络通信层的职责是执行网络 I&#x2F;O 的操作，它支持多种网络协议和 I&#x2F;O 模型的连接操作。
-当网络数据读取到内核缓冲区后，会触发各种网络事件，这些网络事件会
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/">
-				<h2 class="index-title">
-					入门案例
-				</h2>
-				<div class="index-brief">
-					构建一个简单的应用程序：客户端将消息发送给服务器，而服务器再将消息会送给客户端。
-首先，引入 Maven 依赖
- &lt;dependency&gt;
-        &lt;groupId&gt;io.netty&lt;/groupId&gt;
-        &lt;artifactId&gt;
 					...
 				</div>
 			</a>

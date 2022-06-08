@@ -1023,6 +1023,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7/">
+										分布式一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
 										动态代理
 									</a>
@@ -1552,6 +1561,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90%E5%88%9D%E5%A7%8B%E5%8C%96/">
+										共享资源初始化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 										内存模型
 									</a>
@@ -1664,6 +1682,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/">
 										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E5%AE%9E%E7%8E%B0/">
+										锁实现
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5581,6 +5608,123 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Reactor%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
+				<h2 class="index-title">
+					Reactor线程模型
+				</h2>
+				<div class="index-brief">
+					Reactor是反应堆的意思，Reactor模型，是指通过一个或多个输入同时传递给服务处理器的服务请求的事件驱动处理模式。 
+服务端程序处理传入多路请求，并将它们同步分派给请求对应的处理线程，Reactor模式也叫Dispatcher模式，即I&#x2F;O多了复用统一监听事件，收到事件后分发(Di
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+				<h2 class="index-title">
+					基本架构
+				</h2>
+				<div class="index-brief">
+					Netty 的逻辑处理架构为典型网络分层架构设计，共分为网络通信层、事件调度层、服务编排层，每一层各司其职。
+
+
+网络通信层网络通信层的职责是执行网络 I&#x2F;O 的操作，它支持多种网络协议和 I&#x2F;O 模型的连接操作。
+当网络数据读取到内核缓冲区后，会触发各种网络事件，这些网络事件会
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/">
+				<h2 class="index-title">
+					入门案例
+				</h2>
+				<div class="index-brief">
+					构建一个简单的应用程序：客户端将消息发送给服务器，而服务器再将消息会送给客户端。
+首先，引入 Maven 依赖
+ &lt;dependency&gt;
+        &lt;groupId&gt;io.netty&lt;/groupId&gt;
+        &lt;artifactId&gt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
 					基础知识
@@ -6256,126 +6400,6 @@ Obse
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/AOP/">
-				<h2 class="index-title">
-					AOP
-				</h2>
-				<div class="index-brief">
-					AOP的核心是将横切关注点从业务逻辑中抽离出来，只需要关注业务主体逻辑即可，无需关注通用逻辑（日志、埋点、事务等通用的逻辑）。
-AOP术语
-
-连接点（JoinPoint）
-程序执行的某个特定位置，例如：类初始化前、类初始化后、类的某个方法执行前、类的某个方法正常执行后、类的某个方法抛出异常后等。一个
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/Bean%E6%B3%A8%E5%86%8C/">
-				<h2 class="index-title">
-					Bean注册
-				</h2>
-				<div class="index-brief">
-					XML文件配置的方式
-Spring的xml配置文件：
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans xmlns=&quot;http://www.springframework.org/schem
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/%E6%BA%90%E7%A0%81%E7%8E%AF%E5%A2%83/">
-				<h2 class="index-title">
-					源码环境
-				</h2>
-				<div class="index-brief">
-					Spring在github上的仓库地址是：
-https://github.com/spring-projects/spring-framework
-
-不要直接去github上去下载源码，网速实在太慢
-
-使用的码云上Spring仓库的镜像，该镜像每日同步一次，地址是：https://gitee.com
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/Spring/">Spring</a>
 										
                                     </span>
                                 

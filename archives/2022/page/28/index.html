@@ -1023,6 +1023,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7/">
+										分布式一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
 										动态代理
 									</a>
@@ -1552,6 +1561,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90%E5%88%9D%E5%A7%8B%E5%8C%96/">
+										共享资源初始化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 										内存模型
 									</a>
@@ -1664,6 +1682,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/">
 										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E5%AE%9E%E7%8E%B0/">
+										锁实现
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5581,6 +5608,131 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%8B%A6%E6%88%AA%E5%99%A8/">
+				<h2 class="index-title">
+					拦截器
+				</h2>
+				<div class="index-brief">
+					Kafka拦截器分为生产者拦截器和消费者拦截器。
+
+生产者拦截器允许你在发送消息前以及消息提交成功后植入你的拦截器逻辑；
+
+消费者拦截器支持在消费消息前以及提交位移后编写特定逻辑。
+
+
+可以将一组拦截器串连成一个大的拦截器，Kafka会按照添加顺序依次执行拦截器逻辑。
+当前Kafka拦截器的设置方法
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%8E%A7%E5%88%B6%E5%99%A8/">
+				<h2 class="index-title">
+					控制器
+				</h2>
+				<div class="index-brief">
+					控制器组件（Controller），它的主要作用是在Apache ZooKeeper的帮助下管理和协调整个Kafka集群。
+
+
+集群中任意一台Broker都能充当控制器的角色，但是，在运行过程中，只能有一个Broker成为控制器，行使其管理和协调的职责。
+
+Kafka控制器大量使用ZooKeeper
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%97%A5%E5%BF%97%E5%AD%98%E5%82%A8/">
+				<h2 class="index-title">
+					日志存储
+				</h2>
+				<div class="index-brief">
+					Kafka中的消息是以主题为基本单位进行归类的，每个主题在逻辑上相互独立。
+
+每个主题又可以分为一个或多个分区，在不考虑副本的情况下，一个分区会对应一个日志。
+
+但设计者考虑到随着时间推移，日志文件会不断扩大，因此为了防止Log过大，设计者引入了日志分段（LogSegment）的概念，将Log切分为
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1/">
 				<h2 class="index-title">
 					消息丢失
@@ -5856,121 +6008,6 @@ consumer 在消费过程中，应用进程被强制kill掉或发生异常退出�
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/消息队列/KAFKA/">KAFKA</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/Pipeline/">
-				<h2 class="index-title">
-					Pipeline
-				</h2>
-				<div class="index-brief">
-					Redis如何解决频繁的命令往返造成的性能瓶颈！
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E4%BA%8B%E5%8A%A1/">
-				<h2 class="index-title">
-					事务
-				</h2>
-				<div class="index-brief">
-					Redis提供了简单的事务功能，将一组需要一起执行的命令放到multi和 exec两个命令之间。
-multi命令代表事务开始，exec命令代表事务结束，它们之间的命令是原子顺序执行的。
-127.0.0.1:6379&gt; multi
-OK
-127.0.0.1:6379&gt; sadd user:
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E5%86%85%E5%AD%98%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					内存机制
-				</h2>
-				<div class="index-brief">
-					内存消耗可通过执行info memory 命令获取内存相关指标。
-当mem_fragmentation_ratio&gt;1时，说明used_memory_rss-used_memory多出的部分内存并没有用于数据存储，而是被内存碎片所消耗，如果两者相差很大，说明碎片率严重。
-当mem_fragme
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/Redis/">Redis</a>
 										
                                     </span>
                                 
