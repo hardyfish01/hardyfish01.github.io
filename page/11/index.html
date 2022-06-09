@@ -4215,6 +4215,37 @@
 								
 							</ul>
 			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										股票知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										美股
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/06/09/%E8%BD%BB%E6%9D%BE%E6%97%B6%E5%88%BB/%E8%82%A1%E7%A5%A8%E7%9F%A5%E8%AF%86/%E7%BE%8E%E8%82%A1/%E4%BA%A4%E6%98%93%E8%A7%84%E5%88%99/">
+										交易规则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5608,6 +5639,43 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Recycler%E5%AF%B9%E8%B1%A1%E6%B1%A0/">
+				<h2 class="index-title">
+					Recycler对象池
+				</h2>
+				<div class="index-brief">
+					对象池与内存池的都是为了提高 Netty 的并发处理能力，我们知道 Java 中频繁地创建和销毁对象的开销是很大的，所以很多人会将一些通用对象缓存起来，当需要某个对象时，优先从对象池中获取对象实例。
+通过重用对象，不仅避免频繁地创建和销毁所带来的性能损耗，而且对 JVM GC 是友好的，这就是对象池
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/Reactor%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
 					Reactor线程模型
@@ -6339,46 +6407,6 @@ ZooKeeper 树中的每一层级用斜杠（/）分隔开，且只能用
 
 轮询法是最为简单的负载均衡算法，当接收到来自网络中的客户端请求后，负载均衡服务器会按顺序逐个分配给后端服务。
 比如集群中有 3 台服务器，分别是 server1、server2、server3，轮询法会按照 sever1、server2、server3 这个顺序依次分发
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E9%9B%86%E7%BE%A4/">
-				<h2 class="index-title">
-					集群
-				</h2>
-				<div class="index-brief">
-					ZK集群中包括Leader，Follower，Observer三种角色。
-
-Leader：事务请求的唯一处理者，保证集群事务处理的顺序性。集群内部各节点的调度者。
-Follower：处理非事务请求，并将事务请求转发给Leader节点。参与事务请求过半数生效的投票。参与Leader选举投票。
-Obse
 					...
 				</div>
 			</a>
