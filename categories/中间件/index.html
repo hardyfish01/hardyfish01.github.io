@@ -161,6 +161,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/11/JVM%E7%9B%B8%E5%85%B3/%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">
+										代码运行机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
 										元空间
 									</a>
@@ -608,6 +617,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/">
+										数据持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E7%B4%A2%E5%BC%95/">
 										索引
 									</a>
@@ -794,6 +812,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8FID/">
 										分布式ID
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4261,6 +4288,26 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										海量数据
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/06/12/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE/%E9%AB%98%E9%A2%91%E8%AF%8D/">
+										高频词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										资料分享
 									</a>
 									
@@ -5639,6 +5686,85 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/">
+				<h2 class="index-title">
+					数据持久化
+				</h2>
+				<div class="index-brief">
+					Elasticsearch底层采用的是lucene这个库来实现倒排索引的功能，在lucene里每一条记录称为document(文档)，lucene使用segment(分段)来存储数据，用commit point来记录所有segment的元数据，一条记录要被搜索到，必须写入到segment中。
+
+
+
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Elasticsearch/">Elasticsearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+				<h2 class="index-title">
+					分布式锁
+				</h2>
+				<div class="index-brief">
+					分布式锁的目的是保证在分布式部署的应用集群中，多个服务在请求同一个方法或者同一个业务操作的情况下，对应业务逻辑只能被一台机器上的一个线程执行，避免出现并发问题。
+实现分布式锁目前有三种流行方案，即基于数据库、Redis、ZooKeeper 的方案。
+方案一：
+使用节点中的存储数据区域，ZK中节点存储
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/24/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/Head/">
 				<h2 class="index-title">
 					Head
@@ -5943,93 +6069,6 @@ GET /_search
 目的：是文档均匀分布到所有分片上，以充分利用资源。之所以不用随机和轮询round-robin算法的原因是：
 
 需要维护文档到分片的映射关系，那么在PB级别的数据量的时候，这是一个
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/ElasticSearch/">ElasticSearch</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E7%B4%A2%E5%BC%95/">
-				<h2 class="index-title">
-					索引
-				</h2>
-				<div class="index-brief">
-					索引一个文档就是存储一个文档到一个 索引 （名词）中以便被检索和查询。
-倒排索引：
-关系型数据库通过增加一个 索引，比如一个 B树（B-tree）索引 到指定的列上，以便提升数据检索速度。
-Elasticsearch 和 Lucene 使用了一个叫做 倒排索引 的结构来达到相同的目的。
-
-默认的，一
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/">中间件</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/中间件/Elasticsearch/">Elasticsearch</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E9%9B%86%E7%BE%A4/">
-				<h2 class="index-title">
-					集群
-				</h2>
-				<div class="index-brief">
-					ES支持集群模式，即一个分布式系统。
-其好处主要有以下2个：
-
-可增大系统容量。比如：内存、磁盘的增加使得ES能够支持PB级别的数据；
-
-提高了系统可用性。即使一部分节点停止服务，集群依然可以正常对外服务。
-
-
-ES集群由多个ES实例构成：
-
-不同集群通过集群名字来区分，通过配置文件elastics
 					...
 				</div>
 			</a>

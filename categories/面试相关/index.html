@@ -161,6 +161,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/11/JVM%E7%9B%B8%E5%85%B3/%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">
+										代码运行机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
 										元空间
 									</a>
@@ -608,6 +617,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/">
+										数据持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E7%B4%A2%E5%BC%95/">
 										索引
 									</a>
@@ -794,6 +812,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8FID/">
 										分布式ID
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4261,6 +4288,26 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										海量数据
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/06/12/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE/%E9%AB%98%E9%A2%91%E8%AF%8D/">
+										高频词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										资料分享
 									</a>
 									
@@ -5639,6 +5686,46 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/06/12/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE/%E9%AB%98%E9%A2%91%E8%AF%8D/">
+				<h2 class="index-title">
+					高频词
+				</h2>
+				<div class="index-brief">
+					题目描述
+假如有一个1G大小的文件，文件里每一行是一个词，每个词的大小不超过16byte，要求返回出现频率最高的100个词。
+内存大小限制是10M。
+解法1由于内存限制，我们无法直接将大文件的所有词一次性读到内存中。
+可以使用分治策略，把一个大文件分解成多个小文件，保证每个文件的大小小于10M，进而
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/面试相关/">面试相关</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/面试相关/海量数据/">海量数据</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/24/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E8%B5%84%E6%96%99%E5%88%86%E4%BA%AB/Redis/">
 				<h2 class="index-title">
 					Redis
@@ -5979,46 +6066,6 @@ Java异常机制可以使程序中异常处理代码和正常业务代码分离�
 				<div class="index-brief">
 					简介MyBatis是什么？
 MyBatis 是一款优秀的持久层框架，一个半 ORM（对象关系映射）框架，它支持定制化 SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/">面试相关</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/面试相关/面试题/">面试题</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E9%9D%A2%E8%AF%95%E9%A2%98/JVM%E9%9D%A2%E8%AF%95%E9%A2%98/">
-				<h2 class="index-title">
-					JVM面试题
-				</h2>
-				<div class="index-brief">
-					内存区域说一下 JVM 的主要组成部分及其作用？
-
-JVM包含两个子系统和两个组件，两个子系统为Class loader(类装载)、Execution engine(执行引擎)；两个组件为Runtime data area(运行时数据区)、Native Interface(本地接口)。
-
-Class
 					...
 				</div>
 			</a>

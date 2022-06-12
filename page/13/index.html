@@ -161,6 +161,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/11/JVM%E7%9B%B8%E5%85%B3/%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">
+										代码运行机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/JVM%E7%9B%B8%E5%85%B3/%E5%85%83%E7%A9%BA%E9%97%B4/">
 										元空间
 									</a>
@@ -608,6 +617,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/">
+										数据持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ElasticSearch/%E7%B4%A2%E5%BC%95/">
 										索引
 									</a>
@@ -794,6 +812,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8FID/">
 										分布式ID
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/12/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4261,6 +4288,26 @@
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										海量数据
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/06/12/%E9%9D%A2%E8%AF%95%E7%9B%B8%E5%85%B3/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE/%E9%AB%98%E9%A2%91%E8%AF%8D/">
+										高频词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										资料分享
 									</a>
 									
@@ -5639,6 +5686,181 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%B4%AA%E5%A9%AA%E6%A8%A1%E5%BC%8F%E5%92%8C%E9%9D%9E%E8%B4%AA%E5%A9%AA%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					贪婪模式和非贪婪模式
+				</h2>
+				<div class="index-brief">
+					贪婪模式，简单说就是尽可能进行最长匹配。
+非贪婪模式，则会尽可能进行最短匹配。
+贪婪匹配
+在正则中，表示次数的量词默认是贪婪的，在贪婪模式下，会尝试尽可能最大长度去匹配。
+比如：在字符串 aaabb 中使用正则 a* 的匹配过程。
+
+a* 在匹配开头的 a 时，会尝试尽量匹配更多的 a，直到第一个字
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/正则表达式/">正则表达式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%BD%AC%E4%B9%89/">
+				<h2 class="index-title">
+					转义
+				</h2>
+				<div class="index-brief">
+					常见的转义字符以及它们的含义：
+
+
+正则转义
+一般来说，正则中 d 代表的是单个数字，但如果我们想表示成 反斜杠和字母d，这时候就需要进行转义，写成 d，这个就表示反斜杠后面紧跟着一个字母d。
+
+
+如果你想表示成反斜杠或d，可以用管道符号或中括号来实现，比如 |d 或 [d]。
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/正则表达式/">正则表达式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%8F%B0/">
+				<h2 class="index-title">
+					云计算平台
+				</h2>
+				<div class="index-brief">
+					我们可以将经典的云计算架构分为三大服务层：
+
+IaaS（Infrastructure as a Service，基础设施即服务）
+
+PaaS（Platform as a Service，平台即服务）
+
+SaaS（Software as a Service，软件即服务）
+
+
+IaaS 层通过虚拟化技术
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+				<h2 class="index-title">
+					基本架构
+				</h2>
+				<div class="index-brief">
+					
+
+Docker 整体架构采用 C&#x2F;S（客户端 &#x2F; 服务器）模式，主要由客户端和服务端两大部分组成。
+
+客户端负责发送操作指令，服务端负责接收和处理指令。
+
+客户端和服务端通信有多种方式，既可以在同一台机器上通过UNIX套接字通信，也可以通过网络连接远程通信。
+
+Docker 客
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/">服务器</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/服务器/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
 				<h2 class="index-title">
 					基本概念
@@ -6262,164 +6484,6 @@ HBase 又是一个面向列存储的数据库，当表的字段很多
 在ER模型里面，有三个要素，分别是实体、属性和关系。
 
 实体，可以
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/MySQL%E6%9E%B6%E6%9E%84/">
-				<h2 class="index-title">
-					MySQL架构
-				</h2>
-				<div class="index-brief">
-					
-MySQL分为Server层和存储引擎层两部分：
-
-Server层包括连接器、查询缓存、分析器、优化器、执行器等，涵盖MySQL的大多数核心服务功能，以及所有的内置函数（如日期、时间、数学和加密函数等），所有跨存储引擎的功能都在这一层实现，比如存储过程、触发器、视图等。
-
-存储引擎层负责数据的存储
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-				<h2 class="index-title">
-					SQL更新
-				</h2>
-				<div class="index-brief">
-					update T set c=c+1 where ID=2;
-
-
-执行器先找引擎取ID&#x3D;2这一行。ID是主键，引擎直接用树搜索找到这一行。如果ID&#x3D;2这一行所在的数据页本来就在内存中，就直接返回给执行器；否则，需要先从磁盘读入内存，然后再返回。
-执行器拿到引擎给的行数据，把这个值
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2/">
-				<h2 class="index-title">
-					关联查询
-				</h2>
-				<div class="index-brief">
-					写出好的Join语句，前提你得懂这些
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/">数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据库/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E5%88%86%E5%8C%BA%E8%A1%A8/">
-				<h2 class="index-title">
-					分区表
-				</h2>
-				<div class="index-brief">
-					MySQL 数据库中的数据是以文件的形势存在磁盘上的，默认放在 /var/lib/mysql/ 目录。
-一个数据库就是一个文件夹，一个库中，有其对应的表的信息。
-
-
-在 MySQL 中，如果存储引擎是 MyISAM，那么在 data 目录下会看到 3 类文件：.frm、.myi、.myd，作用如下：
 					...
 				</div>
 			</a>
