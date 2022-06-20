@@ -181,3 +181,7 @@ https://greasyfork.org/zh-CN/scripts/412245-github-增强-高速下载
 - 在查看文件内容时下载文件
 
 **GitHub File Icons**
+
+**GitHub Hovercard**
+
+如果你想在GitHub中快速了解到一个作者或者一个仓库甚至一个issues的信息的时候，你可以使用这款插件。
