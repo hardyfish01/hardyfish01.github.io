@@ -179,6 +179,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">
+										内存泄漏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
 										即时编译器
 									</a>
@@ -190,6 +199,15 @@
 								<li class="file">
 									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
 										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E6%A0%88%E5%92%8C%E5%A0%86/">
+										栈和堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1196,6 +1214,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9B%86%E5%90%88%E7%B1%BB%E9%97%AE%E9%A2%98/">
+										集合类问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9D%A2%E7%BB%8F%E5%88%86%E4%BA%AB/">
 										面经分享
 									</a>
@@ -1283,6 +1310,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
 										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/%E5%88%86%E5%B8%83%E5%BC%8F/HTTP%E5%92%8CRPC/">
+										HTTP和RPC
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4826,6 +4862,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/14/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/2099%E6%89%BE%E5%88%B0%E5%92%8C%E6%9C%80%E5%A4%A7%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BAK%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/">
+										2099找到和最大的长度为K的子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 										20有效的括号
 									</a>
@@ -5215,6 +5260,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
 										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/18/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/628%E4%B8%89%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
+										628三个数的最大乘积
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5696,6 +5750,258 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+				<h2 class="index-title">
+					零拷贝
+				</h2>
+				<div class="index-brief">
+					硬盘上的数据，在发往网络之前，需要经过多次缓冲区的拷贝，以及用户空间和内核空间的多次切换。
+
+如果能减少一些拷贝的过程，效率就能提升，所以零拷贝应运而生。
+
+没有采取零拷贝手段如何实现文件传输？
+服务器提供文件传输功能，需要将磁盘上的文件读取出来，通过网络协议发送到客户端。
+
+如果要实现这个文件传输
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/">计算机基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/操作系统相关/">操作系统相关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/%E7%B4%A2%E5%BC%95/">
+				<h2 class="index-title">
+					索引
+				</h2>
+				<div class="index-brief">
+					索引是帮助MySQL高效获取数据的数据结构，简单理解为：排好序的快速查找数据结构。
+索引分类
+按结构分：
+
+Hash索引和B+树索引
+
+根据索引字段个数划分：
+
+单值和复合索引
+
+根据是否是在主键上建立的索引进行划分：
+
+主键索引，辅助索引
+
+根据数据与索引的存储关联性划分：
+
+聚簇索引&#x2F;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/数据库/">数据库</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/数据库/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					适配器模式
+				</h2>
+				<div class="index-brief">
+					适配器模式把一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无法在一起工作的两个类能够在一起工作。
+适配器模式有类的适配器模式和对象的适配器模式两种不同的形式。
+类适配器模式类的适配器模式，简单来说，就是适配的类的API转换成为目标接口的API。
+
+为了使客户端能够使用Adapt
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/设计模式/">设计模式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
+				<h2 class="index-title">
+					分布式ID
+				</h2>
+				<div class="index-brief">
+					在互联网的业务系统中，涉及到各种各样的ID，如在支付系统中就会有支付ID、退款ID等。
+UUID算法的核心思想是结合机器的网卡、当地时间、一个随机数来生成UUID。
+UUID的16个8位字节表示为32个十六进制的数字，显示在由连字符分割的五个组中，8-4-4-4-12总共36个字符，例如：
+123e
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/分布式/">分布式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringBoot/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
+				<h2 class="index-title">
+					定时任务
+				</h2>
+				<div class="index-brief">
+					定时任务 一般会存在 中大型企业级 项目中，为了减少 服务器、数据库 的压力，往往会以 定时任务 的方式去完成某些业务逻辑。
+Timer
+Timer 的内部只有 一个线程，如果有 多个任务 的话就会 顺序执行，这样任务的 延迟时间 和 循环时间 就会出现问题。
+public class TimerS
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/Spring/">Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/Spring/SpringBoot/">SpringBoot</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/24/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/Spring/SpringBoot/%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6/">
+				<h2 class="index-title">
+					基本组件
+				</h2>
+				<div class="index-brief">
+					用户认证授权、日志记录 MDC、编码解码、UA 检查、多端对应等都需要通过 拦截请求 来进行处理。
+这时就需要 Servlet、Filter、Listener、Interceptor 这几种组件。
+基本介绍监听器Listener
+Listener 可以监听 web 服务器中某一个 事件操作，并触发注
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/Spring/">Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/Spring/SpringBoot/">SpringBoot</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/Future/">
@@ -6269,238 +6575,10 @@ type ArticleRepo interface &#123;
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/24/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Go%E5%9F%BA%E7%A1%80/%E5%B9%B6%E5%8F%91/">
-				<h2 class="index-title">
-					并发
-				</h2>
-				<div class="index-brief">
-					goroutine
-进程、线程、协程
-程序启动时，操作系统会创建一个进程用于运行该程序，进程内包含了运行程序所需的资源。
-线程是一种执行方法，一个进程的运行会从一个主线程开始，主线程可以依次启动更多的线程，用于执行程序中的代码。
-当主线程终止时，进程也就结束了。
-goroutine是协程的Go语言实
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/编程语言/">编程语言</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/编程语言/Go基础/">Go基础</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Go%E5%9F%BA%E7%A1%80/%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">
-				<h2 class="index-title">
-					错误处理
-				</h2>
-				<div class="index-brief">
-					Error
-Go中的error 就是一个接口，提供一个普通的值。
-我们可以用errors.New() 方法获取一个error对象。实际上它返回的是一个对象的指针，这个对象里放了一个字符串，这个字符串就是错误的提示。Go在此处使用指针而不是直接使用字符串，这是为了防止创建2个内容相同的error导致的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/编程语言/">编程语言</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/编程语言/Go基础/">Go基础</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/ConcurrentHashMap/">
-				<h2 class="index-title">
-					ConcurrentHashMap
-				</h2>
-				<div class="index-brief">
-					ConcurrentHashMap核心原理，这次彻底给整明白了
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/">并发编程</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/并发工具类/">并发工具类</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					锁机制
-				</h2>
-				<div class="index-brief">
-					锁分类偏向锁&#x2F;轻量级锁&#x2F;重量级锁
-可重入锁&#x2F;非可重入锁
-可重入锁指的是线程当前已经持有这把锁了，能在不释放这把锁的情况下，再次获取这把锁。
-public class LockExample &#123;
-    public static void main(Strin
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/">并发编程</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
-				<h2 class="index-title">
-					分库分表
-				</h2>
-				<div class="index-brief">
-					什么是分库分表
-分库：就是一个数据库分成多个数据库，部署到不同机器。
-
-
-分表：就是一个数据库表分成多个表。
-
-
-什么时候要分库分表
-参考阿里巴巴的《Java 开发手册》中数据库部分的建表规约：
-
-单表行数超过 500 万行或者单表容量超过 2GB，才推荐进行分库分表。
-
-如何分库分表
-
-垂直切分
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/24/%E4%B8%93%E6%A0%8F%E5%AD%A6%E4%B9%A0/%E5%A4%A7%E5%8E%82%E6%99%8B%E5%8D%87%E6%8C%87%E5%8D%97/4D%E6%80%BB%E7%BB%93%E6%B3%95/">
-				<h2 class="index-title">
-					4D总结法
-				</h2>
-				<div class="index-brief">
-					
-
-工作总结的时候怎么说才能充分展示出自己的工作亮点呢？
-这就要用到 4D 总结法了，也就是从结果、数据、技术和成长这 4 个维度来整理自己的做事收获，从而涵盖事情的重点难点核心点，有效地应对晋升答辩时可能遇到的各种问题。
-维度一：结果
-结果这个维度重点关注的是事情带来的价值，不同类型的团队在结果价
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-24</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/专栏学习/">专栏学习</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/专栏学习/大厂晋升指南/">大厂晋升指南</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/5/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/7/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/5/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/7/">&gt;</a>
 		
 	</div>
 </div>

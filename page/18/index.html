@@ -179,6 +179,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">
+										内存泄漏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
 										即时编译器
 									</a>
@@ -190,6 +199,15 @@
 								<li class="file">
 									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
 										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E6%A0%88%E5%92%8C%E5%A0%86/">
+										栈和堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1196,6 +1214,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9B%86%E5%90%88%E7%B1%BB%E9%97%AE%E9%A2%98/">
+										集合类问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9D%A2%E7%BB%8F%E5%88%86%E4%BA%AB/">
 										面经分享
 									</a>
@@ -1283,6 +1310,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
 										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/%E5%88%86%E5%B8%83%E5%BC%8F/HTTP%E5%92%8CRPC/">
+										HTTP和RPC
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4826,6 +4862,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/14/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/2099%E6%89%BE%E5%88%B0%E5%92%8C%E6%9C%80%E5%A4%A7%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BAK%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/">
+										2099找到和最大的长度为K的子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 										20有效的括号
 									</a>
@@ -5215,6 +5260,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
 										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/18/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/628%E4%B8%89%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
+										628三个数的最大乘积
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5696,6 +5750,282 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux%E7%9B%B8%E5%85%B3/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					系统管理
+				</h2>
+				<div class="index-brief">
+					进程管理查看进程：
+ps aux
+ps -le
+
+查看进程树：
+pstree 
+pstree -p // 查看每个进程的id号，会展开折叠进程
+pstree -u // 查看进程的用户
+
+杀死进程
+查看信号：
+kill -l
+
+
+
+
+信号代号
+信号名称
+说明
+
+
+
+1
+SIGHUP
+该信号让进程立即
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/">计算机基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/Linux相关/">Linux相关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+				<h2 class="index-title">
+					类和接口
+				</h2>
+				<div class="index-brief">
+					使类和成员的可访问性最小化
+尽可能地使每个类或者成员不被外界访问。
+Java中可以通过包、访问修饰符（private protected public）控制类、接口和成员的可访问性（accessibility） 
+除了应该暴露的API之外，我们应该尽可能少的开放访问权。 因为一旦暴露给外界，可能会有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Effective-Java/">Effective Java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E5%AF%B9%E8%B1%A1/">
+				<h2 class="index-title">
+					创建和销毁对象
+				</h2>
+				<div class="index-brief">
+					书籍地址：https://book.douban.com/subject/30412517/
+静态工厂方法静态工厂方法，也就是提供一个静态方法，可以返回类的一个实例。
+例如，下面是一个简单的提供Boolean类实例化方法：
+public static Boolean valueOf(boolean 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Effective-Java/">Effective Java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+				<h2 class="index-title">
+					网络安全
+				</h2>
+				<div class="index-brief">
+					数字签名网络传输过程中需要经过很多中间节点，虽然数据无法被解密，但可能被篡改
+
+数字签名可以校验数据的完整性
+
+数字签名有两种功效：
+
+能确定消息确实是由发送方签名并发出来的，因为别人假冒不了发送方的签名。
+
+数字签名能确定消息的完整性，证明数据是否未被篡改过。
+
+
+将一段文本先用Hash函数生成消
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/">计算机基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/计算机基础/网络相关/">网络相关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/">
+				<h2 class="index-title">
+					内存区域
+				</h2>
+				<div class="index-brief">
+					虚拟机所管理的内存将会包括以下几个运行时数据区域
+
+
+举例子：
+public class JVMCase &#123;
+
+    // 常量
+    public final static String MAN_SEX_TYPE = &quot;man&quot;;
+
+    // 静态变量
+   
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/深入理解JVM虚拟机/">深入理解JVM虚拟机</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Effective%20Java/%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/">
+				<h2 class="index-title">
+					通用方法
+				</h2>
+				<div class="index-brief">
+					覆盖equals时请遵守通用约定
+
+什么时候应该覆盖equals
+
+当类需要逻辑相等这个概念的时候就应该覆盖equals，比如要判断两个student是否是同一个人，这个时候我们就需要按需重写equals
+
+逻辑相等，就是逻辑上是相等的，比如id一样，判定它们相等，即使它们是两个不同的对象
+
+
+通用
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/">读书笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/读书笔记/Effective-Java/">Effective Java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
@@ -6266,249 +6596,10 @@ RDS持久化（默认持久化策略）就是将某一时间点上
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/Sentinel%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					Sentinel机制
-				</h2>
-				<div class="index-brief">
-					Sentinel（哨兵）是Redis的高可用性的解决方案，由一个或多个Sentinel实例组成的Sentinel系统可以监视任意多个主服务器以及属下的所有从服务器。
-
-当主服务器下线时，自动将下线的某个主服务器属下的某个从服务器升级为新的主服务器。
-
-从而实现故障转移，当原来的主服务器重新上线时，会
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E4%BB%B6/">
-				<h2 class="index-title">
-					事件
-				</h2>
-				<div class="index-brief">
-					Redis服务器是一个事件驱动程序，主要有两种：
-
-文件事件：Redis服务器通过套接字与客户端连接，文件事件就是服务器对套接字操作的抽象。服务器与客户端通信会产生相应文件事件，服务器通过监听这些事件来完成一系列网络通信操作。
-时间事件：Redis服务器有一些需要在给定时间内执行的操作，而时间事件就
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E4%BA%8B%E5%8A%A1/">
-				<h2 class="index-title">
-					事务
-				</h2>
-				<div class="index-brief">
-					Redis通过MULTI，EXEC，WATCH等命令实现事务功能。
-
-事务是将多个命令打包，然后原子地按顺序地执行的机制，执行期间服务器不会中断事务执行其他客户端的命令请求。
-
-下面展示了一次完整事务的执行命令：
-redis&gt; MULTI
-OK
-redis&gt; SET &quot;name
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/">
-				<h2 class="index-title">
-					压缩列表
-				</h2>
-				<div class="index-brief">
-					压缩列表(ZipList) 是哈希键的底层实现之一，当一个哈希键只包含少量键值对，并且每个键值对的键和值是小整数值或者长度较短的字符串时，Redis 就会使用压缩列表来做哈希键的底层实现。
-127.0.0.1:6379&gt; HMSET hs &quot;name&quot; &quot;wifi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%A4%8D%E5%88%B6/">
-				<h2 class="index-title">
-					复制
-				</h2>
-				<div class="index-brief">
-					在Redis中，可通过SLAVEOF命令或配置文件中设置slaveof选项，让一个服务器去复制另一个服务器，被复制的为主服务器，对其复制的称为从服务器。
-旧版本复制功能的实现
-Redis在2.8以前使用旧版本复制，在短线重连后的从服务器会遇上低效的情况。
-Redis的复制功能分为同步和命令传播俩操作
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AD%97%E5%85%B8/">
-				<h2 class="index-title">
-					字典
-				</h2>
-				<div class="index-brief">
-					字典用于保存键值对的抽象数据结构。
-当一个哈希键包含的键值对比较多时，或者键值对中的元素都是比较长的字符串时，Redis就会使用字典作为哈希键的底层实现。
-字典的实现
-Redis的字典使用哈希表作为底层实现，一个哈希表里面可以有多个哈希表节点，每个哈希表节点保存了字典中的一个键值对。
-哈希表
-使用d
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/">读书笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/读书笔记/Redis设计与实现/">Redis设计与实现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/17/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/19/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/17/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/19/">&gt;</a>
 		
 	</div>
 </div>

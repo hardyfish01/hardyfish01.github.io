@@ -179,6 +179,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">
+										内存泄漏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
 										即时编译器
 									</a>
@@ -190,6 +199,15 @@
 								<li class="file">
 									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
 										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E6%A0%88%E5%92%8C%E5%A0%86/">
+										栈和堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1196,6 +1214,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9B%86%E5%90%88%E7%B1%BB%E9%97%AE%E9%A2%98/">
+										集合类问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9D%A2%E7%BB%8F%E5%88%86%E4%BA%AB/">
 										面经分享
 									</a>
@@ -1283,6 +1310,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
 										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/%E5%88%86%E5%B8%83%E5%BC%8F/HTTP%E5%92%8CRPC/">
+										HTTP和RPC
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4826,6 +4862,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/14/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/2099%E6%89%BE%E5%88%B0%E5%92%8C%E6%9C%80%E5%A4%A7%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BAK%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/">
+										2099找到和最大的长度为K的子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 										20有效的括号
 									</a>
@@ -5215,6 +5260,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
 										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/18/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/628%E4%B8%89%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
+										628三个数的最大乘积
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5698,6 +5752,255 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+				<h2 class="index-title">
+					基本架构
+				</h2>
+				<div class="index-brief">
+					MyBatis 分为三层架构，分别是基础支撑层、核心处理层和接口层：
+
+API接口层：提供给外部使用的接口API，开发人员通过这些本地API来操纵数据库。接口层一接收到调用请求就会调用数据处理层来完成具体的数据处理。
+
+数据处理层：负责具体的SQL查找、SQL解析、SQL执行和执行结果映射处理等。它
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%8B%A6%E6%88%AA%E5%99%A8/">
+				<h2 class="index-title">
+					拦截器
+				</h2>
+				<div class="index-brief">
+					MyBatis的拦截器顾名思义，就是对某些操作进行拦截。
+
+通过拦截器可以对某些方法执行前后进行拦截，添加一些处理逻辑。
+
+拦截器设计的初衷就是为了让用户在MyBatis的处理流程中不必去修改MyBatis的源码，能够以插件的方式集成到整个执行流程中。
+比如MyBatis中的Executor有Bat
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/">
+				<h2 class="index-title">
+					核心原理
+				</h2>
+				<div class="index-brief">
+					核心类
+
+SqlSessionFactoryBuilder
+
+每一个MyBatis的应用程序的入口是SqlSessionFactoryBuilder。
+
+它的作用是通过XML配置文件创建Configuration对象，然后通过build方法创建SqlSessionFactory对象。
+
+没有必要每次
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					缓存机制
+				</h2>
+				<div class="index-brief">
+					一级缓存在应用运行过程中，我们有可能在一次数据库会话中，执行多次查询条件完全相同的SQL，MyBatis提供了一级缓存的方案优化这部分场景，如果是相同的SQL语句，会优先命中一级缓存，避免直接对数据库进行查询，提高性能。
+
+一级缓存是SqlSession级别的缓存。在操作数据库时需要构造SqlSes
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					仓库管理
+				</h2>
+				<div class="index-brief">
+					Maven的依赖是存放在仓库中进行统一管理，使用某依赖时先从本地仓库检索是否有该依赖，如果没有再从远程仓库下载至本地仓库。
+仓库的分类
+本地仓库：从远程仓库下载下来的构件都是存放在本地仓库的，我们在构建项目的时候都是依赖本地仓库构建的。
+&lt;settings&gt;
+    &lt;localR
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/Maven/">Maven</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					依赖管理
+				</h2>
+				<div class="index-brief">
+					依赖范围管理
+依赖范围即引入jar包的作用域，引入时使用&lt;scope&gt;指定
+
+
+依赖的作用域分为以上五种，作用范围如下：
+
+
+例如junit就是test范围：
+&lt;dependency&gt;
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+  &lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/Maven/">Maven</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%88%86%E7%BB%84/">
 				<h2 class="index-title">
 					分组
@@ -5875,265 +6178,10 @@ https://regex101.com/r/x1lg4P/1。
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%B4%AA%E5%A9%AA%E6%A8%A1%E5%BC%8F%E5%92%8C%E9%9D%9E%E8%B4%AA%E5%A9%AA%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					贪婪模式和非贪婪模式
-				</h2>
-				<div class="index-brief">
-					贪婪模式，简单说就是尽可能进行最长匹配。
-非贪婪模式，则会尽可能进行最短匹配。
-贪婪匹配
-在正则中，表示次数的量词默认是贪婪的，在贪婪模式下，会尝试尽可能最大长度去匹配。
-比如：在字符串 aaabb 中使用正则 a* 的匹配过程。
-
-a* 在匹配开头的 a 时，会尝试尽量匹配更多的 a，直到第一个字
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/">开发工具</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/正则表达式/">正则表达式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E8%BD%AC%E4%B9%89/">
-				<h2 class="index-title">
-					转义
-				</h2>
-				<div class="index-brief">
-					常见的转义字符以及它们的含义：
-
-
-正则转义
-一般来说，正则中 d 代表的是单个数字，但如果我们想表示成 反斜杠和字母d，这时候就需要进行转义，写成 d，这个就表示反斜杠后面紧跟着一个字母d。
-
-
-如果你想表示成反斜杠或d，可以用管道符号或中括号来实现，比如 |d 或 [d]。
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/">开发工具</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/正则表达式/">正则表达式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E4%BA%91%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%8F%B0/">
-				<h2 class="index-title">
-					云计算平台
-				</h2>
-				<div class="index-brief">
-					我们可以将经典的云计算架构分为三大服务层：
-
-IaaS（Infrastructure as a Service，基础设施即服务）
-
-PaaS（Platform as a Service，平台即服务）
-
-SaaS（Software as a Service，软件即服务）
-
-
-IaaS 层通过虚拟化技术
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
-				<h2 class="index-title">
-					基本架构
-				</h2>
-				<div class="index-brief">
-					
-
-Docker 整体架构采用 C&#x2F;S（客户端 &#x2F; 服务器）模式，主要由客户端和服务端两大部分组成。
-
-客户端负责发送操作指令，服务端负责接收和处理指令。
-
-客户端和服务端通信有多种方式，既可以在同一台机器上通过UNIX套接字通信，也可以通过网络连接远程通信。
-
-Docker 客
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-				<h2 class="index-title">
-					基本概念
-				</h2>
-				<div class="index-brief">
-					Docker 要做的就是把各种软件打包成一个集装箱（镜像），然后分发，且在运行的时候可以相互隔离。
-Docker 是利用 Linux 的 Namespace 、Cgroups 和联合文件系统三大机制来保证实现的
-
-使用 Namespace 做主机名、网络、PID 等资源的隔离
-
-使用 Cgroups
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Docker/%E9%95%9C%E5%83%8F%E5%92%8C%E5%AE%B9%E5%99%A8/">
-				<h2 class="index-title">
-					镜像和容器
-				</h2>
-				<div class="index-brief">
-					镜像Docker 镜像是由一系列镜像层（layer）组成的，每一层代表了镜像构建过程中的一次提交。
-分层的结构使得 Docker 镜像非常轻量，每一层根据镜像的内容都有一个唯一的 ID 值，当不同的镜像之间有相同的镜像层时，便可以实现不同的镜像之间共享镜像层的效果。
-
-Docker 镜像是静态的分层
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/24/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/23/">23</a><a class="page-number" href="/archives/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/archives/page/26/">26</a><a class="page-number" href="/archives/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/54/">54</a><a class="extend next" rel="next" href="/archives/page/26/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/24/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/23/">23</a><a class="page-number" href="/archives/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/archives/page/26/">26</a><a class="page-number" href="/archives/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/55/">55</a><a class="extend next" rel="next" href="/archives/page/26/">&gt;</a>
 		
 	</div>
 </div>

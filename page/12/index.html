@@ -179,6 +179,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">
+										内存泄漏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
 										即时编译器
 									</a>
@@ -190,6 +199,15 @@
 								<li class="file">
 									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
 										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E6%A0%88%E5%92%8C%E5%A0%86/">
+										栈和堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1196,6 +1214,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9B%86%E5%90%88%E7%B1%BB%E9%97%AE%E9%A2%98/">
+										集合类问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9D%A2%E7%BB%8F%E5%88%86%E4%BA%AB/">
 										面经分享
 									</a>
@@ -1283,6 +1310,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
 										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/%E5%88%86%E5%B8%83%E5%BC%8F/HTTP%E5%92%8CRPC/">
+										HTTP和RPC
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4826,6 +4862,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/14/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/2099%E6%89%BE%E5%88%B0%E5%92%8C%E6%9C%80%E5%A4%A7%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BAK%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/">
+										2099找到和最大的长度为K的子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 										20有效的括号
 									</a>
@@ -5215,6 +5260,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
 										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/18/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/628%E4%B8%89%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
+										628三个数的最大乘积
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5696,6 +5750,248 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B/">
+				<h2 class="index-title">
+					核心流程
+				</h2>
+				<div class="index-brief">
+					Netty 各个组件的整体交互流程：
+
+服务端启动初始化时有 Boss EventLoopGroup 和 Worker EventLoopGroup 两个组件，其中 Boss 负责监听网络连接事件。当有新的网络连接事件到达时，则将 Channel 注册到 Worker EventLoopGroup。
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E7%A9%BA%E9%97%B2%E6%A3%80%E6%B5%8B/">
+				<h2 class="index-title">
+					空闲检测
+				</h2>
+				<div class="index-brief">
+					服务端空闲检测
+对于服务端来说，客户端的连接如果出现假死，那么服务端将无法收到客户端的数据，也就是说，如果能一直收到客户端发来的数据，那么可以说明这条连接还是活的，因此，服务端对于连接假死的应对策略就是空闲检测。
+空闲检测指的是每隔一段时间，检测这段时间内是否有数据读写，我们的服务端只需要检测一段时
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81/">
+				<h2 class="index-title">
+					编解码
+				</h2>
+				<div class="index-brief">
+					每个网络应用程序都必须定义如何解析在两个节点之间来回传输的原始字节，以及如何将其和目标应用程序的数据格式做相互转换。
+这种转换逻辑由编解码器处理，编解码器由编码器和解码器组成，它们每种都可以将字节流从一种格式转换为另一种格式。
+编码器是将消息转换为适合于传输的格式（最有可能的就是字节流）；而对应的解
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+				<h2 class="index-title">
+					零拷贝
+				</h2>
+				<div class="index-brief">
+					传统意义的拷贝
+是在发送数据的时候，传统的实现方式是：
+
+File.read(bytes)
+Socket.send(bytes)
+
+这种方式需要四次数据拷贝和四次上下文切换：
+
+数据从磁盘读取到内核的read buffer
+
+数据从内核缓冲区拷贝到用户缓冲区
+
+数据从用户缓冲区拷贝到内核的socke
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/ACL%E6%9D%83%E9%99%90/">
+				<h2 class="index-title">
+					ACL权限
+				</h2>
+				<div class="index-brief">
+					一个 ACL 权限设置通常可以分为 3 部分，分别是：权限模式（Scheme）、授权对象（ID）、权限信息（Permission）。
+
+最终组成一条例如scheme:id:permission格式的 ACL 请求信息。
+
+权限模式：Scheme
+ZooKeeper 的权限验证方式大体分为两种类型，一
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/Leader%E9%80%89%E4%B8%BE/">
+				<h2 class="index-title">
+					Leader选举
+				</h2>
+				<div class="index-brief">
+					Leader 选举是一个过程，在这个过程中 ZooKeeper 主要做了两个重要工作，一个是数据同步，另一个是选举出新的 Leader 服务器。
+在分布式系统中有一个著名的 CAP 定理，是说一个分布式系统不能同时满足一致性、可用性，以及分区容错性。
+
+ZooKeeper 中实现的一致性也不是强一致
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/">中间件</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/中间件/ZooKeeper/">ZooKeeper</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/05/04/%E4%B8%AD%E9%97%B4%E4%BB%B6/ZooKeeper/Watch%E6%9C%BA%E5%88%B6/">
@@ -6256,259 +6552,10 @@ https://github.com/spring-projects/spring-framework
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
-				<h2 class="index-title">
-					基本架构
-				</h2>
-				<div class="index-brief">
-					MyBatis 分为三层架构，分别是基础支撑层、核心处理层和接口层：
-
-API接口层：提供给外部使用的接口API，开发人员通过这些本地API来操纵数据库。接口层一接收到调用请求就会调用数据处理层来完成具体的数据处理。
-
-数据处理层：负责具体的SQL查找、SQL解析、SQL执行和执行结果映射处理等。它
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%8B%A6%E6%88%AA%E5%99%A8/">
-				<h2 class="index-title">
-					拦截器
-				</h2>
-				<div class="index-brief">
-					MyBatis的拦截器顾名思义，就是对某些操作进行拦截。
-
-通过拦截器可以对某些方法执行前后进行拦截，添加一些处理逻辑。
-
-拦截器设计的初衷就是为了让用户在MyBatis的处理流程中不必去修改MyBatis的源码，能够以插件的方式集成到整个执行流程中。
-比如MyBatis中的Executor有Bat
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/">
-				<h2 class="index-title">
-					核心原理
-				</h2>
-				<div class="index-brief">
-					核心类
-
-SqlSessionFactoryBuilder
-
-每一个MyBatis的应用程序的入口是SqlSessionFactoryBuilder。
-
-它的作用是通过XML配置文件创建Configuration对象，然后通过build方法创建SqlSessionFactory对象。
-
-没有必要每次
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					缓存机制
-				</h2>
-				<div class="index-brief">
-					一级缓存在应用运行过程中，我们有可能在一次数据库会话中，执行多次查询条件完全相同的SQL，MyBatis提供了一级缓存的方案优化这部分场景，如果是相同的SQL语句，会优先命中一级缓存，避免直接对数据库进行查询，提高性能。
-
-一级缓存是SqlSession级别的缓存。在操作数据库时需要构造SqlSes
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/">常用框架</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
-				<h2 class="index-title">
-					仓库管理
-				</h2>
-				<div class="index-brief">
-					Maven的依赖是存放在仓库中进行统一管理，使用某依赖时先从本地仓库检索是否有该依赖，如果没有再从远程仓库下载至本地仓库。
-仓库的分类
-本地仓库：从远程仓库下载下来的构件都是存放在本地仓库的，我们在构建项目的时候都是依赖本地仓库构建的。
-&lt;settings&gt;
-    &lt;localR
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/">开发工具</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/Maven/">Maven</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/">
-				<h2 class="index-title">
-					依赖管理
-				</h2>
-				<div class="index-brief">
-					依赖范围管理
-依赖范围即引入jar包的作用域，引入时使用&lt;scope&gt;指定
-
-
-依赖的作用域分为以上五种，作用范围如下：
-
-
-例如junit就是test范围：
-&lt;dependency&gt;
-  &lt;groupId&gt;junit&lt;/groupId&gt;
-  &lt;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/">开发工具</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/开发工具/Maven/">Maven</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/11/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/13/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/11/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/13/">&gt;</a>
 		
 	</div>
 </div>

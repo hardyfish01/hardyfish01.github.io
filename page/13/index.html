@@ -179,6 +179,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">
+										内存泄漏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/JVM%E7%9B%B8%E5%85%B3/%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8/">
 										即时编译器
 									</a>
@@ -190,6 +199,15 @@
 								<li class="file">
 									<a href="/2022/05/28/JVM%E7%9B%B8%E5%85%B3/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/">
 										垃圾回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/16/JVM%E7%9B%B8%E5%85%B3/%E6%A0%88%E5%92%8C%E5%A0%86/">
+										栈和堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1196,6 +1214,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/16/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9B%86%E5%90%88%E7%B1%BB%E9%97%AE%E9%A2%98/">
+										集合类问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/24/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0/%E9%9D%A2%E7%BB%8F%E5%88%86%E4%BA%AB/">
 										面经分享
 									</a>
@@ -1283,6 +1310,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
 										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/14/%E5%88%86%E5%B8%83%E5%BC%8F/HTTP%E5%92%8CRPC/">
+										HTTP和RPC
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4826,6 +4862,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2022/07/14/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/2099%E6%89%BE%E5%88%B0%E5%92%8C%E6%9C%80%E5%A4%A7%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BAK%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97/">
+										2099找到和最大的长度为K的子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
 										20有效的括号
 									</a>
@@ -5215,6 +5260,15 @@
 								<li class="file">
 									<a href="/2022/05/04/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
 										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/07/18/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/LeetCode/628%E4%B8%89%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
+										628三个数的最大乘积
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -5696,6 +5750,255 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84/">
+				<h2 class="index-title">
+					基本架构
+				</h2>
+				<div class="index-brief">
+					MyBatis 分为三层架构，分别是基础支撑层、核心处理层和接口层：
+
+API接口层：提供给外部使用的接口API，开发人员通过这些本地API来操纵数据库。接口层一接收到调用请求就会调用数据处理层来完成具体的数据处理。
+
+数据处理层：负责具体的SQL查找、SQL解析、SQL执行和执行结果映射处理等。它
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%8B%A6%E6%88%AA%E5%99%A8/">
+				<h2 class="index-title">
+					拦截器
+				</h2>
+				<div class="index-brief">
+					MyBatis的拦截器顾名思义，就是对某些操作进行拦截。
+
+通过拦截器可以对某些方法执行前后进行拦截，添加一些处理逻辑。
+
+拦截器设计的初衷就是为了让用户在MyBatis的处理流程中不必去修改MyBatis的源码，能够以插件的方式集成到整个执行流程中。
+比如MyBatis中的Executor有Bat
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/">
+				<h2 class="index-title">
+					核心原理
+				</h2>
+				<div class="index-brief">
+					核心类
+
+SqlSessionFactoryBuilder
+
+每一个MyBatis的应用程序的入口是SqlSessionFactoryBuilder。
+
+它的作用是通过XML配置文件创建Configuration对象，然后通过build方法创建SqlSessionFactory对象。
+
+没有必要每次
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6/MyBatis/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					缓存机制
+				</h2>
+				<div class="index-brief">
+					一级缓存在应用运行过程中，我们有可能在一次数据库会话中，执行多次查询条件完全相同的SQL，MyBatis提供了一级缓存的方案优化这部分场景，如果是相同的SQL语句，会优先命中一级缓存，避免直接对数据库进行查询，提高性能。
+
+一级缓存是SqlSession级别的缓存。在操作数据库时需要构造SqlSes
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/">常用框架</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/常用框架/MyBatis/">MyBatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					仓库管理
+				</h2>
+				<div class="index-brief">
+					Maven的依赖是存放在仓库中进行统一管理，使用某依赖时先从本地仓库检索是否有该依赖，如果没有再从远程仓库下载至本地仓库。
+仓库的分类
+本地仓库：从远程仓库下载下来的构件都是存放在本地仓库的，我们在构建项目的时候都是依赖本地仓库构建的。
+&lt;settings&gt;
+    &lt;localR
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/Maven/">Maven</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Maven/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					依赖管理
+				</h2>
+				<div class="index-brief">
+					依赖范围管理
+依赖范围即引入jar包的作用域，引入时使用&lt;scope&gt;指定
+
+
+依赖的作用域分为以上五种，作用范围如下：
+
+
+例如junit就是test范围：
+&lt;dependency&gt;
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+  &lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-05-04</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/">开发工具</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发工具/Maven/">Maven</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/05/04/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E5%88%86%E7%BB%84/">
@@ -6296,256 +6599,10 @@ cpu 密集型任务，需要线程长时间进行的复杂的运算，这种类�
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/Servlet/">
-				<h2 class="index-title">
-					Servlet
-				</h2>
-				<div class="index-brief">
-					Servlet容器用来加载和管理业务类。HTTP服务器不直接跟业务类打交道，而是把请求交给Servlet容器去处理，Servlet容器会将请求转发到具体的Servlet，如果这个Servlet还没创建，就加载并实例化这个Servlet，然后调用这个Servlet的接口方法。
-
-因此Servlet接口
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					双亲委托机制
-				</h2>
-				<div class="index-brief">
-					Tomcat的自定义类加载器WebAppClassLoader打破了双亲委托机制
-它首先自己尝试去加载某个类，如果找不到再代理给父类加载器，其目的是优先加载Web应用自己定义的类。
-
-具体实现就是重写ClassLoader的两个方法：findClass和loadClass。
-
-要打破双亲委托机制，需
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E5%A4%9A%E5%B1%82%E5%AE%B9%E5%99%A8/">
-				<h2 class="index-title">
-					多层容器
-				</h2>
-				<div class="index-brief">
-					Tomcat设计了4种容器，分别是Engine、Host、Context和Wrapper。
-这4种容器不是平行关系，而是父子关系。
-
-
-
-Context表示一个Web应用程序；Wrapper表示一个Servlet，一个Web应用程序中可能会有多个Servlet；
-
-Host代表的是一个虚拟主机，或者
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
-				<h2 class="index-title">
-					核心组件
-				</h2>
-				<div class="index-brief">
-					我们可以通过Tomcat的/bin目录下的脚本startup.sh来启动Tomcat，那我们执行了这个脚本后发生了什么呢？
-
-
-Catalina
-Catalina的主要任务就是创建Server，它不是直接new一个Server实例就完事了，而是需要解析server.xml，把在server.xml里
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
-				<h2 class="index-title">
-					热部署和热加载
-				</h2>
-				<div class="index-brief">
-					要在运行的过程中升级Web应用，如果你不想重启系统，实现的方式有两种：热加载和热部署。
-那如何实现热部署和热加载呢？它们跟类加载机制有关，具体来说就是：
-
-热加载的实现方式是Web容器启动一个后台线程，定期检测类文件的变化，如果有变化，就重新加载类，在这个过程中不会清空Session ，一般用在开发
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/Tomcat/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/">
-				<h2 class="index-title">
-					生命周期管理
-				</h2>
-				<div class="index-brief">
-					
-
-上面这张图描述了组件之间的静态关系，如果想让一个系统能够对外提供服务，我们需要创建、组装并启动这些组件；
-在服务停止的时候，我们还需要释放资源，销毁这些组件，因此这是一个动态的过程。
-
-也就是说，Tomcat需要动态地管理这些组件的生命周期。
-
-Lifecycle接口
-
-这个接口跟生命周期有关。
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2022-05-04</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/">服务器</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/服务器/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/12/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/14/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/12/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/14/">&gt;</a>
 		
 	</div>
 </div>
